@@ -6,7 +6,7 @@ use std::path::Path;
 use std::str::{from_utf8, FromStr};
 use thiserror::Error;
 
-use crate::nitf::Nitf;
+use nitf_rs::Nitf;
 
 pub mod dep;
 pub mod v1_3_0;
@@ -77,7 +77,7 @@ pub enum SicdMeta {
 /// # Example
 ///
 ///     use std::path::Path;
-///     use nitf_rs::sicd::read_sicd;
+///     use sicd_rs::read_sicd;
 ///
 ///     let sicd_path = Path::new("../example.nitf");
 ///     let sicd = read_sicd(sicd_path);
