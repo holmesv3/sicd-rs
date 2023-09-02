@@ -1,0 +1,10 @@
+[package]
+name = "sicd-rs"
+version = "0.1.0"
+edition = "2021"
+description = "Crate to interface with SICD files."
+homepage = "https://github.com/holmesv3/sicd-rs"
+readme = "README-crates.md"
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
