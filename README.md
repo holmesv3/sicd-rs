@@ -1,9 +1,7 @@
-# nitf-rs
+# sicd-rs
 
 [![crates.io](https://img.shields.io/crates/v/sicd-rs)](https://crates.io/crates/sicd-rs)
 [![docs](https://img.shields.io/docsrs/sicd-rs)](https://docs.rs/sicd-rs/latest/sicd_rs/)
-
-# sicd-rs
 
 A rust SICD file interface
 
