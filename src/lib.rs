@@ -74,6 +74,8 @@ impl Default for ImageData {
 }
 impl ImageData {
     pub fn initialize(slice: &[u8], n_rows: usize, n_cols: usize) -> Self {
+        const REAL: usize = 0;
+        const IM: usize = 1;
         let mut im_data = Self::default();
         im_data.byte_slice_ptr = slice.as_ptr();
         im_data.byte_slice_len = slice.len();
@@ -84,8 +86,8 @@ impl ImageData {
         im_data.array = Array2::zeros((n_rows, n_cols));
 
         par_azip!((out_elem in &mut im_data.array, in_elem in &aview) {
-            out_elem.re = f32::from_be_bytes(in_elem[0]);
-            out_elem.im = f32::from_be_bytes(in_elem[1]);
+            out_elem.re = f32::from_be_bytes(in_elem[REAL]);
+            out_elem.im = f32::from_be_bytes(in_elem[IM]);
         });
         im_data
     }
