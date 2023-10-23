@@ -1,18 +1,17 @@
 [package]
 name = "sicd-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT OR Apache-2.0"
-description = "Crate to interface with SICD files."
+description = "Crate to interact with SICD files."
 homepage = "https://github.com/holmesv3/sicd-rs"
 readme = "README-crates.md"
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-thiserror = "^1.0"
-memmap2 = "0.5.10"
+thiserror = "1.0"
 num-complex = "0.4.3"
-nitf-rs = "0.2.0"
-ndarray = {version = "^0.15"}
-serde = {version = "^1.0", features = ["derive"]}
-quick-xml = {version = "^0.28", features = ["serialize"]}
+zerocopy = "0.7.11"
+nitf-rs = {version = "0.2.2", path = "../nitf-rs"}
+ndarray = {version = "0.15", features = ["rayon"]}
+serde = {version = "1.0", features = ["derive"]}
+quick-xml = {version = "0.28", features = ["serialize"]}

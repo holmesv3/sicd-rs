@@ -22,7 +22,12 @@ pub struct NoiseLevel {
     pub noise_poly: Poly2d,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub enum NoiseLevelType {
+pub struct NoiseLevelType {
+    #[serde(rename = "$text")]
+    pub value: NoiseLevelTypeEnum,
+}
+#[derive(Debug, Deserialize, PartialEq, Clone)]
+pub enum NoiseLevelTypeEnum {
     ABSOLUTE,
     RELATIVE,
 }
