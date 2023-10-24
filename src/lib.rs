@@ -44,7 +44,7 @@ pub fn read_sicd(path: &Path) -> Sicd {
 }
 
 #[derive(Error, Debug)]
-pub(crate) enum SicdError {
+pub enum SicdError {
     /// "unknown sicd version {}"
     #[error("unknown sicd version {0}")]
     VersionError(String),
