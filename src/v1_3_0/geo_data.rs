@@ -72,7 +72,7 @@ pub struct Desc {
     #[serde(rename = "@name")]
     pub name: String,
     #[serde(rename = "$value")]
-    pub value: String,
+    pub value: Option<String>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Line {
@@ -91,7 +91,7 @@ pub struct Polygon {
 
 #[cfg(test)]
 mod tests {
-    use super::GeoData;
+    use super::{Desc, GeoData};
     use quick_xml::de::from_str;
     #[test]
     fn test_geo_data() {
@@ -104,6 +104,14 @@ mod tests {
             <ValidData size="1"><Vertex index="1"><Lat>0</Lat><Lon>0</Lon>
             </Vertex></ValidData></GeoData>"#;
         assert!(match from_str::<GeoData>(&xml_str) {
+            Ok(_) => true,
+            Err(_) => false,
+        })
+    }
+    #[test]
+    fn test_empty_desc() {
+        let xml_str = r#"<Desc name="foo">    </Desc>"#;
+        assert!(match from_str::<Desc>(&xml_str) {
             Ok(_) => true,
             Err(_) => false,
         })

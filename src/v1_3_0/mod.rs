@@ -202,7 +202,7 @@ pub struct Parameter {
     #[serde(rename = "@name")]
     pub name: String,
     #[serde(rename = "$value")]
-    pub value: String,
+    pub value: Option<String>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub enum SinglePolarization {
@@ -529,6 +529,17 @@ mod tests {
 
         let xml = r#"
             <Parameter name="Param0">TestP0</Parameter>
+            <Parameter name="Param1">TestP1</Parameter>"#;
+        assert!(match from_str::<Parameter>(xml) {
+            Ok(_) => true,
+            Err(_) => false,
+        });
+    }
+
+    #[test]
+    fn test_empty_parameter() {
+        let xml = r#"
+            <Parameter name="Param0">      </Parameter>
             <Parameter name="Param1">TestP1</Parameter>"#;
         assert!(match from_str::<Parameter>(xml) {
             Ok(_) => true,
