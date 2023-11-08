@@ -535,4 +535,15 @@ mod tests {
             Err(_) => false,
         });
     }
+
+    #[test]
+    fn test_empty_parameter() {
+        let xml = r#"
+            <Parameter name="Param0">      </Parameter>
+            <Parameter name="Param1">TestP1</Parameter>"#;
+        assert!(match from_str::<Parameter>(xml) {
+            Ok(_) => true,
+            Err(_) => false,
+        });
+    }
 }
