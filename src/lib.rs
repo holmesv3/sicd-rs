@@ -33,9 +33,11 @@ pub mod v1_3_0;
 /// use sicd_rs::SicdVersion;
 ///
 /// let sicd_path = Path::new("../example.nitf");
-/// let sicd = sicd_rs::read_sicd(sicd_path);
-/// // Then use convenience methods provided by SicdMeta enum, or match off of version
-/// let meta = sicd.meta.get_v1_meta();
+/// if sicd_path.exists() {
+///     let sicd = sicd_rs::read_sicd(sicd_path);
+///     // Then use convenience methods provided by SicdMeta enum, or match off of version
+///     let meta = sicd.meta.get_v1_meta();
+/// }
 /// ```
 ///
 pub fn read_sicd(path: &Path) -> Sicd {
