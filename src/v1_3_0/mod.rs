@@ -202,7 +202,7 @@ pub struct Parameter {
     #[serde(rename = "@name")]
     pub name: String,
     #[serde(rename = "$value")]
-    pub value: String,
+    pub value: Option<String>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub enum SinglePolarization {
