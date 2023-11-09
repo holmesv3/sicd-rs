@@ -3,8 +3,6 @@ use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct MatchInfo {
-    #[serde(rename = "@size")]
-    pub size: usize,
     #[serde(rename = "Collect")]
     pub collect: Vec<Collect>,
 }
@@ -21,5 +19,5 @@ pub struct Collect {
     #[serde(rename = "MatchType")]
     pub match_type: Option<Vec<String>>,
     #[serde(rename = "Parameter")]
-    pub parameter: Parameter,
+    pub parameter: Option<Vec<Parameter>>,
 }

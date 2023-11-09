@@ -73,7 +73,7 @@ impl Default for ImageData {
     }
 }
 impl ImageData {
-    pub fn initialize(slice: &[u8], n_rows: usize, n_cols: usize) -> Self {
+    fn initialize(slice: &[u8], n_rows: usize, n_cols: usize) -> Self {
         const REAL: usize = 0;
         const IM: usize = 1;
         let mut im_data = Self::default();
