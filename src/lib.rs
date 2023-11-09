@@ -22,6 +22,29 @@ use nitf_rs::Nitf;
 pub mod dep;
 pub mod v1_3_0;
 
+/// Construct a [Sicd] object from a file `path`.
+///
+/// This is specifically for cases where the version of the Sicd is not known
+/// and makes use of several `enums` to parse the data.
+///
+/// # Example
+/// ```
+/// use std::path::Path;
+/// use sicd_rs::SicdVersion;
+///
+/// let sicd_path = Path::new("../example.nitf");
+/// if sicd_path.exists() {
+///     let sicd = sicd_rs::read_sicd(sicd_path);
+///     // Then use convenience methods provided by SicdMeta enum, or match off of version
+///     let meta = sicd.meta.get_v1_meta();
+/// }
+/// ```
+///
+pub fn read_sicd(path: &Path) -> Sicd {
+    let file = File::open(path).unwrap();
+    Sicd::from_file(file)
+}
+
 #[derive(Error, Debug)]
 pub enum SicdError {
     /// "unknown sicd version {}"
@@ -30,11 +53,6 @@ pub enum SicdError {
     /// "metadata for version {} is not implemented"
     #[error("metadata for version {0} is not implemented")]
     Unimpl(String),
-    /// "error using metadata. Perhaps the metadata version does not have a field you're expecting"
-    #[error(
-        "error using metadata. Perhaps the metadata version does not have a field you're expecting"
-    )]
-    MetaUsage,
 }
 
 /// SICD file structure
@@ -161,27 +179,6 @@ impl SicdMeta {
         }
     }
 }
-/// Construct a [Sicd] object from a file `path`.
-///
-/// This is specifically for cases where the version of the Sicd is not known
-/// and makes use of several `enums` to parse the data.
-///
-/// # Example
-/// ```
-/// use std::path::Path;
-/// use sicd_rs::SicdVersion;
-///
-/// let sicd_path = Path::new("../example.nitf");
-/// let sicd = sicd_rs::read_sicd(sicd_path);
-/// // Then use convenience methods provided by SicdMeta enum, or match off of version
-/// let meta = sicd.meta.get_v1_meta();
-/// ```
-///
-pub fn read_sicd(path: &Path) -> Sicd {
-    let file = File::open(path).unwrap();
-    Sicd::from_file(file)
-}
-
 impl Sicd {
     pub fn from_file(mut file: File) -> Self {
         let nitf = Nitf::from_file(&mut file);
