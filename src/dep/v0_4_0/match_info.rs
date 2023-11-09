@@ -19,5 +19,5 @@ pub struct Collect {
     #[serde(rename = "MatchType")]
     pub match_type: Option<Vec<String>>,
     #[serde(rename = "Parameter")]
-    pub parameter: Option<Vec<Parameter>>,
+    pub parameters: Option<Vec<Parameter>>,
 }
