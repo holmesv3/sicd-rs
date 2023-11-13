@@ -77,18 +77,18 @@ pub struct SicdMeta {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RowCol {
     #[serde(rename = "Row")]
-    pub row: u64,
+    pub row: i64,
     #[serde(rename = "Col")]
-    pub col: u64,
+    pub col: i64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxRowCol {
     #[serde(rename = "@index")]
     pub index: usize,
     #[serde(rename = "Row")]
-    pub row: u64,
+    pub row: i64,
     #[serde(rename = "Col")]
-    pub col: u64,
+    pub col: i64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct CMPLX {
