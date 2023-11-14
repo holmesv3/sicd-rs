@@ -6,12 +6,7 @@ pub mod geo_data;
 pub mod grid;
 pub mod image_formation;
 pub mod match_info;
-pub mod pfa;
-pub mod position;
-pub mod radar_collection;
 pub mod radiometric;
-pub mod scpcoa;
-pub mod timeline;
 
 pub use crate::dep::v0_4_0::antenna::Antenna;
 pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
@@ -22,12 +17,12 @@ pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
 use image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
-use pfa::Pfa;
-use position::Position;
-use radar_collection::RadarCollection;
+pub use crate::dep::v0_4_0::pfa::Pfa;
+pub use crate::dep::v0_4_0::position::Position;
+pub use crate::dep::v0_4_0::radar_collection::RadarCollection;
 use radiometric::Radiometric;
-use scpcoa::ScpCoa;
-use timeline::Timeline;
+pub use crate::dep::v0_4_0::scpcoa::ScpCoa;
+pub use crate::dep::v0_4_0::timeline::Timeline;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SicdMeta {
