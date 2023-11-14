@@ -56,8 +56,6 @@ pub struct ValidDataLL {
 pub struct GeoInfo {
     #[serde(rename = "@name")]
     pub name: String,
-    #[serde(rename = "GeoInfo")]
-    pub geo_info: Option<Vec<GeoInfo>>,
     #[serde(rename = "Desc")]
     pub desc: Option<Vec<Desc>>,
     #[serde(rename = "Point")]
