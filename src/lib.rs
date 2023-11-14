@@ -212,7 +212,7 @@ struct VersionGetter {
 
 fn parse_sicd(sicd_str: &str) -> Result<(SicdVersion, SicdMeta), SicdError> {
     // This feels bad
-    let tmp: VersionGetter = from_str(&sicd_str).unwrap();
+    let tmp: VersionGetter = from_str(sicd_str).unwrap();
     let sicd_version = SicdVersion::from_str(&tmp.version).unwrap();
     use SicdError::Unimpl;
     match sicd_version {
