@@ -2,13 +2,8 @@
 use ndarray::{Array1, Array2};
 use serde::Deserialize;
 
-pub mod antenna;
-pub mod collection_info;
-pub mod error_statistics;
 pub mod geo_data;
 pub mod grid;
-pub mod image_creation;
-pub mod image_data;
 pub mod image_formation;
 pub mod match_info;
 pub mod pfa;
@@ -18,13 +13,13 @@ pub mod radiometric;
 pub mod scpcoa;
 pub mod timeline;
 
-use antenna::Antenna;
-use collection_info::CollectionInfo;
-use error_statistics::ErrorStatistics;
+pub use crate::dep::v0_4_0::antenna::Antenna;
+pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
+pub use crate::dep::v0_4_0::error_statistics::ErrorStatistics;
 use geo_data::GeoData;
 use grid::Grid;
-use image_creation::ImageCreation;
-use image_data::ImageData;
+pub use crate::dep::v0_4_0::image_creation::ImageCreation;
+pub use crate::dep::v0_4_0::image_data::ImageData;
 use image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
 use pfa::Pfa;
