@@ -3,7 +3,6 @@ use serde::Deserialize;
 
 pub mod grid;
 pub mod match_info;
-pub mod radiometric;
 
 pub use crate::dep::v0_4_0::antenna::Antenna;
 pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
@@ -15,6 +14,7 @@ pub use crate::dep::v0_4_0::image_formation::{ImageFormation, RgAzComp, Rma};
 pub use crate::dep::v0_4_0::pfa::Pfa;
 pub use crate::dep::v0_4_0::position::Position;
 pub use crate::dep::v0_4_0::radar_collection::RadarCollection;
+pub use crate::dep::v0_4_0::radiometric::Radiometric;
 pub use crate::dep::v0_4_0::scpcoa::ScpCoa;
 pub use crate::dep::v0_4_0::timeline::Timeline;
 pub use crate::dep::v0_4_0::{
@@ -23,7 +23,6 @@ pub use crate::dep::v0_4_0::{
 };
 use grid::Grid;
 use match_info::MatchInfo;
-use radiometric::Radiometric;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SicdMeta {
