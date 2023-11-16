@@ -3,7 +3,6 @@ use ndarray::{Array1, Array2};
 use serde::Deserialize;
 
 pub mod grid;
-pub mod image_formation;
 pub mod match_info;
 pub mod radiometric;
 
@@ -14,7 +13,7 @@ pub use crate::dep::v0_4_0::geo_data::GeoData;
 use grid::Grid;
 pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
-use image_formation::{ImageFormation, RgAzComp, Rma};
+pub use crate::dep::v0_4_0::image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
 pub use crate::dep::v0_4_0::pfa::Pfa;
 pub use crate::dep::v0_4_0::position::Position;
