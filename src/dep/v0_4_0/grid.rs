@@ -1,4 +1,4 @@
-use super::{Parameter, Poly2D, XYZ};
+use super::{Poly2D, XYZ};
 use serde::Deserialize;
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Grid {
@@ -61,13 +61,6 @@ pub struct DirectionParams {
     pub wgt_type: Option<String>,
     #[serde(rename = "WgtFunct")]
     pub wgt_funct: Option<WgtFunct>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct WgtType {
-    #[serde(rename = "WindowName")]
-    pub window_name: String,
-    #[serde(rename = "Parameter")]
-    pub parameters: Option<Vec<Parameter>>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct WgtFunct {
