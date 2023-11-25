@@ -4,7 +4,6 @@
 use serde::Deserialize;
 
 pub mod antenna;
-pub mod collection_info;
 pub mod error_statistics;
 pub mod geo_data;
 pub mod grid;
@@ -19,11 +18,11 @@ pub mod radiometric;
 pub mod scpcoa;
 pub mod timeline;
 
+pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
 pub use crate::dep::v0_4_0::{
     IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Poly1D, Poly2D, RowCol, XyzPoly, CMPLX, LL, LLH, XYZ,
 };
 use antenna::Antenna;
-use collection_info::CollectionInfo;
 use error_statistics::ErrorStatistics;
 use geo_data::GeoData;
 use grid::Grid;
