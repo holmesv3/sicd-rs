@@ -143,22 +143,22 @@ pub struct IdxLL {
     pub lon: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Coef1d {
+pub struct Coef1D {
     #[serde(rename = "@exponent1")]
     pub exponent1: usize,
     #[serde(rename = "$value")]
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Poly1d {
+pub struct Poly1D {
     #[serde(rename = "@order1")]
     pub order1: usize,
     #[serde(rename = "$value")]
-    pub coefs: Vec<Coef1d>,
+    pub coefs: Vec<Coef1D>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Coef2d {
+pub struct Coef2D {
     #[serde(rename = "@exponent1")]
     pub exponent1: usize,
     #[serde(rename = "@exponent2")]
@@ -167,34 +167,34 @@ pub struct Coef2d {
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Poly2d {
+pub struct Poly2D {
     #[serde(rename = "@order1")]
     pub order1: usize,
     #[serde(rename = "@order2")]
     pub order2: usize,
     #[serde(rename = "$value")]
-    pub coefs: Vec<Coef2d>,
+    pub coefs: Vec<Coef2D>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct XyzPoly {
     #[serde(rename = "X")]
-    pub x: Poly1d,
+    pub x: Poly1D,
     #[serde(rename = "Y")]
-    pub y: Poly1d,
+    pub y: Poly1D,
     #[serde(rename = "Z")]
-    pub z: Poly1d,
+    pub z: Poly1D,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxXyzPoly {
     #[serde(rename = "@index")]
     pub index: usize,
     #[serde(rename = "X")]
-    pub x: Poly1d,
+    pub x: Poly1D,
     #[serde(rename = "Y")]
-    pub y: Poly1d,
+    pub y: Poly1D,
     #[serde(rename = "Z")]
-    pub z: Poly1d,
+    pub z: Poly1D,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -386,7 +386,7 @@ pub enum DualPolarization {
     UNKNOWN,
 }
 
-impl Poly1d {
+impl Poly1D {
     /// Parse the data in the polynomial to an array object
     pub fn to_array(&self) -> Array1<f64> {
         let mut poly = Array1::zeros(self.order1 + 1);
@@ -406,7 +406,7 @@ impl Poly1d {
         res
     }
 }
-impl Poly2d {
+impl Poly2D {
     /// Parse the data in the polynomial to an array object
     pub fn to_array(&self) -> Array2<f64> {
         let mut poly = Array2::zeros((self.order1 + 1, self.order2 + 1));
@@ -494,7 +494,7 @@ mod tests {
 
         let xml = r#"<Poly1d order1="1"><Coef1d exponent1="0">0</Coef1d>
             <Coef1d exponent1="1">0</Coef1d></Poly1d>"#;
-        assert!(match from_str::<Poly1d>(xml) {
+        assert!(match from_str::<Poly1D>(xml) {
             Ok(_) => true,
             Err(_) => false,
         });
@@ -504,7 +504,7 @@ mod tests {
             <Coef2d exponent1="1" exponent2="0">0</Coef2d>
             <Coef2d exponent1="0" exponent2="1">0</Coef2d>
             <Coef2d exponent1="1" exponent2="1">0</Coef2d></Poly2d>"#;
-        assert!(match from_str::<Poly2d>(xml) {
+        assert!(match from_str::<Poly2D>(xml) {
             Ok(_) => true,
             Err(_) => false,
         });

@@ -1,4 +1,4 @@
-use super::{DualPolarization, Parameter, Poly1d, Poly2d, CMPLX, XYZ};
+use super::{DualPolarization, Parameter, Poly1D, Poly2D, CMPLX, XYZ};
 use serde::Deserialize;
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ImageFormation {
@@ -156,7 +156,7 @@ pub struct RgAzComp {
     #[serde(rename = "AzSF")]
     pub az_sf: f64,
     #[serde(rename = "KazPoly")]
-    pub kaz_poly: Poly1d,
+    pub kaz_poly: Poly1D,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -208,15 +208,15 @@ pub struct RMAlgo {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct INCA {
     #[serde(rename = "TimeCAPoly")]
-    pub time_ca_poly: Poly1d,
+    pub time_ca_poly: Poly1D,
     #[serde(rename = "R_CA_SCP")]
     pub r_ca_scp: f64,
     #[serde(rename = "FreqZero")]
     pub freq_zero: f64,
     #[serde(rename = "DRateSFPoly")]
-    pub d_rate_sf_poly: Poly2d,
+    pub d_rate_sf_poly: Poly2D,
     #[serde(rename = "DopCentroidPoly")]
-    pub dop_centroid_poly: Option<Poly2d>,
+    pub dop_centroid_poly: Option<Poly2D>,
     #[serde(rename = "DopCentroidCOA")]
     pub dop_centroid_coa: Option<bool>,
 }
