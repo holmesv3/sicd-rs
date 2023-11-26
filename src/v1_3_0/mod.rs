@@ -261,7 +261,7 @@ pub enum DualPolarization {
 
 #[cfg(test)]
 mod tests {
-    use crate::dep::v0_4_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC};
+    use crate::{dep::v0_4_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC}, v1_3_0::image_formation::RcvChanProc};
 
     use super::*;
     use quick_xml::de::from_str;
@@ -2015,22 +2015,18 @@ mod tests {
     #[test]
     fn test_generated_xml_valid_data() {
         let xml = r#"
-    <ValidData size="-555">
-      <Vertex index="-3944">
-        <Lat>-7.80209419605491</Lat>
-        <Lon>178.084265803945</Lon>
+    <ValidData size="-939">
+      <Vertex index="79">
+        <Row>-2116</Row>
+        <Col>2716</Col>
       </Vertex>
-      <Vertex index="-482">
-        <Lat>-48.1665541960549</Lat>
-        <Lon>-167.798334196055</Lon>
+      <Vertex index="1506">
+        <Row>4563</Row>
+        <Col>625</Col>
       </Vertex>
-      <Vertex index="-2355">
-        <Lat>-17.9710141960549</Lat>
-        <Lon>136.863545803945</Lon>
-      </Vertex>
-      <Vertex index="1224">
-        <Lat>-82.3701541960549</Lat>
-        <Lon>-138.519534196055</Lon>
+      <Vertex index="-1709">
+        <Row>4069</Row>
+        <Col>2576</Col>
       </Vertex>
     </ValidData>
         "#;
@@ -2040,6 +2036,23 @@ mod tests {
                 dbg!(err);
                 false
             }
+        });
+    }
+    #[test]
+    fn test_generated_xml_rcv_chan_proc() {
+        let xml = r#"
+    <RcvChanProc>
+      <NumChanProc>3798</NumChanProc>
+      <PRFScaleFactor>5898700000000.24</PRFScaleFactor>
+      <ChanIndex>-2598</ChanIndex>
+      <ChanIndex>-2404</ChanIndex>
+      <ChanIndex>-675</ChanIndex>
+      <ChanIndex>3381</ChanIndex>
+    </RcvChanProc>
+        "#;
+        assert!(match from_str::<RcvChanProc>(xml) {
+            Ok(_) => true,
+            Err(err) => {dbg!(err);false},
         });
     }
     // #[test]
