@@ -15,7 +15,7 @@ pub struct Position {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RcvAPC {
     #[serde(rename = "@size")]
-    pub size: usize,
+    pub size: i32,
     #[serde(rename = "RcvAPCPoly")]
     pub rcv_apc_poly: Vec<IdxXyzPoly>,
 }

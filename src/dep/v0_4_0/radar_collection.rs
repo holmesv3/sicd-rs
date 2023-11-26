@@ -6,7 +6,7 @@ pub struct RadarCollection {
     #[serde(rename = "TxFrequency")]
     pub tx_frequency: TxFrequency,
     #[serde(rename = "RefFreqIndex")]
-    pub ref_freq_index: Option<u64>,
+    pub ref_freq_index: Option<i32>,
     #[serde(rename = "Waveform")]
     pub waveform: Option<Waveform>,
     #[serde(rename = "TxPolarization")]
@@ -30,14 +30,14 @@ pub struct TxFrequency {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Waveform {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "WFParameters")]
     pub wf_parameters: Vec<WFParameters>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct WFParameters {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "TxPulseLength")]
     pub tx_pulse_length: Option<f64>,
     #[serde(rename = "TxRFBandwidth")]
@@ -90,16 +90,16 @@ pub enum TxPolarizationEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxSequence {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "TxStep")]
     pub tx_step: Vec<TxStep>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxStep {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "WFIndex")]
-    pub wf_index: Option<usize>,
+    pub wf_index: Option<i32>,
     #[serde(rename = "TxPolarization")]
     pub tx_polarization: Option<TxStepPolarization>,
 }
@@ -119,18 +119,18 @@ pub enum TxStepPolarizationEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RcvChannels {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "ChanParameters")]
     pub chan_parameters: Vec<ChanParameters>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ChanParameters {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "TxRcvPolarization")]
     pub tx_rcv_polarization: String, // TODO: Implement this enum
     #[serde(rename = "RcvAPCIndex")]
-    pub rcv_apc_index: Option<u64>,
+    pub rcv_apc_index: Option<i32>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Area {
@@ -175,9 +175,9 @@ pub struct XDir {
     #[serde(rename = "LineSpacing")]
     pub line_spacing: f64,
     #[serde(rename = "NumLines")]
-    pub num_lines: u64,
+    pub num_lines: i32,
     #[serde(rename = "FirstLine")]
-    pub first_line: u64,
+    pub first_line: i32,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct YDir {
@@ -186,9 +186,9 @@ pub struct YDir {
     #[serde(rename = "SampleSpacing")]
     pub sample_spacing: f64,
     #[serde(rename = "NumSamples")]
-    pub num_samples: u64,
+    pub num_samples: i32,
     #[serde(rename = "FirstSample")]
-    pub first_sample: u64,
+    pub first_sample: i32,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SegmentList {
@@ -200,15 +200,15 @@ pub struct SegmentList {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Segment {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "StartLine")]
-    pub start_line: u64,
+    pub start_line: i32,
     #[serde(rename = "StartSample")]
-    pub start_sample: u64,
+    pub start_sample: i32,
     #[serde(rename = "EndLine")]
-    pub end_line: u64,
+    pub end_line: i32,
     #[serde(rename = "EndSample")]
-    pub end_sample: u64,
+    pub end_sample: i32,
     #[serde(rename = "Identifier")]
     pub identifier: String,
 }

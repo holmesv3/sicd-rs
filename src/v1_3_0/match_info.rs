@@ -4,31 +4,31 @@ use serde::Deserialize;
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct MatchInfo {
     #[serde(rename = "NumMatchTypes")]
-    pub num_match_types: u64,
+    pub num_match_types: i32,
     #[serde(rename = "MatchType")]
     pub match_type: Vec<MatchType>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct MatchType {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "TypeID")]
     pub type_id: String,
     #[serde(rename = "CurrentIndex")]
-    pub current_index: Option<usize>,
+    pub current_index: Option<i32>,
     #[serde(rename = "NumMatchCollections")]
-    pub num_match_collections: u64,
+    pub num_match_collections: i32,
     #[serde(rename = "MatchCollection")]
     pub match_collection: Option<Vec<MatchCollection>>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct MatchCollection {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "CoreName")]
     pub core_name: String,
     #[serde(rename = "MatchIndex")]
-    pub match_index: Option<usize>,
+    pub match_index: Option<i32>,
     #[serde(rename = "Parameter")]
     pub parameters: Option<Vec<Parameter>>,
 }

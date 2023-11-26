@@ -9,7 +9,7 @@ pub struct MatchInfo {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Collect {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "CollectorName")]
     pub collector_name: String,
     #[serde(rename = "IlluminatorName")]

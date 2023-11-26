@@ -15,3 +15,4 @@ nitf-rs = { version = "0.2.2" }
 ndarray = { version = "0.15", features = ["rayon"] }
 serde = { version = "1.0", features = ["derive"] }
 quick-xml = { version = "0.28", features = ["serialize"] }
+num-traits = "0.2.17"

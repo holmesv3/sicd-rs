@@ -37,11 +37,11 @@ pub struct TxRcvPolarizationProc {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RcvChanProc {
     #[serde(rename = "NumChanProc")]
-    pub num_chan_proc: u64,
+    pub num_chan_proc: i32,
     #[serde(rename = "PRFScaleFactor")]
     pub prf_scale_factor: Option<f64>,
     #[serde(rename = "ChanIndex")]
-    pub chan_index: usize,
+    pub chan_index: i32,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxFrequencyProc {

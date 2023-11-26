@@ -48,7 +48,7 @@ pub struct ICP {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ValidDataLL {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "Vertex")]
     pub vertex: Vec<IdxLL>,
 }
@@ -77,14 +77,14 @@ pub struct Desc {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Line {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "Endpoint")]
     pub endpoint: Vec<IdxLL>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Polygon {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "Vertex")]
     pub vertex: Vec<IdxLL>,
 }

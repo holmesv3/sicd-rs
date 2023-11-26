@@ -31,9 +31,9 @@ pub struct IppSet {
     #[serde(rename = "TEnd")]
     pub t_end: f64,
     #[serde(rename = "IPPStart")]
-    pub ipp_start: u64,
+    pub ipp_start: i32,
     #[serde(rename = "IPPEnd")]
-    pub ipp_end: u64,
+    pub ipp_end: i32,
     #[serde(rename = "IPPPoly")]
     pub ipp_poly: Poly1D,
 }

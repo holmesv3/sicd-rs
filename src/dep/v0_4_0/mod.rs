@@ -18,6 +18,7 @@ pub mod radiometric;
 pub mod scpcoa;
 pub mod timeline;
 
+use crate::to_usize;
 use antenna::Antenna;
 use collection_info::CollectionInfo;
 use error_statistics::ErrorStatistics;
@@ -82,7 +83,7 @@ pub struct RowCol {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxRowCol {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "Row")]
     pub row: i64,
     #[serde(rename = "Col")]
@@ -116,7 +117,7 @@ pub struct LLH {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxLLH {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "Lat")]
     pub lat: f64,
     #[serde(rename = "Lon")]
@@ -134,7 +135,7 @@ pub struct LL {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxLL {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "Lat")]
     pub lat: f64,
     #[serde(rename = "Lon")]
@@ -143,14 +144,14 @@ pub struct IdxLL {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Coef1D {
     #[serde(rename = "@exponent1")]
-    pub exponent1: usize,
+    pub exponent1: i32,
     #[serde(rename = "$value")]
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Poly1D {
     #[serde(rename = "@order1")]
-    pub order1: usize,
+    pub order1: i32,
     #[serde(rename = "$value")]
     pub coefs: Vec<Coef1D>,
 }
@@ -158,18 +159,18 @@ pub struct Poly1D {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Coef2D {
     #[serde(rename = "@exponent1")]
-    pub exponent1: usize,
+    pub exponent1: i32,
     #[serde(rename = "@exponent2")]
-    pub exponent2: usize,
+    pub exponent2: i32,
     #[serde(rename = "$value")]
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Poly2D {
     #[serde(rename = "@order1")]
-    pub order1: usize,
+    pub order1: i32,
     #[serde(rename = "@order2")]
-    pub order2: usize,
+    pub order2: i32,
     #[serde(rename = "$value")]
     pub coefs: Vec<Coef2D>,
 }
@@ -186,7 +187,7 @@ pub struct XyzPoly {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxXyzPoly {
     #[serde(rename = "@index")]
-    pub index: usize,
+    pub index: i32,
     #[serde(rename = "X")]
     pub x: Poly1D,
     #[serde(rename = "Y")]
@@ -206,9 +207,9 @@ pub struct Parameter {
 impl Poly1D {
     /// Parse the data in the polynomial to an array object
     pub fn to_array(&self) -> Array1<f64> {
-        let mut poly = Array1::zeros(self.order1 + 1);
+        let mut poly = Array1::zeros(to_usize(self.order1) + 1);
         for coef in &self.coefs {
-            let term = coef.exponent1;
+            let term: usize = to_usize(coef.exponent1);
             poly[term] = coef.value;
         }
         poly
@@ -223,13 +224,14 @@ impl Poly1D {
         res
     }
 }
+
 impl Poly2D {
     /// Parse the data in the polynomial to an array object
     pub fn to_array(&self) -> Array2<f64> {
-        let mut poly = Array2::zeros((self.order1 + 1, self.order2 + 1));
+        let mut poly = Array2::zeros((to_usize(self.order1) + 1, to_usize(self.order2) + 1));
         for coef in &self.coefs {
-            let term1 = coef.exponent1;
-            let term2 = coef.exponent2;
+            let term1 = to_usize(coef.exponent1);
+            let term2 = to_usize(coef.exponent2);
             poly[[term1, term2]] = coef.value;
         }
         poly

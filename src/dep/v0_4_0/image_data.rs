@@ -8,13 +8,13 @@ pub struct ImageData {
     #[serde(rename = "AmpTable")]
     pub amp_table: Option<AmpTable>,
     #[serde(rename = "NumRows")]
-    pub num_rows: u64,
+    pub num_rows: i32,
     #[serde(rename = "NumCols")]
-    pub num_cols: u64,
+    pub num_cols: i32,
     #[serde(rename = "FirstRow")]
-    pub first_row: u64,
+    pub first_row: i32,
     #[serde(rename = "FirstCol")]
-    pub first_col: u64,
+    pub first_col: i32,
     #[serde(rename = "FullImage")]
     pub full_image: FullImage,
     #[serde(rename = "SCPPixel")]
@@ -40,28 +40,28 @@ pub enum PixelTypeEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct AmpTable {
     #[serde(rename = "@size")]
-    pub size: u16, // 256
+    pub size: i32, // 256
     #[serde(rename = "Amplitude")]
     pub amplitude: Vec<Amplitude>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Amplitude {
     #[serde(rename = "@index")]
-    pub index: u8, // [0, 255]
+    pub index: i32, // [0, 255]
     #[serde(rename = "$value")]
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct FullImage {
     #[serde(rename = "NumRows")]
-    pub num_rows: u64,
+    pub num_rows: i32,
     #[serde(rename = "NumCols")]
-    pub num_cols: u64,
+    pub num_cols: i32,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ValidDataRC {
     #[serde(rename = "@size")]
-    pub size: u64,
+    pub size: i32,
     #[serde(rename = "Vertex")]
     pub vertex: Vec<IdxRowCol>,
 }
