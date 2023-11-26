@@ -6,7 +6,6 @@ use serde::Deserialize;
 pub mod antenna;
 pub mod error_statistics;
 pub mod geo_data;
-pub mod image_creation;
 pub mod image_data;
 pub mod image_formation;
 pub mod match_info;
@@ -18,6 +17,7 @@ pub mod scpcoa;
 pub mod timeline;
 
 pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
+pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::{
     IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Poly1D, Poly2D, RowCol, XyzPoly, CMPLX, LL, LLH, XYZ,
 };
@@ -25,7 +25,6 @@ pub use crate::dep::v0_5_0::grid::Grid;
 use antenna::Antenna;
 use error_statistics::ErrorStatistics;
 use geo_data::GeoData;
-use image_creation::ImageCreation;
 use image_data::ImageData;
 use image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
