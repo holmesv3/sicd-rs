@@ -12,6 +12,17 @@ pub mod radar_collection;
 pub mod radiometric;
 pub mod scpcoa;
 
+pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
+pub use crate::dep::v0_4_0::image_creation::ImageCreation;
+pub use crate::dep::v0_4_0::image_data::ImageData;
+pub use crate::dep::v0_4_0::pfa::Pfa;
+pub use crate::dep::v0_4_0::position::Position;
+pub use crate::dep::v0_4_0::timeline::Timeline;
+pub use crate::dep::v0_4_0::{
+    IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Poly1D, Poly2D, RowCol, XyzPoly, CMPLX, LL, LLH, XYZ,
+};
+pub use crate::dep::v0_5_0::grid::Grid;
+
 use antenna::Antenna;
 use error_statistics::ErrorStatistics;
 use geo_data::GeoData;
@@ -250,7 +261,7 @@ pub enum DualPolarization {
 
 #[cfg(test)]
 mod tests {
-    use crate::v1_3_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC};
+    use crate::dep::v0_4_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC};
 
     use super::*;
     use quick_xml::de::from_str;
