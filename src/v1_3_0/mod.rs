@@ -8,7 +8,6 @@ pub mod error_statistics;
 pub mod geo_data;
 pub mod image_formation;
 pub mod match_info;
-pub mod pfa;
 pub mod position;
 pub mod radar_collection;
 pub mod radiometric;
@@ -18,6 +17,7 @@ pub mod timeline;
 pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
 pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
+pub use crate::dep::v0_4_0::pfa::Pfa;
 pub use crate::dep::v0_4_0::{
     IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Poly1D, Poly2D, RowCol, XyzPoly, CMPLX, LL, LLH, XYZ,
 };
@@ -27,7 +27,6 @@ use error_statistics::ErrorStatistics;
 use geo_data::GeoData;
 use image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
-use pfa::Pfa;
 use position::Position;
 use radar_collection::RadarCollection;
 use radiometric::Radiometric;
