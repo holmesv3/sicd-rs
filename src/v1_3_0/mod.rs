@@ -1,41 +1,25 @@
 //! Common types and metadata definition for SICD Version 1.3.0 [2021-11-30]
 //!
 //! Backwards compatible with version 1, 1.1, 1.2.1
-use ndarray::{Array1, Array2};
 use serde::Deserialize;
 
 pub mod antenna;
-pub mod collection_info;
 pub mod error_statistics;
 pub mod geo_data;
-pub mod grid;
-pub mod image_creation;
-pub mod image_data;
 pub mod image_formation;
 pub mod match_info;
-pub mod pfa;
-pub mod position;
 pub mod radar_collection;
 pub mod radiometric;
 pub mod scpcoa;
-pub mod timeline;
 
-use crate::to_usize;
 use antenna::Antenna;
-use collection_info::CollectionInfo;
 use error_statistics::ErrorStatistics;
 use geo_data::GeoData;
-use grid::Grid;
-use image_creation::ImageCreation;
-use image_data::ImageData;
 use image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
-use pfa::Pfa;
-use position::Position;
 use radar_collection::RadarCollection;
 use radiometric::Radiometric;
 use scpcoa::ScpCoa;
-use timeline::Timeline;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SicdMeta {
@@ -73,129 +57,6 @@ pub struct SicdMeta {
     pub pfa: Option<Pfa>,
     #[serde(rename = "RMA")]
     pub rma: Option<Rma>,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct RowCol {
-    #[serde(rename = "Row")]
-    pub row: i64,
-    #[serde(rename = "Col")]
-    pub col: i64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct IdxRowCol {
-    #[serde(rename = "@index")]
-    pub index: i32,
-    #[serde(rename = "Row")]
-    pub row: i64,
-    #[serde(rename = "Col")]
-    pub col: i64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct CMPLX {
-    #[serde(rename = "Real")]
-    pub real: f64,
-    #[serde(rename = "Imag")]
-    pub imag: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct XYZ {
-    #[serde(rename = "X")]
-    pub x: f64,
-    #[serde(rename = "Y")]
-    pub y: f64,
-    #[serde(rename = "Z")]
-    pub z: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct LLH {
-    #[serde(rename = "Lat")]
-    pub lat: f64,
-    #[serde(rename = "Lon")]
-    pub lon: f64,
-    #[serde(rename = "HAE")]
-    pub hae: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct IdxLLH {
-    #[serde(rename = "@index")]
-    pub index: i32,
-    #[serde(rename = "Lat")]
-    pub lat: f64,
-    #[serde(rename = "Lon")]
-    pub lon: f64,
-    #[serde(rename = "HAE")]
-    pub hae: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct LL {
-    #[serde(rename = "Lat")]
-    pub lat: f64,
-    #[serde(rename = "Lon")]
-    pub lon: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct IdxLL {
-    #[serde(rename = "@index")]
-    pub index: i32,
-    #[serde(rename = "Lat")]
-    pub lat: f64,
-    #[serde(rename = "Lon")]
-    pub lon: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Coef1d {
-    #[serde(rename = "@exponent1")]
-    pub exponent1: i32,
-    #[serde(rename = "$value")]
-    pub value: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Poly1d {
-    #[serde(rename = "@order1")]
-    pub order1: i32,
-    #[serde(rename = "$value")]
-    pub coefs: Vec<Coef1d>,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Coef2d {
-    #[serde(rename = "@exponent1")]
-    pub exponent1: i32,
-    #[serde(rename = "@exponent2")]
-    pub exponent2: i32,
-    #[serde(rename = "$value")]
-    pub value: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Poly2d {
-    #[serde(rename = "@order1")]
-    pub order1: i32,
-    #[serde(rename = "@order2")]
-    pub order2: i32,
-    #[serde(rename = "$value")]
-    pub coefs: Vec<Coef2d>,
-}
-
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct XyzPoly {
-    #[serde(rename = "X")]
-    pub x: Poly1d,
-    #[serde(rename = "Y")]
-    pub y: Poly1d,
-    #[serde(rename = "Z")]
-    pub z: Poly1d,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct IdxXyzPoly {
-    #[serde(rename = "@index")]
-    pub index: i32,
-    #[serde(rename = "X")]
-    pub x: Poly1d,
-    #[serde(rename = "Y")]
-    pub y: Poly1d,
-    #[serde(rename = "Z")]
-    pub z: Poly1d,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -387,55 +248,6 @@ pub enum DualPolarization {
     UNKNOWN,
 }
 
-impl Poly1d {
-    /// Parse the data in the polynomial to an array object
-    pub fn to_array(&self) -> Array1<f64> {
-        let mut poly = Array1::zeros(to_usize(self.order1) + 1);
-        for coef in &self.coefs {
-            let term = to_usize(coef.exponent1);
-            poly[term] = coef.value;
-        }
-        poly
-    }
-
-    /// Evaluate the polynomial at a point
-    pub fn eval(&self, x: f64) -> f64 {
-        let mut res = 0f64;
-        for coef in &self.coefs {
-            res += coef.value * x.powi(coef.exponent1 as i32)
-        }
-        res
-    }
-}
-impl Poly2d {
-    /// Parse the data in the polynomial to an array object
-    pub fn to_array(&self) -> Array2<f64> {
-        let mut poly = Array2::zeros((to_usize(self.order1) + 1, to_usize(self.order2) + 1));
-        for coef in &self.coefs {
-            let term1 = to_usize(coef.exponent1);
-            let term2 = to_usize(coef.exponent2);
-            poly[[term1, term2]] = coef.value;
-        }
-        poly
-    }
-    /// Evaluate the polynomial at a point
-    pub fn eval(&self, x: f64, y: f64) -> f64 {
-        let mut res = 0f64;
-        for coef in &self.coefs {
-            res += coef.value * x.powi(coef.exponent1 as i32) * y.powi(coef.exponent2 as i32)
-        }
-        res
-    }
-}
-impl XyzPoly {
-    pub fn eval(&self, t: f64) -> Vec<f64> {
-        let x_pos = self.x.eval(t);
-        let y_pos = self.y.eval(t);
-        let z_pos = self.z.eval(t);
-        vec![x_pos, y_pos, z_pos]
-    }
-}
-
 #[cfg(test)]
 mod tests {
     use crate::v1_3_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC};
@@ -497,7 +309,7 @@ mod tests {
 
         let xml = r#"<Poly1d order1="1"><Coef1d exponent1="0">0</Coef1d>
             <Coef1d exponent1="1">0</Coef1d></Poly1d>"#;
-        assert!(match from_str::<Poly1d>(xml) {
+        assert!(match from_str::<Poly1D>(xml) {
             Ok(_) => true,
             Err(_) => false,
         });
@@ -507,7 +319,7 @@ mod tests {
             <Coef2d exponent1="1" exponent2="0">0</Coef2d>
             <Coef2d exponent1="0" exponent2="1">0</Coef2d>
             <Coef2d exponent1="1" exponent2="1">0</Coef2d></Poly2d>"#;
-        assert!(match from_str::<Poly2d>(xml) {
+        assert!(match from_str::<Poly2D>(xml) {
             Ok(_) => true,
             Err(_) => false,
         });

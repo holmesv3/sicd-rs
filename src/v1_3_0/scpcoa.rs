@@ -1,4 +1,5 @@
 use super::XYZ;
+pub use crate::dep::v0_4_0::scpcoa::SideOfTrack;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -31,16 +32,6 @@ pub struct ScpCoa {
     pub azim_ang: f64,
     #[serde(rename = "LayoverAng")]
     pub layover_ang: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct SideOfTrack {
-    #[serde(rename = "$text")]
-    pub value: SideOfTrackEnum,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub enum SideOfTrackEnum {
-    L,
-    R,
 }
 
 #[cfg(test)]

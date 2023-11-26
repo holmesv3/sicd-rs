@@ -1,4 +1,5 @@
-use super::{Poly1d, Poly2d, XyzPoly};
+use super::{Poly1D, XyzPoly};
+pub use crate::dep::v0_4_0::antenna::{Array, Elem, EB};
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -25,32 +26,11 @@ pub struct AntennaType {
     #[serde(rename = "Elem")]
     pub elem: Option<Elem>,
     #[serde(rename = "GainBSPoly")]
-    pub gain_bs_poly: Option<Poly1d>,
+    pub gain_bs_poly: Option<Poly1D>,
     #[serde(rename = "EBFreqShift")]
     pub eb_freq_shift: Option<bool>,
     #[serde(rename = "MLFreqDilation")]
     pub ml_freq_dilation: Option<bool>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct EB {
-    #[serde(rename = "DCXPoly")]
-    pub dcx_poly: Poly1d,
-    #[serde(rename = "DCYPoly")]
-    pub dcy_poly: Poly1d,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Array {
-    #[serde(rename = "GainPoly")]
-    pub gain_poly: Poly2d,
-    #[serde(rename = "PhasePoly")]
-    pub phase_poly: Poly2d,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Elem {
-    #[serde(rename = "GainPoly")]
-    pub gain_poly: Poly2d,
-    #[serde(rename = "PhasePoly")]
-    pub phase_poly: Poly2d,
 }
 
 #[cfg(test)]

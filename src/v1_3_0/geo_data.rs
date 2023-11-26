@@ -1,4 +1,7 @@
-use super::{IdxLL, LL, LLH, XYZ};
+use super::LL;
+pub use crate::dep::v0_4_0::geo_data::{
+    Desc, EarthModel, ImageCorners, Line, Polygon, ValidDataLL, SCP,
+};
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -15,44 +18,6 @@ pub struct GeoData {
     pub geo_info: Option<Vec<GeoInfo>>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct EarthModel {
-    #[serde(rename = "$text")]
-    pub value: EarthModelEnum,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub enum EarthModelEnum {
-    #[serde(rename = "WGS_84")]
-    WGS84,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct SCP {
-    #[serde(rename = "ECF")]
-    pub ecf: XYZ,
-    #[serde(rename = "LLH")]
-    pub llh: LLH,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct ImageCorners {
-    #[serde(rename = "ICP")]
-    pub icp: Vec<ICP>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct ICP {
-    #[serde(rename = "@index")]
-    pub index: String,
-    #[serde(rename = "Lat")]
-    pub lat: f64,
-    #[serde(rename = "Lon")]
-    pub lon: f64,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct ValidDataLL {
-    #[serde(rename = "@size")]
-    pub size: i32,
-    #[serde(rename = "Vertex")]
-    pub vertex: Vec<IdxLL>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct GeoInfo {
     #[serde(rename = "@name")]
     pub name: String,
@@ -66,27 +31,6 @@ pub struct GeoInfo {
     pub polygon: Option<Polygon>,
     #[serde(rename = "GeoInfo")]
     pub geo_info: Option<Vec<GeoInfo>>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Desc {
-    #[serde(rename = "@name")]
-    pub name: String,
-    #[serde(rename = "$value")]
-    pub value: Option<String>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Line {
-    #[serde(rename = "@size")]
-    pub size: i32,
-    #[serde(rename = "Endpoint")]
-    pub endpoint: Vec<IdxLL>,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Polygon {
-    #[serde(rename = "@size")]
-    pub size: i32,
-    #[serde(rename = "Vertex")]
-    pub vertex: Vec<IdxLL>,
 }
 
 #[cfg(test)]
