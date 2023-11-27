@@ -80,7 +80,10 @@ pub struct Parameter {
 
 #[cfg(test)]
 mod tests {
-    use crate::{dep::v0_4_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC}, v1_3_0::image_formation::RcvChanProc};
+    use crate::{
+        dep::v0_4_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC},
+        v1_3_0::image_formation::RcvChanProc,
+    };
 
     use super::*;
     use quick_xml::de::from_str;
@@ -1871,7 +1874,10 @@ mod tests {
         "#;
         assert!(match from_str::<RcvChanProc>(xml) {
             Ok(_) => true,
-            Err(err) => {dbg!(err);false},
+            Err(err) => {
+                dbg!(err);
+                false
+            }
         });
     }
     // #[test]
