@@ -258,8 +258,7 @@ impl XyzPoly {
 mod tests {
     use quick_xml::de::from_str;
 
-    use crate::dep::v0_4_0::SicdMeta;
-
+    use super::{CollectionInfo, GeoData, Grid, ImageCreation, ImageData, SicdMeta};
 
     #[test]
     fn test_gen_xml() {
@@ -929,7 +928,224 @@ mod tests {
         "#;
         assert!(match from_str::<SicdMeta>(xml) {
             Ok(_) => true,
-            Err(err) => {dbg!(err);false},
+            Err(err) => {
+                dbg!(err);
+                false
+            }
+        });
+    }
+    #[test]
+    fn test_gen_xml_collection_info() {
+        let xml = r#"
+  <CollectionInfo>
+    <CollectorName class="xs:string">string</CollectorName>
+    <IlluminatorName class="xs:string">string</IlluminatorName>
+    <CoreName class="xs:string">string</CoreName>
+    <CollectType class="xs:string">MONOSTATIC</CollectType>
+    <RadarMode>
+      <ModeType class="xs:string">SPOTLIGHT</ModeType>
+    </RadarMode>
+    <Classification class="xs:string">string</Classification>
+    <CountryCode class="xs:string">string</CountryCode>
+    <CountryCode class="xs:string">string</CountryCode>
+    <Parameter name="string" class="xs:string">string</Parameter>
+    <Parameter name="string" class="xs:string">string</Parameter>
+    <Parameter name="string" class="xs:string">string</Parameter>
+    <Parameter name="string" class="xs:string">string</Parameter>
+  </CollectionInfo>
+        "#;
+        assert!(match from_str::<CollectionInfo>(xml) {
+            Ok(_) => true,
+            Err(err) => {
+                dbg!(err);
+                false
+            }
+        });
+    }
+    #[test]
+    fn test_gen_xml_image_creation() {
+        let xml = r#"
+  <ImageCreation>
+    <Application class="xs:string">string</Application>
+    <DateTime class="xs:dateTime">1984-08-28T05:27:48.21</DateTime>
+    <Site class="xs:string">string</Site>
+    <Profile class="xs:string">string</Profile>
+  </ImageCreation>
+        "#;
+        assert!(match from_str::<ImageCreation>(xml) {
+            Ok(_) => true,
+            Err(err) => {
+                dbg!(err);
+                false
+            }
+        });
+    }
+    #[test]
+    fn test_gen_xml_image_data() {
+        let xml = r#"
+  <ImageData>
+    <PixelType class="xs:string">RE32F_IM32F</PixelType>
+    <AmpTable size="-2707">
+      <Amplitude index="3686" class="xs:double">-7078599999999.76</Amplitude>
+      <Amplitude index="1025" class="xs:double">21028400000000.2</Amplitude>
+    </AmpTable>
+    <NumRows class="xs:int">2816</NumRows>
+    <NumCols class="xs:int">1313</NumCols>
+    <FirstRow class="xs:int">-2905</FirstRow>
+    <FirstCol class="xs:int">-3467</FirstCol>
+    <FullImage>
+      <NumRows class="xs:int">135</NumRows>
+      <NumCols class="xs:int">-1971</NumCols>
+    </FullImage>
+    <SCPPixel>
+      <Row class="xs:int">1978</Row>
+      <Col class="xs:int">1467</Col>
+    </SCPPixel>
+    <ValidData size="545">
+      <Vertex index="-1561">
+        <Row class="xs:int">-3455</Row>
+        <Col class="xs:int">2979</Col>
+      </Vertex>
+      <Vertex index="-4756">
+        <Row class="xs:int">-108</Row>
+        <Col class="xs:int">3828</Col>
+      </Vertex>
+      <Vertex index="-1004">
+        <Row class="xs:int">1031</Row>
+        <Col class="xs:int">2580</Col>
+      </Vertex>
+    </ValidData>
+  </ImageData>
+        "#;
+        assert!(match from_str::<ImageData>(xml) {
+            Ok(_) => true,
+            Err(err) => {
+                dbg!(err);
+                false
+            }
+        });
+    }
+    #[test]
+    fn test_gen_xml_geo_data() {
+        let xml = r#"
+  <GeoData>
+    <EarthModel class="xs:string">WGS_84</EarthModel>
+    <SCP>
+      <ECF>
+        <X class="xs:double">-32922499999999.8</X>
+        <Y class="xs:double">45571300000000.2</Y>
+        <Z class="xs:double">-28286899999999.8</Z>
+      </ECF>
+      <LLH>
+        <Lat class="xs:double">24698700000000.2</Lat>
+        <Lon class="xs:double">-6815199999999.76</Lon>
+        <HAE class="xs:double">15901200000000.2</HAE>
+      </LLH>
+    </SCP>
+    <ImageCorners>
+      <ICP index="3:LRLC">
+        <Lat class="xs:double">-16505799999999.8</Lat>
+        <Lon class="xs:double">15760600000000.2</Lon>
+      </ICP>
+      <ICP index="2:FRLC">
+        <Lat class="xs:double">-30138199999999.8</Lat>
+        <Lon class="xs:double">18215300000000.2</Lon>
+      </ICP>
+      <ICP index="1:FRFC">
+        <Lat class="xs:double">7613900000000.24</Lat>
+        <Lon class="xs:double">38986600000000.2</Lon>
+      </ICP>
+      <ICP index="4:LRFC">
+        <Lat class="xs:double">19679800000000.2</Lat>
+        <Lon class="xs:double">19660400000000.2</Lon>
+      </ICP>
+    </ImageCorners>
+    <ValidData size="-1889">
+      <Vertex index="-3007">
+        <Lat class="xs:double">15413400000000.2</Lat>
+        <Lon class="xs:double">18658000000000.2</Lon>
+      </Vertex>
+      <Vertex index="-3956">
+        <Lat class="xs:double">-45829899999999.8</Lat>
+        <Lon class="xs:double">1316900000000.23</Lon>
+      </Vertex>
+      <Vertex index="4940">
+        <Lat class="xs:double">-48148799999999.8</Lat>
+        <Lon class="xs:double">30975500000000.2</Lon>
+      </Vertex>
+    </ValidData>
+    <GeoInfo name="string">
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+    </GeoInfo>
+  </GeoData>
+        "#;
+        assert!(match from_str::<GeoData>(xml) {
+            Ok(_) => true,
+            Err(err) => {
+                dbg!(err);
+                false
+            }
+        });
+    }
+    #[test]
+    fn test_gen_xml_grid() {
+        let xml = r#"
+  <Grid>
+    <ImagePlane class="xs:string">GROUND</ImagePlane>
+    <Type class="xs:string">RGAZIM</Type>
+    <TimeCOAPoly order1="-1052" order2="-4622">
+      <Coef exponent1="-4237" exponent2="2660" class="xs:double">-29866499999999.8</Coef>
+      <Coef exponent1="1945" exponent2="-1595" class="xs:double">-4506299999999.76</Coef>
+      <Coef exponent1="-4026" exponent2="-4356" class="xs:double">-20750399999999.8</Coef>
+      <Coef exponent1="594" exponent2="-4020" class="xs:double">-33942899999999.8</Coef>
+      <Coef exponent1="972" exponent2="1840" class="xs:double">-15645799999999.8</Coef>
+    </TimeCOAPoly>
+    <Row>
+      <UVectECF>
+        <X class="xs:double">-20727799999999.8</X>
+        <Y class="xs:double">23855300000000.2</Y>
+        <Z class="xs:double">29372000000000.2</Z>
+      </UVectECF>
+      <SS class="xs:double">21110500000000.2</SS>
+      <ImpRespWid class="xs:double">19682000000000.2</ImpRespWid>
+      <Sgn class="xs:int">2424</Sgn>
+      <ImpRespBW class="xs:double">20014300000000.2</ImpRespBW>
+      <KCtr class="xs:double">-12708799999999.8</KCtr>
+      <DeltaK1 class="xs:double">-41078599999999.8</DeltaK1>
+      <DeltaK2 class="xs:double">19824000000000.2</DeltaK2>
+      <DeltaKCOAPoly order1="-1146" order2="2472">
+        <Coef exponent1="-1708" exponent2="-2589" class="xs:double">26725500000000.2</Coef>
+      </DeltaKCOAPoly>
+      <WgtType class="xs:string">string</WgtType>
+    </Row>
+    <Col>
+      <UVectECF>
+        <X class="xs:double">15387100000000.2</X>
+        <Y class="xs:double">-47256499999999.8</Y>
+        <Z class="xs:double">40079100000000.2</Z>
+      </UVectECF>
+      <SS class="xs:double">24383100000000.2</SS>
+      <ImpRespWid class="xs:double">-13241899999999.8</ImpRespWid>
+      <Sgn class="xs:int">3169</Sgn>
+      <ImpRespBW class="xs:double">-3957199999999.77</ImpRespBW>
+      <KCtr class="xs:double">-18888599999999.8</KCtr>
+      <DeltaK1 class="xs:double">34461900000000.2</DeltaK1>
+      <DeltaK2 class="xs:double">41716700000000.2</DeltaK2>
+      <WgtType class="xs:string">string</WgtType>
+      <WgtFunct size="-1907">
+        <Wgt index="527" class="xs:double">-11849799999999.8</Wgt>
+        <Wgt index="-3877" class="xs:double">15082400000000.2</Wgt>
+      </WgtFunct>
+    </Col>
+  </Grid>
+        "#;
+        assert!(match from_str::<Grid>(xml) {
+            Ok(_) => true,
+            Err(err) => {
+                dbg!(err);
+                false
+            }
         });
     }
     // #[test]
