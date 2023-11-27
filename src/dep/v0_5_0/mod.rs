@@ -66,7 +66,7 @@ pub struct SicdMeta {
 mod tests {
     use quick_xml::de::from_str;
 
-    use crate::dep::{v0_5_0::{CollectionInfo, SicdMeta}, v0_4_0::image_formation::ImageFormation};
+    use crate::dep::v0_5_0::{CollectionInfo, ImageFormation, SicdMeta};
 
     #[test]
     fn test_gen_xml() {
@@ -791,7 +791,10 @@ mod tests {
         "#;
         assert!(match from_str::<SicdMeta>(xml) {
             Ok(_) => true,
-            Err(err) => {dbg!(err);false},
+            Err(err) => {
+                dbg!(err);
+                false
+            }
         });
     }
     #[test]
@@ -816,7 +819,10 @@ mod tests {
         "#;
         assert!(match from_str::<CollectionInfo>(xml) {
             Ok(_) => true,
-            Err(err) => {dbg!(err);false},
+            Err(err) => {
+                dbg!(err);
+                false
+            }
         });
     }
     #[test]
@@ -903,7 +909,10 @@ mod tests {
         "#;
         assert!(match from_str::<ImageFormation>(xml) {
             Ok(_) => true,
-            Err(err) => {dbg!(err);false},
+            Err(err) => {
+                dbg!(err);
+                false
+            }
         });
     }
     // #[test]
