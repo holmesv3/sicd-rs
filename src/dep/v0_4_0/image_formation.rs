@@ -114,7 +114,7 @@ pub struct PolCal {
     #[serde(rename = "HVAngleCompApplied")]
     pub hv_angle_comp_applied: bool,
     #[serde(rename = "DistortCorrectionApplied")]
-    pub distort_correction_applied: bool,
+    pub distort_correction_applied: Option<bool>,
     #[serde(rename = "Distortion")]
     pub distortion: Distortion,
 }

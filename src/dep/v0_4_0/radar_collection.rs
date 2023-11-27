@@ -128,7 +128,7 @@ pub struct ChanParameters {
     #[serde(rename = "@index")]
     pub index: i32,
     #[serde(rename = "TxRcvPolarization")]
-    pub tx_rcv_polarization: String, // TODO: Implement this enum
+    pub tx_rcv_polarization: Option<String>, // TODO: Implement this enum
     #[serde(rename = "RcvAPCIndex")]
     pub rcv_apc_index: Option<i32>,
 }
