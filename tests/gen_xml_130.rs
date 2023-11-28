@@ -6,312 +6,326 @@ use sicd_rs::{
 
 #[test]
 fn test_generated_xml() {
-    let xml = r#"<?xml version="1.0" encoding="utf-8"?>
+    let xml = r#"
+    <?xml version="1.0" encoding="utf-8"?>
 <!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
 <SICD xmlns="urn:SICD:1.3.0" xsi:schemaLocation="urn:SICD:1.3.0 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <CollectionInfo>
     <CollectorName>string</CollectorName>
     <IlluminatorName>string</IlluminatorName>
     <CoreName>string</CoreName>
-    <CollectType>MONOSTATIC</CollectType>
+    <CollectType>BISTATIC</CollectType>
     <RadarMode>
-      <ModeType>DYNAMIC STRIPMAP</ModeType>
+      <ModeType>SPOTLIGHT</ModeType>
+      <ModeID>string</ModeID>
     </RadarMode>
     <Classification>string</Classification>
     <CountryCode>string</CountryCode>
     <CountryCode>string</CountryCode>
+    <CountryCode>string</CountryCode>
+    <CountryCode>string</CountryCode>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
     <Parameter name="string">string</Parameter>
   </CollectionInfo>
   <ImageCreation>
     <Application>string</Application>
-    <DateTime>1994-04-05T10:27:33.85</DateTime>
+    <DateTime>2001-07-16T00:53:41.38</DateTime>
     <Site>string</Site>
     <Profile>string</Profile>
   </ImageCreation>
   <ImageData>
-    <PixelType>RE16I_IM16I</PixelType>
-    <AmpTable size="-1490">
-      <Amplitude index="2273">162200000000.235</Amplitude>
-      <Amplitude index="555">-43949299999999.8</Amplitude>
-      <Amplitude index="1752">2033500000000.23</Amplitude>
-      <Amplitude index="782">-49253599999999.8</Amplitude>
-      <Amplitude index="1410">39259000000000.2</Amplitude>
-      <Amplitude index="3550">-8400399999999.76</Amplitude>
-      <Amplitude index="1711">49045500000000.2</Amplitude>
-      <Amplitude index="12">35525600000000.2</Amplitude>
-      <Amplitude index="2757">39219800000000.2</Amplitude>
-      <Amplitude index="-4778">-7486199999999.76</Amplitude>
-      <Amplitude index="1095">-48358399999999.8</Amplitude>
-      <Amplitude index="-3986">-12052999999999.8</Amplitude>
-      <Amplitude index="483">24281200000000.2</Amplitude>
-      <Amplitude index="-4323">-18821199999999.8</Amplitude>
-      <Amplitude index="2107">43491900000000.2</Amplitude>
-      <Amplitude index="-619">31852100000000.2</Amplitude>
-      <Amplitude index="-2066">22261400000000.2</Amplitude>
-      <Amplitude index="1017">-42300599999999.8</Amplitude>
-      <Amplitude index="4210">-6153699999999.76</Amplitude>
-      <Amplitude index="964">12312700000000.2</Amplitude>
-      <Amplitude index="3536">-4628299999999.76</Amplitude>
-      <Amplitude index="4206">45800300000000.2</Amplitude>
-      <Amplitude index="-3825">27920800000000.2</Amplitude>
-      <Amplitude index="1812">33673500000000.2</Amplitude>
-      <Amplitude index="-3454">-2826699999999.77</Amplitude>
-      <Amplitude index="2818">-46796499999999.8</Amplitude>
-      <Amplitude index="-1712">-32673299999999.8</Amplitude>
-      <Amplitude index="-943">21088100000000.2</Amplitude>
-      <Amplitude index="-997">-32401699999999.8</Amplitude>
-      <Amplitude index="122">43235900000000.2</Amplitude>
-      <Amplitude index="-474">-23361999999999.8</Amplitude>
-      <Amplitude index="-2032">20606000000000.2</Amplitude>
-      <Amplitude index="-455">-46354899999999.8</Amplitude>
-      <Amplitude index="-3774">44849100000000.2</Amplitude>
-      <Amplitude index="-1113">-7581399999999.76</Amplitude>
-      <Amplitude index="4343">-16276299999999.8</Amplitude>
-      <Amplitude index="-2042">-10096399999999.8</Amplitude>
-      <Amplitude index="715">-34422799999999.8</Amplitude>
-      <Amplitude index="-4041">-35663799999999.8</Amplitude>
-      <Amplitude index="-2381">26905000000000.2</Amplitude>
-      <Amplitude index="-4384">-26901799999999.8</Amplitude>
-      <Amplitude index="-3428">-26103199999999.8</Amplitude>
-      <Amplitude index="-3469">-9393899999999.77</Amplitude>
-      <Amplitude index="-103">-37990399999999.8</Amplitude>
-      <Amplitude index="-1831">39083500000000.2</Amplitude>
-      <Amplitude index="1767">24499900000000.2</Amplitude>
-      <Amplitude index="4262">16405500000000.2</Amplitude>
-      <Amplitude index="-3295">8723900000000.24</Amplitude>
-      <Amplitude index="-3430">-28550299999999.8</Amplitude>
-      <Amplitude index="35">-41890399999999.8</Amplitude>
-      <Amplitude index="1566">23271700000000.2</Amplitude>
-      <Amplitude index="-520">23038900000000.2</Amplitude>
-      <Amplitude index="375">-5542399999999.76</Amplitude>
-      <Amplitude index="2363">42977800000000.2</Amplitude>
-      <Amplitude index="1017">-25006299999999.8</Amplitude>
-      <Amplitude index="1150">-24310699999999.8</Amplitude>
-      <Amplitude index="4141">24319700000000.2</Amplitude>
-      <Amplitude index="3708">-27836599999999.8</Amplitude>
-      <Amplitude index="-3908">-44220699999999.8</Amplitude>
-      <Amplitude index="530">-45156899999999.8</Amplitude>
-      <Amplitude index="467">-49746299999999.8</Amplitude>
-      <Amplitude index="1316">-209799999999.765</Amplitude>
-      <Amplitude index="2474">-31072699999999.8</Amplitude>
-      <Amplitude index="-890">13172800000000.2</Amplitude>
-      <Amplitude index="-2715">48427800000000.2</Amplitude>
-      <Amplitude index="4988">38136100000000.2</Amplitude>
-      <Amplitude index="1399">-31917599999999.8</Amplitude>
-      <Amplitude index="-3875">-17111599999999.8</Amplitude>
-      <Amplitude index="2830">-7317699999999.76</Amplitude>
-      <Amplitude index="2015">20852800000000.2</Amplitude>
-      <Amplitude index="1698">5992800000000.24</Amplitude>
-      <Amplitude index="183">-43303299999999.8</Amplitude>
-      <Amplitude index="-2242">-8015599999999.76</Amplitude>
-      <Amplitude index="3309">-31698299999999.8</Amplitude>
-      <Amplitude index="2933">44887500000000.2</Amplitude>
-      <Amplitude index="-219">-40083799999999.8</Amplitude>
-      <Amplitude index="1615">-4492099999999.76</Amplitude>
-      <Amplitude index="344">15403700000000.2</Amplitude>
-      <Amplitude index="-3989">45009400000000.2</Amplitude>
-      <Amplitude index="4829">-15181299999999.8</Amplitude>
-      <Amplitude index="-4664">-39547799999999.8</Amplitude>
-      <Amplitude index="2013">11747000000000.2</Amplitude>
-      <Amplitude index="-2489">23366100000000.2</Amplitude>
-      <Amplitude index="1170">23323700000000.2</Amplitude>
-      <Amplitude index="1307">4187100000000.23</Amplitude>
-      <Amplitude index="-614">18234400000000.2</Amplitude>
-      <Amplitude index="-1437">34442700000000.2</Amplitude>
-      <Amplitude index="-1214">48681700000000.2</Amplitude>
-      <Amplitude index="-158">6461900000000.24</Amplitude>
-      <Amplitude index="-2779">-17239699999999.8</Amplitude>
-      <Amplitude index="-1417">-27199499999999.8</Amplitude>
-      <Amplitude index="3384">-22034899999999.8</Amplitude>
-      <Amplitude index="62">39965500000000.2</Amplitude>
-      <Amplitude index="-2802">-31522699999999.8</Amplitude>
-      <Amplitude index="1465">-4156299999999.77</Amplitude>
-      <Amplitude index="-2722">33288900000000.2</Amplitude>
-      <Amplitude index="-561">-14667899999999.8</Amplitude>
-      <Amplitude index="1750">6528800000000.24</Amplitude>
-      <Amplitude index="3587">40087600000000.2</Amplitude>
-      <Amplitude index="3158">4215100000000.23</Amplitude>
-      <Amplitude index="3028">-40229999999999.8</Amplitude>
-      <Amplitude index="523">-24857299999999.8</Amplitude>
-      <Amplitude index="102">29572700000000.2</Amplitude>
-      <Amplitude index="2429">31711400000000.2</Amplitude>
-      <Amplitude index="-4235">4753300000000.24</Amplitude>
-      <Amplitude index="-3302">3651000000000.23</Amplitude>
-      <Amplitude index="2280">15533700000000.2</Amplitude>
-      <Amplitude index="4899">30554800000000.2</Amplitude>
-      <Amplitude index="-2339">-7840099999999.76</Amplitude>
-      <Amplitude index="-3887">-14853599999999.8</Amplitude>
-      <Amplitude index="138">-6773199999999.76</Amplitude>
-      <Amplitude index="-4132">-32771699999999.8</Amplitude>
-      <Amplitude index="-1859">10576000000000.2</Amplitude>
-      <Amplitude index="-2615">-49703699999999.8</Amplitude>
-      <Amplitude index="-3305">31333100000000.2</Amplitude>
-      <Amplitude index="-3719">8331300000000.24</Amplitude>
-      <Amplitude index="2488">17993700000000.2</Amplitude>
-      <Amplitude index="248">-23936499999999.8</Amplitude>
-      <Amplitude index="1757">8700100000000.24</Amplitude>
-      <Amplitude index="2694">21047900000000.2</Amplitude>
-      <Amplitude index="-3432">-9729499999999.77</Amplitude>
-      <Amplitude index="-3917">-40105999999999.8</Amplitude>
-      <Amplitude index="-2114">19124300000000.2</Amplitude>
-      <Amplitude index="-3951">28854400000000.2</Amplitude>
-      <Amplitude index="-1365">36942600000000.2</Amplitude>
-      <Amplitude index="-2008">-6292299999999.76</Amplitude>
-      <Amplitude index="2896">-3561699999999.77</Amplitude>
-      <Amplitude index="-4717">-12946499999999.8</Amplitude>
-      <Amplitude index="-4891">-11998799999999.8</Amplitude>
-      <Amplitude index="4373">40446400000000.2</Amplitude>
-      <Amplitude index="573">23991300000000.2</Amplitude>
-      <Amplitude index="1477">-23687399999999.8</Amplitude>
-      <Amplitude index="-806">8653400000000.24</Amplitude>
-      <Amplitude index="2877">-45193199999999.8</Amplitude>
-      <Amplitude index="-3695">22921600000000.2</Amplitude>
-      <Amplitude index="-3702">17909200000000.2</Amplitude>
-      <Amplitude index="1522">-9921599999999.77</Amplitude>
-      <Amplitude index="-3053">-38886499999999.8</Amplitude>
-      <Amplitude index="-1760">48782300000000.2</Amplitude>
-      <Amplitude index="3837">12287300000000.2</Amplitude>
-      <Amplitude index="9">-5008199999999.76</Amplitude>
-      <Amplitude index="1395">-19997499999999.8</Amplitude>
-      <Amplitude index="141">19106300000000.2</Amplitude>
-      <Amplitude index="2937">-21561199999999.8</Amplitude>
-      <Amplitude index="1516">-34573599999999.8</Amplitude>
-      <Amplitude index="-2503">-20430299999999.8</Amplitude>
-      <Amplitude index="1497">36496200000000.2</Amplitude>
-      <Amplitude index="-3468">-8313599999999.76</Amplitude>
-      <Amplitude index="2550">34518700000000.2</Amplitude>
-      <Amplitude index="1795">20205600000000.2</Amplitude>
-      <Amplitude index="4035">-44318499999999.8</Amplitude>
-      <Amplitude index="1580">13425300000000.2</Amplitude>
-      <Amplitude index="2396">12010200000000.2</Amplitude>
-      <Amplitude index="2849">-11117199999999.8</Amplitude>
-      <Amplitude index="-2303">41717400000000.2</Amplitude>
-      <Amplitude index="-4534">-47688699999999.8</Amplitude>
-      <Amplitude index="-37">-18556299999999.8</Amplitude>
-      <Amplitude index="-964">-39265399999999.8</Amplitude>
-      <Amplitude index="-3996">-15236399999999.8</Amplitude>
-      <Amplitude index="2490">22833000000000.2</Amplitude>
-      <Amplitude index="2928">334900000000.235</Amplitude>
-      <Amplitude index="-1036">47627300000000.2</Amplitude>
-      <Amplitude index="-205">33414100000000.2</Amplitude>
-      <Amplitude index="-4706">28721000000000.2</Amplitude>
-      <Amplitude index="-2524">27782100000000.2</Amplitude>
-      <Amplitude index="-1439">-2123399999999.77</Amplitude>
-      <Amplitude index="-1917">-31836299999999.8</Amplitude>
-      <Amplitude index="2194">-5593999999999.76</Amplitude>
-      <Amplitude index="2919">-49476099999999.8</Amplitude>
-      <Amplitude index="604">39403300000000.2</Amplitude>
-      <Amplitude index="4062">-9512899999999.77</Amplitude>
-      <Amplitude index="-4853">23445200000000.2</Amplitude>
-      <Amplitude index="-3923">-27341599999999.8</Amplitude>
-      <Amplitude index="2994">-16474799999999.8</Amplitude>
-      <Amplitude index="-386">-45413199999999.8</Amplitude>
-      <Amplitude index="-1836">-9259399999999.77</Amplitude>
-      <Amplitude index="-4038">45121600000000.2</Amplitude>
-      <Amplitude index="4092">-9984499999999.77</Amplitude>
-      <Amplitude index="1604">18173200000000.2</Amplitude>
-      <Amplitude index="-3453">40544500000000.2</Amplitude>
-      <Amplitude index="907">49769300000000.2</Amplitude>
-      <Amplitude index="-3587">-812399999999.765</Amplitude>
-      <Amplitude index="611">6781400000000.24</Amplitude>
-      <Amplitude index="2148">-18531999999999.8</Amplitude>
-      <Amplitude index="951">45952700000000.2</Amplitude>
-      <Amplitude index="-1846">-40481999999999.8</Amplitude>
-      <Amplitude index="2872">35495600000000.2</Amplitude>
-      <Amplitude index="3222">-11203799999999.8</Amplitude>
-      <Amplitude index="-113">16198800000000.2</Amplitude>
-      <Amplitude index="3686">-24706699999999.8</Amplitude>
-      <Amplitude index="-4652">19414900000000.2</Amplitude>
-      <Amplitude index="-1742">-29829999999999.8</Amplitude>
-      <Amplitude index="-386">44868600000000.2</Amplitude>
-      <Amplitude index="-1174">-14294099999999.8</Amplitude>
-      <Amplitude index="-2276">-18078699999999.8</Amplitude>
-      <Amplitude index="2837">-38982099999999.8</Amplitude>
-      <Amplitude index="3505">15499100000000.2</Amplitude>
-      <Amplitude index="-1967">40846400000000.2</Amplitude>
-      <Amplitude index="-2364">2281500000000.23</Amplitude>
-      <Amplitude index="-3266">3986900000000.23</Amplitude>
-      <Amplitude index="117">-1530299999999.77</Amplitude>
-      <Amplitude index="2402">184700000000.235</Amplitude>
-      <Amplitude index="2304">-27873599999999.8</Amplitude>
-      <Amplitude index="1202">-25875999999999.8</Amplitude>
-      <Amplitude index="-3710">2125900000000.23</Amplitude>
-      <Amplitude index="4115">49838500000000.2</Amplitude>
-      <Amplitude index="3131">40180200000000.2</Amplitude>
-      <Amplitude index="3707">39655100000000.2</Amplitude>
-      <Amplitude index="1719">43955900000000.2</Amplitude>
-      <Amplitude index="-4695">11239500000000.2</Amplitude>
-      <Amplitude index="-3148">-14222199999999.8</Amplitude>
-      <Amplitude index="-4577">-22414399999999.8</Amplitude>
-      <Amplitude index="-3242">-29474699999999.8</Amplitude>
-      <Amplitude index="-2553">-36779299999999.8</Amplitude>
-      <Amplitude index="516">41370600000000.2</Amplitude>
-      <Amplitude index="-3757">46584300000000.2</Amplitude>
-      <Amplitude index="-114">-17127999999999.8</Amplitude>
-      <Amplitude index="2412">5006400000000.24</Amplitude>
-      <Amplitude index="4540">32398800000000.2</Amplitude>
-      <Amplitude index="-287">-25988899999999.8</Amplitude>
-      <Amplitude index="-1715">-35867099999999.8</Amplitude>
-      <Amplitude index="-2720">25115600000000.2</Amplitude>
-      <Amplitude index="-923">28529900000000.2</Amplitude>
-      <Amplitude index="-2030">44870100000000.2</Amplitude>
-      <Amplitude index="2843">-9321899999999.77</Amplitude>
-      <Amplitude index="-2634">-17594799999999.8</Amplitude>
-      <Amplitude index="-77">6097400000000.24</Amplitude>
-      <Amplitude index="-1454">-34603299999999.8</Amplitude>
-      <Amplitude index="-576">-3567399999999.77</Amplitude>
-      <Amplitude index="-1740">2518000000000.23</Amplitude>
-      <Amplitude index="4766">-1200099999999.77</Amplitude>
-      <Amplitude index="1896">-28466099999999.8</Amplitude>
-      <Amplitude index="-1031">44565300000000.2</Amplitude>
-      <Amplitude index="98">-1557899999999.77</Amplitude>
-      <Amplitude index="-3394">-17938199999999.8</Amplitude>
-      <Amplitude index="4426">34786900000000.2</Amplitude>
-      <Amplitude index="-317">29038800000000.2</Amplitude>
-      <Amplitude index="-2161">-45608499999999.8</Amplitude>
-      <Amplitude index="-3702">-20889099999999.8</Amplitude>
-      <Amplitude index="3681">-10945899999999.8</Amplitude>
-      <Amplitude index="4082">-20402499999999.8</Amplitude>
-      <Amplitude index="-1521">-35515799999999.8</Amplitude>
-      <Amplitude index="1771">30029800000000.2</Amplitude>
-      <Amplitude index="-265">42764400000000.2</Amplitude>
-      <Amplitude index="4741">8721900000000.24</Amplitude>
-      <Amplitude index="-3924">-1036099999999.77</Amplitude>
-      <Amplitude index="-20">44608400000000.2</Amplitude>
-      <Amplitude index="-2365">34047900000000.2</Amplitude>
-      <Amplitude index="-483">-48732599999999.8</Amplitude>
-      <Amplitude index="-1458">-3793799999999.77</Amplitude>
-      <Amplitude index="-2245">31261500000000.2</Amplitude>
-      <Amplitude index="2881">-3630999999999.77</Amplitude>
-      <Amplitude index="-358">-11126299999999.8</Amplitude>
-      <Amplitude index="3558">20192600000000.2</Amplitude>
-      <Amplitude index="-2229">-18929099999999.8</Amplitude>
-      <Amplitude index="-4758">-34867699999999.8</Amplitude>
+    <PixelType>AMP8I_PHS8I</PixelType>
+    <AmpTable size="-2108">
+      <Amplitude index="-2945">35839600000000.2</Amplitude>
+      <Amplitude index="-4227">48471100000000.2</Amplitude>
+      <Amplitude index="-4710">48178500000000.2</Amplitude>
+      <Amplitude index="-1179">-33888699999999.8</Amplitude>
+      <Amplitude index="-1677">21511700000000.2</Amplitude>
+      <Amplitude index="842">22052600000000.2</Amplitude>
+      <Amplitude index="4190">-17212299999999.8</Amplitude>
+      <Amplitude index="-3995">42199900000000.2</Amplitude>
+      <Amplitude index="-4418">35582700000000.2</Amplitude>
+      <Amplitude index="-4312">15188600000000.2</Amplitude>
+      <Amplitude index="349">3140700000000.23</Amplitude>
+      <Amplitude index="1411">11033800000000.2</Amplitude>
+      <Amplitude index="-4906">928100000000.235</Amplitude>
+      <Amplitude index="-3998">25566500000000.2</Amplitude>
+      <Amplitude index="-1780">47988100000000.2</Amplitude>
+      <Amplitude index="3263">-31778099999999.8</Amplitude>
+      <Amplitude index="-1928">-6066899999999.76</Amplitude>
+      <Amplitude index="2920">42384700000000.2</Amplitude>
+      <Amplitude index="3197">15139600000000.2</Amplitude>
+      <Amplitude index="-39">7869100000000.24</Amplitude>
+      <Amplitude index="1278">23110400000000.2</Amplitude>
+      <Amplitude index="-1453">17305700000000.2</Amplitude>
+      <Amplitude index="-1894">4599600000000.24</Amplitude>
+      <Amplitude index="-1943">-32943599999999.8</Amplitude>
+      <Amplitude index="-3251">-12518799999999.8</Amplitude>
+      <Amplitude index="2116">44431600000000.2</Amplitude>
+      <Amplitude index="-2796">33463700000000.2</Amplitude>
+      <Amplitude index="1775">17411800000000.2</Amplitude>
+      <Amplitude index="-2827">-3302699999999.77</Amplitude>
+      <Amplitude index="4753">1967400000000.23</Amplitude>
+      <Amplitude index="3816">12639600000000.2</Amplitude>
+      <Amplitude index="3391">-14753799999999.8</Amplitude>
+      <Amplitude index="3888">-9805799999999.77</Amplitude>
+      <Amplitude index="-867">-2036699999999.77</Amplitude>
+      <Amplitude index="359">-32332599999999.8</Amplitude>
+      <Amplitude index="-3977">-9318699999999.77</Amplitude>
+      <Amplitude index="-1403">-990199999999.765</Amplitude>
+      <Amplitude index="-4759">30377600000000.2</Amplitude>
+      <Amplitude index="-3233">46804700000000.2</Amplitude>
+      <Amplitude index="-2002">-3662899999999.77</Amplitude>
+      <Amplitude index="-2964">42959700000000.2</Amplitude>
+      <Amplitude index="808">44723500000000.2</Amplitude>
+      <Amplitude index="-2317">38195200000000.2</Amplitude>
+      <Amplitude index="4618">-2745699999999.77</Amplitude>
+      <Amplitude index="2618">-38213299999999.8</Amplitude>
+      <Amplitude index="2066">-14730399999999.8</Amplitude>
+      <Amplitude index="1761">47647300000000.2</Amplitude>
+      <Amplitude index="1971">-49859099999999.8</Amplitude>
+      <Amplitude index="3920">-49776299999999.8</Amplitude>
+      <Amplitude index="2842">40863100000000.2</Amplitude>
+      <Amplitude index="-3674">32607400000000.2</Amplitude>
+      <Amplitude index="1347">49823100000000.2</Amplitude>
+      <Amplitude index="-2275">-19525799999999.8</Amplitude>
+      <Amplitude index="846">23033300000000.2</Amplitude>
+      <Amplitude index="3106">37373900000000.2</Amplitude>
+      <Amplitude index="-26">-25075599999999.8</Amplitude>
+      <Amplitude index="-3328">1197200000000.23</Amplitude>
+      <Amplitude index="-1839">45202600000000.2</Amplitude>
+      <Amplitude index="-4544">39183000000000.2</Amplitude>
+      <Amplitude index="-4159">-49310499999999.8</Amplitude>
+      <Amplitude index="-598">44080200000000.2</Amplitude>
+      <Amplitude index="2178">-8197599999999.76</Amplitude>
+      <Amplitude index="-299">24963200000000.2</Amplitude>
+      <Amplitude index="2308">-11679399999999.8</Amplitude>
+      <Amplitude index="2930">-47732999999999.8</Amplitude>
+      <Amplitude index="4117">-32552999999999.8</Amplitude>
+      <Amplitude index="-3162">-10886799999999.8</Amplitude>
+      <Amplitude index="-1693">-12250099999999.8</Amplitude>
+      <Amplitude index="-2051">8252800000000.24</Amplitude>
+      <Amplitude index="1748">46358200000000.2</Amplitude>
+      <Amplitude index="-2027">-26854499999999.8</Amplitude>
+      <Amplitude index="1620">38807600000000.2</Amplitude>
+      <Amplitude index="1205">-4268899999999.77</Amplitude>
+      <Amplitude index="-3145">-33592099999999.8</Amplitude>
+      <Amplitude index="1604">24504200000000.2</Amplitude>
+      <Amplitude index="4558">-49979199999999.8</Amplitude>
+      <Amplitude index="4181">27731300000000.2</Amplitude>
+      <Amplitude index="-315">-30815299999999.8</Amplitude>
+      <Amplitude index="-3917">-28335199999999.8</Amplitude>
+      <Amplitude index="281">2285100000000.23</Amplitude>
+      <Amplitude index="740">-29857099999999.8</Amplitude>
+      <Amplitude index="4373">28788500000000.2</Amplitude>
+      <Amplitude index="4620">-17706099999999.8</Amplitude>
+      <Amplitude index="-4346">27607700000000.2</Amplitude>
+      <Amplitude index="-3187">43860100000000.2</Amplitude>
+      <Amplitude index="1571">-3689199999999.77</Amplitude>
+      <Amplitude index="-2829">-37944499999999.8</Amplitude>
+      <Amplitude index="2096">-29130099999999.8</Amplitude>
+      <Amplitude index="-2212">32974000000000.2</Amplitude>
+      <Amplitude index="2976">-48719299999999.8</Amplitude>
+      <Amplitude index="641">6668100000000.24</Amplitude>
+      <Amplitude index="2228">-45201299999999.8</Amplitude>
+      <Amplitude index="-4331">41152800000000.2</Amplitude>
+      <Amplitude index="-2436">-9347599999999.77</Amplitude>
+      <Amplitude index="4227">-36112699999999.8</Amplitude>
+      <Amplitude index="-2308">-42172499999999.8</Amplitude>
+      <Amplitude index="-4456">-34809999999999.8</Amplitude>
+      <Amplitude index="-1104">-40411399999999.8</Amplitude>
+      <Amplitude index="-2058">37410000000000.2</Amplitude>
+      <Amplitude index="4261">-20248399999999.8</Amplitude>
+      <Amplitude index="-1081">-9058999999999.77</Amplitude>
+      <Amplitude index="4828">22177100000000.2</Amplitude>
+      <Amplitude index="-4121">-733599999999.765</Amplitude>
+      <Amplitude index="2831">29754400000000.2</Amplitude>
+      <Amplitude index="-4323">-24022299999999.8</Amplitude>
+      <Amplitude index="4130">-22148399999999.8</Amplitude>
+      <Amplitude index="-809">1530400000000.23</Amplitude>
+      <Amplitude index="4587">-49269999999999.8</Amplitude>
+      <Amplitude index="-214">38931600000000.2</Amplitude>
+      <Amplitude index="2210">-44952699999999.8</Amplitude>
+      <Amplitude index="-4334">15888200000000.2</Amplitude>
+      <Amplitude index="3534">-45762199999999.8</Amplitude>
+      <Amplitude index="1694">7882600000000.24</Amplitude>
+      <Amplitude index="-913">-43482199999999.8</Amplitude>
+      <Amplitude index="2310">11369200000000.2</Amplitude>
+      <Amplitude index="4145">-9528399999999.77</Amplitude>
+      <Amplitude index="4037">5000000000.23491</Amplitude>
+      <Amplitude index="1209">-34526599999999.8</Amplitude>
+      <Amplitude index="839">-49893799999999.8</Amplitude>
+      <Amplitude index="4600">7423300000000.24</Amplitude>
+      <Amplitude index="-3716">-4117399999999.77</Amplitude>
+      <Amplitude index="-1612">16287800000000.2</Amplitude>
+      <Amplitude index="-2742">49072600000000.2</Amplitude>
+      <Amplitude index="1592">3911000000000.23</Amplitude>
+      <Amplitude index="-3068">-11770099999999.8</Amplitude>
+      <Amplitude index="1173">-9516499999999.77</Amplitude>
+      <Amplitude index="-3469">37560100000000.2</Amplitude>
+      <Amplitude index="-2691">23302200000000.2</Amplitude>
+      <Amplitude index="560">44044800000000.2</Amplitude>
+      <Amplitude index="-4476">911300000000.235</Amplitude>
+      <Amplitude index="-4160">21795200000000.2</Amplitude>
+      <Amplitude index="-4334">-4595799999999.76</Amplitude>
+      <Amplitude index="-1548">831400000000.235</Amplitude>
+      <Amplitude index="-1252">41903000000000.2</Amplitude>
+      <Amplitude index="3944">30397100000000.2</Amplitude>
+      <Amplitude index="-766">-2246699999999.77</Amplitude>
+      <Amplitude index="4293">-35324599999999.8</Amplitude>
+      <Amplitude index="4221">10774200000000.2</Amplitude>
+      <Amplitude index="-1799">-30945699999999.8</Amplitude>
+      <Amplitude index="3165">17863200000000.2</Amplitude>
+      <Amplitude index="4196">36958100000000.2</Amplitude>
+      <Amplitude index="3720">-15134499999999.8</Amplitude>
+      <Amplitude index="4964">971200000000.235</Amplitude>
+      <Amplitude index="-2484">-47193599999999.8</Amplitude>
+      <Amplitude index="-2309">38788000000000.2</Amplitude>
+      <Amplitude index="987">14340400000000.2</Amplitude>
+      <Amplitude index="4486">-4906699999999.76</Amplitude>
+      <Amplitude index="-97">-8955499999999.77</Amplitude>
+      <Amplitude index="-1078">38474700000000.2</Amplitude>
+      <Amplitude index="-1824">21752700000000.2</Amplitude>
+      <Amplitude index="1159">24016400000000.2</Amplitude>
+      <Amplitude index="1447">-11077899999999.8</Amplitude>
+      <Amplitude index="4589">-36024399999999.8</Amplitude>
+      <Amplitude index="-244">-49364199999999.8</Amplitude>
+      <Amplitude index="4535">12320500000000.2</Amplitude>
+      <Amplitude index="-871">-13455499999999.8</Amplitude>
+      <Amplitude index="-3761">-12621899999999.8</Amplitude>
+      <Amplitude index="895">-28561099999999.8</Amplitude>
+      <Amplitude index="3460">21793300000000.2</Amplitude>
+      <Amplitude index="-424">33551600000000.2</Amplitude>
+      <Amplitude index="-2433">-15321499999999.8</Amplitude>
+      <Amplitude index="1499">-49347899999999.8</Amplitude>
+      <Amplitude index="-2948">28004200000000.2</Amplitude>
+      <Amplitude index="289">-2166499999999.77</Amplitude>
+      <Amplitude index="1565">1162900000000.23</Amplitude>
+      <Amplitude index="-2845">-6465499999999.76</Amplitude>
+      <Amplitude index="3729">-40099199999999.8</Amplitude>
+      <Amplitude index="-4372">-32053199999999.8</Amplitude>
+      <Amplitude index="-2751">-1723799999999.77</Amplitude>
+      <Amplitude index="-1102">35664500000000.2</Amplitude>
+      <Amplitude index="-4659">-25475499999999.8</Amplitude>
+      <Amplitude index="-4255">14589700000000.2</Amplitude>
+      <Amplitude index="-251">-26669999999999.8</Amplitude>
+      <Amplitude index="195">7486700000000.24</Amplitude>
+      <Amplitude index="3615">-22412799999999.8</Amplitude>
+      <Amplitude index="645">17430300000000.2</Amplitude>
+      <Amplitude index="-729">-1786799999999.77</Amplitude>
+      <Amplitude index="-392">-23091099999999.8</Amplitude>
+      <Amplitude index="-4098">13818800000000.2</Amplitude>
+      <Amplitude index="-3160">-32118999999999.8</Amplitude>
+      <Amplitude index="1109">49723100000000.2</Amplitude>
+      <Amplitude index="-1501">-5810499999999.76</Amplitude>
+      <Amplitude index="-923">47758400000000.2</Amplitude>
+      <Amplitude index="-74">-47509599999999.8</Amplitude>
+      <Amplitude index="-1890">-8998699999999.77</Amplitude>
+      <Amplitude index="4895">-13679499999999.8</Amplitude>
+      <Amplitude index="-1719">10099400000000.2</Amplitude>
+      <Amplitude index="3014">-48853499999999.8</Amplitude>
+      <Amplitude index="-2278">-49597099999999.8</Amplitude>
+      <Amplitude index="316">47192400000000.2</Amplitude>
+      <Amplitude index="-2395">45401600000000.2</Amplitude>
+      <Amplitude index="1169">-11938199999999.8</Amplitude>
+      <Amplitude index="4472">4120100000000.23</Amplitude>
+      <Amplitude index="-4918">-10923899999999.8</Amplitude>
+      <Amplitude index="1382">29366600000000.2</Amplitude>
+      <Amplitude index="-4108">8668400000000.24</Amplitude>
+      <Amplitude index="-2012">-28900899999999.8</Amplitude>
+      <Amplitude index="-2542">-46308599999999.8</Amplitude>
+      <Amplitude index="3954">13264300000000.2</Amplitude>
+      <Amplitude index="-2618">-263399999999.765</Amplitude>
+      <Amplitude index="2407">-541399999999.765</Amplitude>
+      <Amplitude index="-2362">-4856199999999.76</Amplitude>
+      <Amplitude index="-2136">-29872799999999.8</Amplitude>
+      <Amplitude index="-1538">32611300000000.2</Amplitude>
+      <Amplitude index="1808">-5064899999999.76</Amplitude>
+      <Amplitude index="4968">-41379299999999.8</Amplitude>
+      <Amplitude index="-3934">-28792899999999.8</Amplitude>
+      <Amplitude index="4183">15685500000000.2</Amplitude>
+      <Amplitude index="-1197">46924700000000.2</Amplitude>
+      <Amplitude index="-53">36649900000000.2</Amplitude>
+      <Amplitude index="4693">-39821099999999.8</Amplitude>
+      <Amplitude index="-1133">1735800000000.23</Amplitude>
+      <Amplitude index="-1792">-9716799999999.77</Amplitude>
+      <Amplitude index="-4356">-38286099999999.8</Amplitude>
+      <Amplitude index="-1448">26445500000000.2</Amplitude>
+      <Amplitude index="-3839">13960300000000.2</Amplitude>
+      <Amplitude index="2658">-46579599999999.8</Amplitude>
+      <Amplitude index="-2688">26596300000000.2</Amplitude>
+      <Amplitude index="1902">-33455599999999.8</Amplitude>
+      <Amplitude index="-4057">24587900000000.2</Amplitude>
+      <Amplitude index="-3050">-31787599999999.8</Amplitude>
+      <Amplitude index="2100">-31116099999999.8</Amplitude>
+      <Amplitude index="2968">-49697699999999.8</Amplitude>
+      <Amplitude index="-199">-41330499999999.8</Amplitude>
+      <Amplitude index="-2073">8891800000000.23</Amplitude>
+      <Amplitude index="1566">42613100000000.2</Amplitude>
+      <Amplitude index="-3621">-12830199999999.8</Amplitude>
+      <Amplitude index="280">13895900000000.2</Amplitude>
+      <Amplitude index="-3921">24648300000000.2</Amplitude>
+      <Amplitude index="-3693">38352300000000.2</Amplitude>
+      <Amplitude index="-3632">-27096699999999.8</Amplitude>
+      <Amplitude index="-291">41630600000000.2</Amplitude>
+      <Amplitude index="-1667">-14276199999999.8</Amplitude>
+      <Amplitude index="-1796">-42758699999999.8</Amplitude>
+      <Amplitude index="4809">-34770399999999.8</Amplitude>
+      <Amplitude index="4667">-28509599999999.8</Amplitude>
+      <Amplitude index="3750">24886400000000.2</Amplitude>
+      <Amplitude index="1715">28722100000000.2</Amplitude>
+      <Amplitude index="-1082">-30212599999999.8</Amplitude>
+      <Amplitude index="2205">-18224099999999.8</Amplitude>
+      <Amplitude index="4228">47774300000000.2</Amplitude>
+      <Amplitude index="3244">26630100000000.2</Amplitude>
+      <Amplitude index="-3921">-31004599999999.8</Amplitude>
+      <Amplitude index="17">-10586699999999.8</Amplitude>
+      <Amplitude index="62">9221500000000.23</Amplitude>
+      <Amplitude index="1581">44369000000000.2</Amplitude>
+      <Amplitude index="-4652">-28926099999999.8</Amplitude>
+      <Amplitude index="1090">46599500000000.2</Amplitude>
+      <Amplitude index="2112">29369300000000.2</Amplitude>
+      <Amplitude index="3556">-6041599999999.76</Amplitude>
+      <Amplitude index="1826">-9234699999999.77</Amplitude>
+      <Amplitude index="-3942">-35956599999999.8</Amplitude>
+      <Amplitude index="1222">-5833799999999.76</Amplitude>
+      <Amplitude index="-4489">-11096499999999.8</Amplitude>
+      <Amplitude index="2002">24079800000000.2</Amplitude>
+      <Amplitude index="-2528">40999800000000.2</Amplitude>
     </AmpTable>
-    <NumRows>4355</NumRows>
-    <NumCols>1806</NumCols>
-    <FirstRow>448</FirstRow>
-    <FirstCol>966</FirstCol>
+    <NumRows>3129</NumRows>
+    <NumCols>-3409</NumCols>
+    <FirstRow>2046</FirstRow>
+    <FirstCol>-3567</FirstCol>
     <FullImage>
-      <NumRows>734</NumRows>
-      <NumCols>-471</NumCols>
+      <NumRows>-1113</NumRows>
+      <NumCols>-4770</NumCols>
     </FullImage>
     <SCPPixel>
-      <Row>-566</Row>
-      <Col>-3829</Col>
+      <Row>2055</Row>
+      <Col>981</Col>
     </SCPPixel>
-    <ValidData size="-939">
-      <Vertex index="79">
-        <Row>-2116</Row>
-        <Col>2716</Col>
+    <ValidData size="-2191">
+      <Vertex index="3719">
+        <Row>1662</Row>
+        <Col>-3873</Col>
       </Vertex>
-      <Vertex index="1506">
-        <Row>4563</Row>
-        <Col>625</Col>
+      <Vertex index="1939">
+        <Row>2481</Row>
+        <Col>-2781</Col>
       </Vertex>
-      <Vertex index="-1709">
-        <Row>4069</Row>
-        <Col>2576</Col>
+      <Vertex index="-2500">
+        <Row>-4934</Row>
+        <Col>2123</Col>
+      </Vertex>
+      <Vertex index="841">
+        <Row>2171</Row>
+        <Col>992</Col>
+      </Vertex>
+      <Vertex index="-2385">
+        <Row>4948</Row>
+        <Col>1491</Col>
       </Vertex>
     </ValidData>
   </ImageData>
@@ -319,90 +333,84 @@ fn test_generated_xml() {
     <EarthModel>WGS_84</EarthModel>
     <SCP>
       <ECF>
-        <X>21850700000000.2</X>
-        <Y>-28553899999999.8</Y>
-        <Z>32045500000000.2</Z>
+        <X>-26766399999999.8</X>
+        <Y>-45636599999999.8</Y>
+        <Z>-39475099999999.8</Z>
       </ECF>
       <LLH>
-        <Lat>65.7781258039451</Lat>
-        <Lon>54.9804658039451</Lon>
-        <HAE>43153600000000.2</HAE>
+        <Lat>-63.8263741960549</Lat>
+        <Lon>40.8497458039451</Lon>
+        <HAE>19690000000000.2</HAE>
       </LLH>
     </SCP>
     <ImageCorners>
-      <ICP index="3:LRLC">
-        <Lat>44395600000000.2</Lat>
-        <Lon>18526500000000.2</Lon>
+      <ICP index="1:FRFC">
+        <Lat>25190500000000.2</Lat>
+        <Lon>19915100000000.2</Lon>
+      </ICP>
+      <ICP index="1:FRFC">
+        <Lat>-32725699999999.8</Lat>
+        <Lon>30433500000000.2</Lon>
+      </ICP>
+      <ICP index="1:FRFC">
+        <Lat>34308600000000.2</Lat>
+        <Lon>34118400000000.2</Lon>
       </ICP>
       <ICP index="3:LRLC">
-        <Lat>-7840199999999.76</Lat>
-        <Lon>-20680199999999.8</Lon>
-      </ICP>
-      <ICP index="3:LRLC">
-        <Lat>11098700000000.2</Lat>
-        <Lon>31696400000000.2</Lon>
-      </ICP>
-      <ICP index="4:LRFC">
-        <Lat>20334300000000.2</Lat>
-        <Lon>30775700000000.2</Lon>
+        <Lat>40011400000000.2</Lat>
+        <Lon>-19668099999999.8</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-555">
-      <Vertex index="-3944">
-        <Lat>-7.80209419605491</Lat>
-        <Lon>178.084265803945</Lon>
+    <ValidData size="594">
+      <Vertex index="-4637">
+        <Lat>-35.9310541960549</Lat>
+        <Lon>-132.129894196055</Lon>
       </Vertex>
-      <Vertex index="-482">
-        <Lat>-48.1665541960549</Lat>
-        <Lon>-167.798334196055</Lon>
+      <Vertex index="1829">
+        <Lat>-44.2972741960549</Lat>
+        <Lon>12.1815058039451</Lon>
       </Vertex>
-      <Vertex index="-2355">
-        <Lat>-17.9710141960549</Lat>
-        <Lon>136.863545803945</Lon>
+      <Vertex index="2003">
+        <Lat>78.0859858039451</Lat>
+        <Lon>39.8089858039451</Lon>
       </Vertex>
-      <Vertex index="1224">
-        <Lat>-82.3701541960549</Lat>
-        <Lon>-138.519534196055</Lon>
+      <Vertex index="271">
+        <Lat>48.7868458039451</Lat>
+        <Lon>128.292305803945</Lon>
+      </Vertex>
+      <Vertex index="-1454">
+        <Lat>-64.9918741960549</Lat>
+        <Lon>-143.275494196055</Lon>
       </Vertex>
     </ValidData>
     <GeoInfo name="string">
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Line size="-3754">
+        <Endpoint index="-4695">
+          <Lat>-39442399999999.8</Lat>
+          <Lon>46177200000000.2</Lon>
+        </Endpoint>
+        <Endpoint index="4909">
+          <Lat>-16560399999999.8</Lat>
+          <Lon>-11080299999999.8</Lon>
+        </Endpoint>
+      </Line>
+      <GeoInfo name="string" />
+    </GeoInfo>
+    <GeoInfo name="string">
       <Point>
-        <Lat>25.8773458039451</Lat>
-        <Lon>-153.248214196055</Lon>
+        <Lat>24.7417258039451</Lat>
+        <Lon>27.3461458039451</Lon>
       </Point>
-    </GeoInfo>
-    <GeoInfo name="string">
-      <Desc name="string">string</Desc>
       <GeoInfo name="string" />
       <GeoInfo name="string" />
       <GeoInfo name="string" />
     </GeoInfo>
     <GeoInfo name="string">
       <Desc name="string">string</Desc>
-      <Desc name="string">string</Desc>
-      <Desc name="string">string</Desc>
-      <Desc name="string">string</Desc>
-    </GeoInfo>
-    <GeoInfo name="string">
-      <Desc name="string">string</Desc>
-      <Desc name="string">string</Desc>
-      <Desc name="string">string</Desc>
-      <Polygon size="956">
-        <Vertex index="1973">
-          <Lat>62.5789858039451</Lat>
-          <Lon>53.2431058039451</Lon>
-        </Vertex>
-        <Vertex index="2391">
-          <Lat>87.1587058039451</Lat>
-          <Lon>-178.924494196055</Lon>
-        </Vertex>
-        <Vertex index="706">
-          <Lat>88.5110458039451</Lat>
-          <Lon>111.193745803945</Lon>
-        </Vertex>
-      </Polygon>
       <GeoInfo name="string" />
       <GeoInfo name="string" />
       <GeoInfo name="string" />
@@ -410,227 +418,273 @@ fn test_generated_xml() {
     </GeoInfo>
     <GeoInfo name="string">
       <Desc name="string">string</Desc>
-      <Desc name="string">string</Desc>
-      <Polygon size="1041">
-        <Vertex index="3392">
-          <Lat>-0.858954196054914</Lat>
-          <Lon>-86.4782941960549</Lon>
-        </Vertex>
-        <Vertex index="629">
-          <Lat>30.6257458039451</Lat>
-          <Lon>-17.9425741960549</Lon>
-        </Vertex>
-        <Vertex index="1942">
-          <Lat>27.6751858039451</Lat>
-          <Lon>74.3776258039451</Lon>
-        </Vertex>
-      </Polygon>
       <GeoInfo name="string" />
       <GeoInfo name="string" />
       <GeoInfo name="string" />
     </GeoInfo>
   </GeoData>
   <Grid>
-    <ImagePlane>OTHER</ImagePlane>
-    <Type>XRGYCR</Type>
-    <TimeCOAPoly order1="2533" order2="-2782">
-      <Coef exponent1="4532" exponent2="-2122">-23411599999999.8</Coef>
-      <Coef exponent1="4739" exponent2="1189">42445900000000.2</Coef>
-      <Coef exponent1="3926" exponent2="2926">7617500000000.24</Coef>
+    <ImagePlane>SLANT</ImagePlane>
+    <Type>RGZERO</Type>
+    <TimeCOAPoly order1="2947" order2="956">
+      <Coef exponent1="6840" exponent2="1171">3304600000000.23</Coef>
+      <Coef exponent1="7273" exponent2="1947">-1469999999999.77</Coef>
     </TimeCOAPoly>
     <Row>
       <UVectECF>
-        <X>-48862399999999.8</X>
-        <Y>-12354999999999.8</Y>
-        <Z>-40670399999999.8</Z>
+        <X>23570000000000.2</X>
+        <Y>13139800000000.2</Y>
+        <Z>39955400000000.2</Z>
       </UVectECF>
-      <SS>10778800000000.2</SS>
-      <ImpRespWid>-9395999999999.77</ImpRespWid>
+      <SS>29083400000000.2</SS>
+      <ImpRespWid>13382000000000.2</ImpRespWid>
       <Sgn>+1</Sgn>
-      <ImpRespBW>17297400000000.2</ImpRespBW>
-      <KCtr>-6284899999999.76</KCtr>
-      <DeltaK1>47341400000000.2</DeltaK1>
-      <DeltaK2>-30064499999999.8</DeltaK2>
-      <WgtFunct size="893">
-        <Wgt index="451">2528800000000.23</Wgt>
-        <Wgt index="-2294">-43152999999999.8</Wgt>
-      </WgtFunct>
+      <ImpRespBW>37048400000000.2</ImpRespBW>
+      <KCtr>4544000000000.24</KCtr>
+      <DeltaK1>-41703999999999.8</DeltaK1>
+      <DeltaK2>-1709999999999.77</DeltaK2>
+      <WgtType>
+        <WindowName>string</WindowName>
+      </WgtType>
     </Row>
     <Col>
       <UVectECF>
-        <X>46067900000000.2</X>
-        <Y>-38204799999999.8</Y>
-        <Z>-37149099999999.8</Z>
+        <X>2312800000000.23</X>
+        <Y>47781500000000.2</Y>
+        <Z>23985800000000.2</Z>
       </UVectECF>
-      <SS>38151500000000.2</SS>
-      <ImpRespWid>38174800000000.2</ImpRespWid>
+      <SS>-7462399999999.76</SS>
+      <ImpRespWid>-1611199999999.77</ImpRespWid>
       <Sgn>-1</Sgn>
-      <ImpRespBW>-24851499999999.8</ImpRespBW>
-      <KCtr>-14452499999999.8</KCtr>
-      <DeltaK1>40395000000000.2</DeltaK1>
-      <DeltaK2>48907600000000.2</DeltaK2>
-      <DeltaKCOAPoly order1="-3860" order2="-4113">
-        <Coef exponent1="4705" exponent2="482">44359100000000.2</Coef>
+      <ImpRespBW>-25822099999999.8</ImpRespBW>
+      <KCtr>13657000000000.2</KCtr>
+      <DeltaK1>16256200000000.2</DeltaK1>
+      <DeltaK2>14928900000000.2</DeltaK2>
+      <DeltaKCOAPoly order1="4245" order2="1348">
+        <Coef exponent1="8760" exponent2="8577">14046900000000.2</Coef>
       </DeltaKCOAPoly>
-      <WgtFunct size="-3146">
-        <Wgt index="-4425">-23456499999999.8</Wgt>
-        <Wgt index="2197">6065600000000.24</Wgt>
-      </WgtFunct>
+      <WgtType>
+        <WindowName>string</WindowName>
+      </WgtType>
     </Col>
   </Grid>
   <Timeline>
-    <CollectStart>1992-06-02T03:33:53.29</CollectStart>
-    <CollectDuration>41508500000000.2</CollectDuration>
-    <IPP size="-1833">
+    <CollectStart>2015-12-08T02:29:30.43</CollectStart>
+    <CollectDuration>33921900000000.2</CollectDuration>
+    <IPP size="1363">
+      <Set index="-3143">
+        <TStart>25834300000000.2</TStart>
+        <TEnd>-13355799999999.8</TEnd>
+        <IPPStart>-4663</IPPStart>
+        <IPPEnd>-4258</IPPEnd>
+        <IPPPoly order1="7915">
+          <Coef exponent1="4530">-29263999999999.8</Coef>
+        </IPPPoly>
+      </Set>
+      <Set index="-3793">
+        <TStart>-4816599999999.76</TStart>
+        <TEnd>-17322699999999.8</TEnd>
+        <IPPStart>-127</IPPStart>
+        <IPPEnd>-4394</IPPEnd>
+        <IPPPoly order1="6959">
+          <Coef exponent1="3767">-27857899999999.8</Coef>
+        </IPPPoly>
+      </Set>
       <Set index="4375">
-        <TStart>32702000000000.2</TStart>
-        <TEnd>47742900000000.2</TEnd>
-        <IPPStart>4398</IPPStart>
-        <IPPEnd>4733</IPPEnd>
-        <IPPPoly order1="-3693">
-          <Coef exponent1="4860">-745599999999.765</Coef>
+        <TStart>32484100000000.2</TStart>
+        <TEnd>12485800000000.2</TEnd>
+        <IPPStart>-236</IPPStart>
+        <IPPEnd>-1847</IPPEnd>
+        <IPPPoly order1="8460">
+          <Coef exponent1="6046">-23447099999999.8</Coef>
         </IPPPoly>
       </Set>
     </IPP>
   </Timeline>
   <Position>
     <ARPPoly>
-      <X order1="1411">
-        <Coef exponent1="2261">-42371599999999.8</Coef>
+      <X order1="1770">
+        <Coef exponent1="8275">-27742999999999.8</Coef>
       </X>
-      <Y order1="1306">
-        <Coef exponent1="3687">-2956299999999.77</Coef>
+      <Y order1="4575">
+        <Coef exponent1="4680">19751200000000.2</Coef>
       </Y>
-      <Z order1="-3800">
-        <Coef exponent1="2336">-24446499999999.8</Coef>
+      <Z order1="8540">
+        <Coef exponent1="6281">32067700000000.2</Coef>
       </Z>
     </ARPPoly>
     <GRPPoly>
-      <X order1="4075">
-        <Coef exponent1="-4738">-13243599999999.8</Coef>
+      <X order1="1434">
+        <Coef exponent1="8963">-38065599999999.8</Coef>
       </X>
-      <Y order1="-1924">
-        <Coef exponent1="-672">-6174699999999.76</Coef>
+      <Y order1="4560">
+        <Coef exponent1="7238">11678300000000.2</Coef>
       </Y>
-      <Z order1="-875">
-        <Coef exponent1="3242">43444000000000.2</Coef>
+      <Z order1="9841">
+        <Coef exponent1="2729">-13892499999999.8</Coef>
       </Z>
     </GRPPoly>
     <TxAPCPoly>
-      <X order1="-1908">
-        <Coef exponent1="3277">16027500000000.2</Coef>
+      <X order1="190">
+        <Coef exponent1="6349">-35147899999999.8</Coef>
       </X>
-      <Y order1="2632">
-        <Coef exponent1="-4388">-48450799999999.8</Coef>
+      <Y order1="4681">
+        <Coef exponent1="3578">4609200000000.24</Coef>
       </Y>
-      <Z order1="2707">
-        <Coef exponent1="-3586">20317900000000.2</Coef>
+      <Z order1="121">
+        <Coef exponent1="2048">13504400000000.2</Coef>
       </Z>
     </TxAPCPoly>
-    <RcvAPC size="-1415">
-      <RcvAPCPoly index="3101">
-        <X order1="-696">
-          <Coef exponent1="-861">-18061599999999.8</Coef>
+    <RcvAPC size="2081">
+      <RcvAPCPoly index="3140">
+        <X order1="8512">
+          <Coef exponent1="1676">44070200000000.2</Coef>
         </X>
-        <Y order1="2992">
-          <Coef exponent1="-1510">-43296799999999.8</Coef>
+        <Y order1="2671">
+          <Coef exponent1="155">40354800000000.2</Coef>
         </Y>
-        <Z order1="2783">
-          <Coef exponent1="-478">-25210799999999.8</Coef>
+        <Z order1="6001">
+          <Coef exponent1="4122">24561700000000.2</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="-2066">
-        <X order1="-827">
-          <Coef exponent1="-3843">-11781899999999.8</Coef>
+      <RcvAPCPoly index="1808">
+        <X order1="1777">
+          <Coef exponent1="6693">7857800000000.24</Coef>
         </X>
-        <Y order1="-3789">
-          <Coef exponent1="3359">-12122799999999.8</Coef>
+        <Y order1="6378">
+          <Coef exponent1="3934">18523200000000.2</Coef>
         </Y>
-        <Z order1="3203">
-          <Coef exponent1="756">-44305799999999.8</Coef>
+        <Z order1="6337">
+          <Coef exponent1="1287">-46952999999999.8</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="-1508">
-        <X order1="-2380">
-          <Coef exponent1="-783">-27019499999999.8</Coef>
+      <RcvAPCPoly index="-1995">
+        <X order1="907">
+          <Coef exponent1="9966">-8872299999999.77</Coef>
         </X>
-        <Y order1="-1368">
-          <Coef exponent1="4063">31734000000000.2</Coef>
+        <Y order1="6047">
+          <Coef exponent1="2959">-23675899999999.8</Coef>
         </Y>
-        <Z order1="1344">
-          <Coef exponent1="3226">-3039399999999.77</Coef>
+        <Z order1="3178">
+          <Coef exponent1="4571">-14584599999999.8</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="2427">
-        <X order1="4024">
-          <Coef exponent1="-1890">47024700000000.2</Coef>
+      <RcvAPCPoly index="-4926">
+        <X order1="2076">
+          <Coef exponent1="7001">-16971599999999.8</Coef>
         </X>
-        <Y order1="4651">
-          <Coef exponent1="2903">-10472599999999.8</Coef>
+        <Y order1="8937">
+          <Coef exponent1="6190">-11827299999999.8</Coef>
         </Y>
-        <Z order1="986">
-          <Coef exponent1="454">42436800000000.2</Coef>
+        <Z order1="8464">
+          <Coef exponent1="8931">-23496899999999.8</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="-3066">
-        <X order1="-3521">
-          <Coef exponent1="3472">-48142899999999.8</Coef>
+      <RcvAPCPoly index="1690">
+        <X order1="792">
+          <Coef exponent1="5552">-36981199999999.8</Coef>
         </X>
-        <Y order1="3647">
-          <Coef exponent1="747">-39400599999999.8</Coef>
+        <Y order1="8871">
+          <Coef exponent1="3266">27458800000000.2</Coef>
         </Y>
-        <Z order1="-1825">
-          <Coef exponent1="308">-1810699999999.77</Coef>
+        <Z order1="7114">
+          <Coef exponent1="6172">37424600000000.2</Coef>
         </Z>
       </RcvAPCPoly>
     </RcvAPC>
   </Position>
   <RadarCollection>
     <TxFrequency>
-      <Min>21019000000000.2</Min>
-      <Max>41868400000000.2</Max>
+      <Min>-29927999999999.8</Min>
+      <Max>31808600000000.2</Max>
     </TxFrequency>
-    <RefFreqIndex>-4199</RefFreqIndex>
-    <Waveform size="3564">
-      <WFParameters index="3569" />
-      <WFParameters index="1843" />
+    <RefFreqIndex>-3765</RefFreqIndex>
+    <Waveform size="-3515">
+      <WFParameters index="2494" />
+      <WFParameters index="3444" />
+      <WFParameters index="-1492" />
+      <WFParameters index="-998" />
     </Waveform>
-    <TxPolarization>S</TxPolarization>
-    <TxSequence size="2846">
-      <TxStep index="1766" />
-      <TxStep index="-2739" />
-      <TxStep index="-4200" />
-      <TxStep index="-3881" />
+    <TxPolarization>H</TxPolarization>
+    <TxSequence size="-3704">
+      <TxStep index="-2959" />
+      <TxStep index="2265" />
+      <TxStep index="-4521" />
+      <TxStep index="2550" />
     </TxSequence>
-    <RcvChannels size="-1572">
-      <ChanParameters index="2929">
-        <TxRcvPolarization>LHC:OTHER</TxRcvPolarization>
+    <RcvChannels size="267">
+      <ChanParameters index="-2133">
+        <TxRcvPolarization>E:H</TxRcvPolarization>
+      </ChanParameters>
+      <ChanParameters index="4109">
+        <TxRcvPolarization>V:H</TxRcvPolarization>
+      </ChanParameters>
+      <ChanParameters index="1012">
+        <TxRcvPolarization>X:V</TxRcvPolarization>
+      </ChanParameters>
+      <ChanParameters index="-979">
+        <TxRcvPolarization>V:H</TxRcvPolarization>
+      </ChanParameters>
+      <ChanParameters index="-3712">
+        <TxRcvPolarization>S:S</TxRcvPolarization>
       </ChanParameters>
     </RcvChannels>
     <Area>
       <Corner>
         <ACP index="3">
-          <Lat>-30.8356141960549</Lat>
-          <Lon>163.080905803945</Lon>
-          <HAE>-16973899999999.8</HAE>
+          <Lat>27.4914058039451</Lat>
+          <Lon>113.816345803945</Lon>
+          <HAE>25664600000000.2</HAE>
         </ACP>
         <ACP index="2">
-          <Lat>-49.0103941960549</Lat>
-          <Lon>-157.818414196055</Lon>
-          <HAE>38749800000000.2</HAE>
-        </ACP>
-        <ACP index="3">
-          <Lat>-21.2320741960549</Lat>
-          <Lon>-118.078014196055</Lon>
-          <HAE>38578400000000.2</HAE>
+          <Lat>36.8598658039451</Lat>
+          <Lon>-175.669374196055</Lon>
+          <HAE>-42381199999999.8</HAE>
         </ACP>
         <ACP index="4">
-          <Lat>30.5537458039451</Lat>
-          <Lon>179.746025803945</Lon>
-          <HAE>33336800000000.2</HAE>
+          <Lat>31.9001458039451</Lat>
+          <Lon>-39.9432541960549</Lon>
+          <HAE>-30230699999999.8</HAE>
+        </ACP>
+        <ACP index="4">
+          <Lat>-7.86815419605491</Lat>
+          <Lon>35.3554258039451</Lon>
+          <HAE>-43805699999999.8</HAE>
         </ACP>
       </Corner>
+      <Plane>
+        <RefPt>
+          <ECF>
+            <X>-586699999999.765</X>
+            <Y>-22656399999999.8</Y>
+            <Z>47002200000000.2</Z>
+          </ECF>
+          <Line>33629000000000.2</Line>
+          <Sample>-16347199999999.8</Sample>
+        </RefPt>
+        <XDir>
+          <UVectECF>
+            <X>1915500000000.23</X>
+            <Y>-28841899999999.8</Y>
+            <Z>27521700000000.2</Z>
+          </UVectECF>
+          <LineSpacing>-18210599999999.8</LineSpacing>
+          <NumLines>-3401</NumLines>
+          <FirstLine>3116</FirstLine>
+        </XDir>
+        <YDir>
+          <UVectECF>
+            <X>24043900000000.2</X>
+            <Y>-1565399999999.77</Y>
+            <Z>8737700000000.24</Z>
+          </UVectECF>
+          <SampleSpacing>-20234799999999.8</SampleSpacing>
+          <NumSamples>753</NumSamples>
+          <FirstSample>-4274</FirstSample>
+        </YDir>
+      </Plane>
     </Area>
+    <Parameter name="string">string</Parameter>
     <Parameter name="string">string</Parameter>
     <Parameter name="string">string</Parameter>
     <Parameter name="string">string</Parameter>
@@ -638,1050 +692,334 @@ fn test_generated_xml() {
   </RadarCollection>
   <ImageFormation>
     <RcvChanProc>
-      <NumChanProc>3798</NumChanProc>
-      <PRFScaleFactor>5898700000000.24</PRFScaleFactor>
-      <ChanIndex>-2598</ChanIndex>
-      <ChanIndex>-2404</ChanIndex>
-      <ChanIndex>-675</ChanIndex>
-      <ChanIndex>3381</ChanIndex>
+      <NumChanProc>841</NumChanProc>
+      <PRFScaleFactor>-48329899999999.8</PRFScaleFactor>
+      <ChanIndex>-3118</ChanIndex>
+      <ChanIndex>4321</ChanIndex>
+      <ChanIndex>-1460</ChanIndex>
+      <ChanIndex>-2843</ChanIndex>
     </RcvChanProc>
-    <TxRcvPolarizationProc>LHC:OTHERb+1-</TxRcvPolarizationProc>
-    <TStartProc>-49317299999999.8</TStartProc>
-    <TEndProc>9716600000000.23</TEndProc>
+    <TxRcvPolarizationProc>LHC:RHC</TxRcvPolarizationProc>
+    <TStartProc>16995200000000.2</TStartProc>
+    <TEndProc>14517600000000.2</TEndProc>
     <TxFrequencyProc>
-      <MinProc>-20988999999999.8</MinProc>
-      <MaxProc>-35724199999999.8</MaxProc>
+      <MinProc>-27889099999999.8</MinProc>
+      <MaxProc>-14676999999999.8</MaxProc>
     </TxFrequencyProc>
     <SegmentIdentifier>string</SegmentIdentifier>
     <ImageFormAlgo>PFA</ImageFormAlgo>
-    <STBeamComp>NO</STBeamComp>
+    <STBeamComp>SV</STBeamComp>
     <ImageBeamComp>SV</ImageBeamComp>
-    <AzAutofocus>GLOBAL</AzAutofocus>
-    <RgAutofocus>NO</RgAutofocus>
+    <AzAutofocus>NO</AzAutofocus>
+    <RgAutofocus>SV</RgAutofocus>
     <Processing>
       <Type>string</Type>
-      <Applied>true</Applied>
+      <Applied>0</Applied>
+      <Parameter name="string">string</Parameter>
       <Parameter name="string">string</Parameter>
     </Processing>
     <Processing>
       <Type>string</Type>
-      <Applied>true</Applied>
+      <Applied>0</Applied>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>0</Applied>
       <Parameter name="string">string</Parameter>
       <Parameter name="string">string</Parameter>
     </Processing>
     <PolarizationCalibration>
       <DistortCorrectionApplied>0</DistortCorrectionApplied>
       <Distortion>
-        <A>40654600000000.2</A>
+        <A>-1070499999999.77</A>
         <F1>
-          <Real>19937800000000.2</Real>
-          <Imag>33656500000000.2</Imag>
+          <Real>49764800000000.2</Real>
+          <Imag>4910600000000.24</Imag>
         </F1>
         <Q1>
-          <Real>10721500000000.2</Real>
-          <Imag>49490200000000.2</Imag>
+          <Real>12037400000000.2</Real>
+          <Imag>21435900000000.2</Imag>
         </Q1>
         <Q2>
-          <Real>16411800000000.2</Real>
-          <Imag>-38688399999999.8</Imag>
+          <Real>-16137399999999.8</Real>
+          <Imag>-39769099999999.8</Imag>
         </Q2>
         <F2>
-          <Real>-33692099999999.8</Real>
-          <Imag>7940300000000.24</Imag>
+          <Real>-13639399999999.8</Real>
+          <Imag>13078200000000.2</Imag>
         </F2>
         <Q3>
-          <Real>26690700000000.2</Real>
-          <Imag>-17733999999999.8</Imag>
+          <Real>42111800000000.2</Real>
+          <Imag>4421300000000.24</Imag>
         </Q3>
         <Q4>
-          <Real>29034400000000.2</Real>
-          <Imag>-44023799999999.8</Imag>
+          <Real>-19324799999999.8</Real>
+          <Imag>-5304599999999.76</Imag>
         </Q4>
       </Distortion>
     </PolarizationCalibration>
   </ImageFormation>
   <SCPCOA>
-    <SCPTime>3318900000000.23</SCPTime>
+    <SCPTime>34243400000000.2</SCPTime>
     <ARPPos>
-      <X>-7089699999999.76</X>
-      <Y>26031100000000.2</Y>
-      <Z>-46074199999999.8</Z>
+      <X>28934600000000.2</X>
+      <Y>-26665299999999.8</Y>
+      <Z>-43593799999999.8</Z>
     </ARPPos>
     <ARPVel>
-      <X>23449300000000.2</X>
-      <Y>37723800000000.2</Y>
-      <Z>-49538699999999.8</Z>
+      <X>39776700000000.2</X>
+      <Y>-5709999999999.76</Y>
+      <Z>407000000000.235</Z>
     </ARPVel>
     <ARPAcc>
-      <X>-18586099999999.8</X>
-      <Y>-48628499999999.8</Y>
-      <Z>-20948699999999.8</Z>
+      <X>-12590999999999.8</X>
+      <Y>4237600000000.23</Y>
+      <Z>-48323399999999.8</Z>
     </ARPAcc>
     <SideOfTrack>R</SideOfTrack>
-    <SlantRange>-447399999999.765</SlantRange>
-    <GroundRange>8756300000000.24</GroundRange>
-    <DopplerConeAng>16178500000000.2</DopplerConeAng>
-    <GrazeAng>55.8152158039451</GrazeAng>
-    <IncidenceAng>84.9875458039451</IncidenceAng>
-    <TwistAng>32.2857058039451</TwistAng>
-    <SlopeAng>13.1157058039451</SlopeAng>
-    <AzimAng>130.775585803945</AzimAng>
-    <LayoverAng>329.227745803945</LayoverAng>
+    <SlantRange>28554600000000.2</SlantRange>
+    <GroundRange>-32131899999999.8</GroundRange>
+    <DopplerConeAng>-22907799999999.8</DopplerConeAng>
+    <GrazeAng>40.1450458039451</GrazeAng>
+    <IncidenceAng>49.6833358039451</IncidenceAng>
+    <TwistAng>1.02240580394509</TwistAng>
+    <SlopeAng>1.92780580394509</SlopeAng>
+    <AzimAng>101.659865803945</AzimAng>
+    <LayoverAng>162.166145803945</LayoverAng>
   </SCPCOA>
   <Radiometric>
     <NoiseLevel>
       <NoiseLevelType>RELATIVE</NoiseLevelType>
-      <NoisePoly order1="-2910" order2="869">
-        <Coef exponent1="-740" exponent2="-930">29379800000000.2</Coef>
+      <NoisePoly order1="8199" order2="528">
+        <Coef exponent1="7230" exponent2="6804">3310400000000.23</Coef>
       </NoisePoly>
     </NoiseLevel>
-    <RCSSFPoly order1="1384" order2="4621">
-      <Coef exponent1="-4371" exponent2="4660">-44385599999999.8</Coef>
+    <RCSSFPoly order1="8609" order2="6339">
+      <Coef exponent1="9537" exponent2="4142">19391200000000.2</Coef>
+      <Coef exponent1="2683" exponent2="5122">-16532999999999.8</Coef>
+      <Coef exponent1="2801" exponent2="4926">-40100099999999.8</Coef>
     </RCSSFPoly>
-    <SigmaZeroSFPoly order1="-3753" order2="-899">
-      <Coef exponent1="2056" exponent2="607">-7640699999999.76</Coef>
-      <Coef exponent1="-2696" exponent2="3137">-29681999999999.8</Coef>
-      <Coef exponent1="3585" exponent2="-1590">-49279399999999.8</Coef>
+    <SigmaZeroSFPoly order1="5028" order2="868">
+      <Coef exponent1="2549" exponent2="716">-41929999999999.8</Coef>
+      <Coef exponent1="854" exponent2="1604">-2061299999999.77</Coef>
+      <Coef exponent1="5945" exponent2="2760">-4899699999999.76</Coef>
+      <Coef exponent1="1510" exponent2="9696">-46468599999999.8</Coef>
+      <Coef exponent1="8265" exponent2="5436">47127100000000.2</Coef>
     </SigmaZeroSFPoly>
-    <BetaZeroSFPoly order1="-3507" order2="-2657">
-      <Coef exponent1="-472" exponent2="-4086">17740000000000.2</Coef>
-      <Coef exponent1="4031" exponent2="157">16246500000000.2</Coef>
+    <BetaZeroSFPoly order1="1579" order2="2374">
+      <Coef exponent1="4962" exponent2="3476">-929599999999.765</Coef>
     </BetaZeroSFPoly>
-    <GammaZeroSFPoly order1="-4507" order2="47">
-      <Coef exponent1="-3028" exponent2="3510">-3396999999999.77</Coef>
+    <GammaZeroSFPoly order1="7748" order2="2905">
+      <Coef exponent1="8564" exponent2="4705">5008200000000.24</Coef>
     </GammaZeroSFPoly>
   </Radiometric>
   <Antenna>
     <Tx>
       <XAxisPoly>
-        <X order1="-3367">
-          <Coef exponent1="-2772">4845400000000.24</Coef>
+        <X order1="3434">
+          <Coef exponent1="9632">4289400000000.23</Coef>
         </X>
-        <Y order1="3189">
-          <Coef exponent1="-4050">-48051699999999.8</Coef>
+        <Y order1="4769">
+          <Coef exponent1="5213">33375000000000.2</Coef>
         </Y>
-        <Z order1="132">
-          <Coef exponent1="-2784">39442500000000.2</Coef>
+        <Z order1="2653">
+          <Coef exponent1="4466">40730100000000.2</Coef>
         </Z>
       </XAxisPoly>
       <YAxisPoly>
-        <X order1="-4440">
-          <Coef exponent1="1165">-14782599999999.8</Coef>
+        <X order1="8698">
+          <Coef exponent1="4196">48048900000000.2</Coef>
         </X>
-        <Y order1="-3972">
-          <Coef exponent1="-2868">19367700000000.2</Coef>
+        <Y order1="5825">
+          <Coef exponent1="1182">979300000000.235</Coef>
         </Y>
-        <Z order1="-1392">
-          <Coef exponent1="4677">36748500000000.2</Coef>
+        <Z order1="3823">
+          <Coef exponent1="701">31849100000000.2</Coef>
         </Z>
       </YAxisPoly>
-      <FreqZero>-38598999999999.8</FreqZero>
+      <FreqZero>44780900000000.2</FreqZero>
       <Array>
-        <GainPoly order1="4384" order2="-3223">
-          <Coef exponent1="-2265" exponent2="-708">26764400000000.2</Coef>
+        <GainPoly order1="5703" order2="226">
+          <Coef exponent1="7591" exponent2="9915">-16648099999999.8</Coef>
         </GainPoly>
-        <PhasePoly order1="-2321" order2="959">
-          <Coef exponent1="1682" exponent2="127">-8089299999999.76</Coef>
+        <PhasePoly order1="8806" order2="9559">
+          <Coef exponent1="3458" exponent2="4534">-24194099999999.8</Coef>
         </PhasePoly>
       </Array>
       <Elem>
-        <GainPoly order1="-54" order2="1118">
-          <Coef exponent1="-3059" exponent2="-954">20873800000000.2</Coef>
+        <GainPoly order1="3718" order2="4619">
+          <Coef exponent1="3004" exponent2="8092">144100000000.235</Coef>
         </GainPoly>
-        <PhasePoly order1="-2140" order2="-1459">
-          <Coef exponent1="-3694" exponent2="-740">-31825699999999.8</Coef>
+        <PhasePoly order1="8686" order2="6282">
+          <Coef exponent1="7699" exponent2="127">-41247299999999.8</Coef>
         </PhasePoly>
       </Elem>
+      <EBFreqShift>1</EBFreqShift>
+      <MLFreqDilation>1</MLFreqDilation>
     </Tx>
     <Rcv>
       <XAxisPoly>
-        <X order1="-3285">
-          <Coef exponent1="-4195">-28792999999999.8</Coef>
+        <X order1="5774">
+          <Coef exponent1="7696">11670000000000.2</Coef>
         </X>
-        <Y order1="-450">
-          <Coef exponent1="4580">-41855199999999.8</Coef>
+        <Y order1="4017">
+          <Coef exponent1="9261">-17960899999999.8</Coef>
         </Y>
-        <Z order1="-2376">
-          <Coef exponent1="4836">18104900000000.2</Coef>
+        <Z order1="5588">
+          <Coef exponent1="7833">-25329899999999.8</Coef>
         </Z>
       </XAxisPoly>
       <YAxisPoly>
-        <X order1="-865">
-          <Coef exponent1="-347">35432000000000.2</Coef>
+        <X order1="2474">
+          <Coef exponent1="5162">-40642099999999.8</Coef>
         </X>
-        <Y order1="-2113">
-          <Coef exponent1="1041">21633900000000.2</Coef>
+        <Y order1="8611">
+          <Coef exponent1="8928">-24170699999999.8</Coef>
         </Y>
-        <Z order1="994">
-          <Coef exponent1="4755">46462500000000.2</Coef>
+        <Z order1="181">
+          <Coef exponent1="8918">-15872799999999.8</Coef>
         </Z>
       </YAxisPoly>
-      <FreqZero>-333299999999.765</FreqZero>
-      <EB>
-        <DCXPoly order1="-3206">
-          <Coef exponent1="1902">41935400000000.2</Coef>
-        </DCXPoly>
-        <DCYPoly order1="2215">
-          <Coef exponent1="-3045">9247500000000.23</Coef>
-        </DCYPoly>
-      </EB>
+      <FreqZero>-24810299999999.8</FreqZero>
       <Array>
-        <GainPoly order1="-1833" order2="2642">
-          <Coef exponent1="4712" exponent2="-2991">-3190199999999.77</Coef>
+        <GainPoly order1="867" order2="7671">
+          <Coef exponent1="6747" exponent2="2317">3285800000000.23</Coef>
         </GainPoly>
-        <PhasePoly order1="-2583" order2="608">
-          <Coef exponent1="-4119" exponent2="616">-48102799999999.8</Coef>
+        <PhasePoly order1="9906" order2="74">
+          <Coef exponent1="3914" exponent2="4652">14398300000000.2</Coef>
         </PhasePoly>
       </Array>
-      <GainBSPoly order1="-398">
-        <Coef exponent1="-2393">40848100000000.2</Coef>
+      <Elem>
+        <GainPoly order1="1205" order2="3801">
+          <Coef exponent1="5712" exponent2="1091">-32343999999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="5780" order2="4420">
+          <Coef exponent1="6376" exponent2="8741">12018300000000.2</Coef>
+        </PhasePoly>
+      </Elem>
+      <GainBSPoly order1="3655">
+        <Coef exponent1="1471">-31363599999999.8</Coef>
       </GainBSPoly>
     </Rcv>
     <TwoWay>
       <XAxisPoly>
-        <X order1="208">
-          <Coef exponent1="233">19656600000000.2</Coef>
+        <X order1="3316">
+          <Coef exponent1="667">-34397699999999.8</Coef>
         </X>
-        <Y order1="-2996">
-          <Coef exponent1="3055">13017000000000.2</Coef>
+        <Y order1="6">
+          <Coef exponent1="4189">-30411199999999.8</Coef>
         </Y>
-        <Z order1="-1387">
-          <Coef exponent1="538">-48223999999999.8</Coef>
+        <Z order1="1972">
+          <Coef exponent1="908">-42722899999999.8</Coef>
         </Z>
       </XAxisPoly>
       <YAxisPoly>
-        <X order1="-2715">
-          <Coef exponent1="-601">-17029099999999.8</Coef>
+        <X order1="7616">
+          <Coef exponent1="8949">20756900000000.2</Coef>
         </X>
-        <Y order1="-918">
-          <Coef exponent1="-1898">4576600000000.24</Coef>
+        <Y order1="5130">
+          <Coef exponent1="808">-9992899999999.77</Coef>
         </Y>
-        <Z order1="4430">
-          <Coef exponent1="1326">-21102099999999.8</Coef>
+        <Z order1="6959">
+          <Coef exponent1="1515">24475500000000.2</Coef>
         </Z>
       </YAxisPoly>
-      <FreqZero>-10844299999999.8</FreqZero>
-      <EB>
-        <DCXPoly order1="-4478">
-          <Coef exponent1="-4299">39945300000000.2</Coef>
-        </DCXPoly>
-        <DCYPoly order1="4278">
-          <Coef exponent1="1502">-12737099999999.8</Coef>
-        </DCYPoly>
-      </EB>
+      <FreqZero>21501800000000.2</FreqZero>
       <Array>
-        <GainPoly order1="2959" order2="-924">
-          <Coef exponent1="-2494" exponent2="3524">-46423199999999.8</Coef>
+        <GainPoly order1="9466" order2="5532">
+          <Coef exponent1="5109" exponent2="3958">-49788799999999.8</Coef>
         </GainPoly>
-        <PhasePoly order1="-2403" order2="4618">
-          <Coef exponent1="-2619" exponent2="3557">-23521999999999.8</Coef>
+        <PhasePoly order1="1481" order2="3720">
+          <Coef exponent1="6460" exponent2="3268">30235500000000.2</Coef>
         </PhasePoly>
       </Array>
-      <Elem>
-        <GainPoly order1="1177" order2="4693">
-          <Coef exponent1="2579" exponent2="-2404">7126200000000.24</Coef>
-        </GainPoly>
-        <PhasePoly order1="-797" order2="-483">
-          <Coef exponent1="-2043" exponent2="3543">-49057699999999.8</Coef>
-        </PhasePoly>
-      </Elem>
-      <GainBSPoly order1="3367">
-        <Coef exponent1="-3343">15215300000000.2</Coef>
-      </GainBSPoly>
-      <EBFreqShift>0</EBFreqShift>
-      <MLFreqDilation>1</MLFreqDilation>
+      <EBFreqShift>false</EBFreqShift>
+      <MLFreqDilation>0</MLFreqDilation>
     </TwoWay>
   </Antenna>
   <ErrorStatistics>
     <CompositeSCP>
-      <Rg>33405600000000.2</Rg>
-      <Az>-38448299999999.8</Az>
-      <RgAz>32078700000000.2</RgAz>
+      <Rg>-15394399999999.8</Rg>
+      <Az>-9546799999999.77</Az>
+      <RgAz>35723600000000.2</RgAz>
     </CompositeSCP>
     <Components>
       <PosVelErr>
         <Frame>RIC_ECI</Frame>
-        <P1>8411000000000.24</P1>
-        <P2>-13582299999999.8</P2>
-        <P3>14033200000000.2</P3>
-        <V1>8991600000000.23</V1>
-        <V2>-11663299999999.8</V2>
-        <V3>-28207599999999.8</V3>
+        <P1>17529700000000.2</P1>
+        <P2>33740900000000.2</P2>
+        <P3>-4245499999999.77</P3>
+        <V1>43722500000000.2</V1>
+        <V2>32469400000000.2</V2>
+        <V3>-42195799999999.8</V3>
       </PosVelErr>
       <RadarSensor>
-        <RangeBias>-46222199999999.8</RangeBias>
+        <RangeBias>42781300000000.2</RangeBias>
       </RadarSensor>
+      <TropoError />
     </Components>
     <Unmodeled>
-      <Xrow>-11682299999999.8</Xrow>
-      <Ycol>47135000000000.2</Ycol>
-      <XrowYcol>-26824799999999.8</XrowYcol>
+      <Xrow>-32628799999999.8</Xrow>
+      <Ycol>10409300000000.2</Ycol>
+      <XrowYcol>35331800000000.2</XrowYcol>
     </Unmodeled>
     <AdditionalParms>
+      <Parameter name="string">string</Parameter>
       <Parameter name="string">string</Parameter>
       <Parameter name="string">string</Parameter>
       <Parameter name="string">string</Parameter>
     </AdditionalParms>
   </ErrorStatistics>
   <MatchInfo>
-    <NumMatchTypes>4352</NumMatchTypes>
-    <MatchType index="-3785">
+    <NumMatchTypes>1775</NumMatchTypes>
+    <MatchType index="575">
       <TypeID>string</TypeID>
-      <NumMatchCollections>106</NumMatchCollections>
-      <MatchCollection index="-4251">
-        <CoreName>string</CoreName>
-      </MatchCollection>
-      <MatchCollection index="-790">
-        <CoreName>string</CoreName>
-      </MatchCollection>
-      <MatchCollection index="2353">
-        <CoreName>string</CoreName>
-      </MatchCollection>
-      <MatchCollection index="7">
-        <CoreName>string</CoreName>
-      </MatchCollection>
+      <CurrentIndex>4757</CurrentIndex>
+      <NumMatchCollections>-2747</NumMatchCollections>
     </MatchType>
-    <MatchType index="-3826">
+    <MatchType index="-3774">
       <TypeID>string</TypeID>
-      <NumMatchCollections>2488</NumMatchCollections>
-      <MatchCollection index="1258">
-        <CoreName>string</CoreName>
-      </MatchCollection>
-      <MatchCollection index="1696">
-        <CoreName>string</CoreName>
-      </MatchCollection>
+      <CurrentIndex>1290</CurrentIndex>
+      <NumMatchCollections>83</NumMatchCollections>
     </MatchType>
-    <MatchType index="1199">
+    <MatchType index="-3118">
       <TypeID>string</TypeID>
-      <CurrentIndex>-497</CurrentIndex>
-      <NumMatchCollections>728</NumMatchCollections>
-      <MatchCollection index="681">
+      <CurrentIndex>-182</CurrentIndex>
+      <NumMatchCollections>-2005</NumMatchCollections>
+      <MatchCollection index="1897">
         <CoreName>string</CoreName>
       </MatchCollection>
-    </MatchType>
-    <MatchType index="3106">
-      <TypeID>string</TypeID>
-      <CurrentIndex>2021</CurrentIndex>
-      <NumMatchCollections>-1620</NumMatchCollections>
+      <MatchCollection index="-1743">
+        <CoreName>string</CoreName>
+      </MatchCollection>
     </MatchType>
   </MatchInfo>
-  <PFA>
-    <FPN>
-      <X>31626500000000.2</X>
-      <Y>-25002999999999.8</Y>
-      <Z>-28178199999999.8</Z>
-    </FPN>
-    <IPN>
-      <X>42929200000000.2</X>
-      <Y>44532100000000.2</Y>
-      <Z>25609100000000.2</Z>
-    </IPN>
-    <PolarAngRefTime>-42929899999999.8</PolarAngRefTime>
-    <PolarAngPoly order1="-3772">
-      <Coef exponent1="-520">-26162499999999.8</Coef>
-    </PolarAngPoly>
-    <SpatialFreqSFPoly order1="3615">
-      <Coef exponent1="-4017">49174500000000.2</Coef>
-    </SpatialFreqSFPoly>
-    <Krg1>-38271499999999.8</Krg1>
-    <Krg2>16180700000000.2</Krg2>
-    <Kaz1>15022800000000.2</Kaz1>
-    <Kaz2>25184800000000.2</Kaz2>
-    <STDeskew>
-      <Applied>1</Applied>
-      <STDSPhasePoly order1="4718" order2="2252">
-        <Coef exponent1="-4770" exponent2="-1993">-7193099999999.76</Coef>
-      </STDSPhasePoly>
-    </STDeskew>
-  </PFA>
-</SICD>"#;
+  <RMA>
+    <RMAlgoType>RG_DOP</RMAlgoType>
+    <ImageType>RMCR</ImageType>
+    <RMCR>
+      <PosRef>
+        <X>-38152099999999.8</X>
+        <Y>4768800000000.24</Y>
+        <Z>42183800000000.2</Z>
+      </PosRef>
+      <VelRef>
+        <X>-27645899999999.8</X>
+        <Y>48748900000000.2</Y>
+        <Z>37702900000000.2</Z>
+      </VelRef>
+      <DopConeAngRef>-27466899999999.8</DopConeAngRef>
+    </RMCR>
+  </RMA>
+</SICD>
+"#;
     //let sicd_meta = quick_xml::de::
     let sicd_meta = from_str::<SicdMeta>(xml);
     // let sicd_meta = serde_path_to_error::deserialize(sicd_meta);
     assert!(match sicd_meta {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_collection_info() {
-    let xml = r#"
-  <CollectionInfo>
-    <CollectorName>string</CollectorName>
-    <IlluminatorName>string</IlluminatorName>
-    <CoreName>string</CoreName>
-    <CollectType>MONOSTATIC</CollectType>
-    <RadarMode>
-      <ModeType>DYNAMIC STRIPMAP</ModeType>
-    </RadarMode>
-    <Classification>string</Classification>
-    <CountryCode>string</CountryCode>
-    <CountryCode>string</CountryCode>
-    <Parameter name="string">string</Parameter>
-  </CollectionInfo>"#;
-    assert!(match from_str::<CollectionInfo>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_image_creation() {
-    let xml = r#"
-  <ImageCreation>
-    <Application>string</Application>
-    <DateTime>1994-04-05T10:27:33.85</DateTime>
-    <Site>string</Site>
-    <Profile>string</Profile>
-  </ImageCreation>
-        "#;
-    assert!(match from_str::<ImageCreation>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_image_data() {
-    let xml = r#"
-  <ImageData>
-    <PixelType>RE16I_IM16I</PixelType>
-    <AmpTable size="-1490">
-      <Amplitude index="2273">162200000000.235</Amplitude>
-      <Amplitude index="555">-43949299999999.8</Amplitude>
-      <Amplitude index="1752">2033500000000.23</Amplitude>
-      <Amplitude index="782">-49253599999999.8</Amplitude>
-      <Amplitude index="1410">39259000000000.2</Amplitude>
-      <Amplitude index="3550">-8400399999999.76</Amplitude>
-      <Amplitude index="1711">49045500000000.2</Amplitude>
-      <Amplitude index="12">35525600000000.2</Amplitude>
-      <Amplitude index="2757">39219800000000.2</Amplitude>
-      <Amplitude index="-4778">-7486199999999.76</Amplitude>
-      <Amplitude index="1095">-48358399999999.8</Amplitude>
-      <Amplitude index="-3986">-12052999999999.8</Amplitude>
-      <Amplitude index="483">24281200000000.2</Amplitude>
-      <Amplitude index="-4323">-18821199999999.8</Amplitude>
-      <Amplitude index="2107">43491900000000.2</Amplitude>
-      <Amplitude index="-619">31852100000000.2</Amplitude>
-      <Amplitude index="-2066">22261400000000.2</Amplitude>
-      <Amplitude index="1017">-42300599999999.8</Amplitude>
-      <Amplitude index="4210">-6153699999999.76</Amplitude>
-      <Amplitude index="964">12312700000000.2</Amplitude>
-      <Amplitude index="3536">-4628299999999.76</Amplitude>
-      <Amplitude index="4206">45800300000000.2</Amplitude>
-      <Amplitude index="-3825">27920800000000.2</Amplitude>
-      <Amplitude index="1812">33673500000000.2</Amplitude>
-      <Amplitude index="-3454">-2826699999999.77</Amplitude>
-      <Amplitude index="2818">-46796499999999.8</Amplitude>
-      <Amplitude index="-1712">-32673299999999.8</Amplitude>
-      <Amplitude index="-943">21088100000000.2</Amplitude>
-      <Amplitude index="-997">-32401699999999.8</Amplitude>
-      <Amplitude index="122">43235900000000.2</Amplitude>
-      <Amplitude index="-474">-23361999999999.8</Amplitude>
-      <Amplitude index="-2032">20606000000000.2</Amplitude>
-      <Amplitude index="-455">-46354899999999.8</Amplitude>
-      <Amplitude index="-3774">44849100000000.2</Amplitude>
-      <Amplitude index="-1113">-7581399999999.76</Amplitude>
-      <Amplitude index="4343">-16276299999999.8</Amplitude>
-      <Amplitude index="-2042">-10096399999999.8</Amplitude>
-      <Amplitude index="715">-34422799999999.8</Amplitude>
-      <Amplitude index="-4041">-35663799999999.8</Amplitude>
-      <Amplitude index="-2381">26905000000000.2</Amplitude>
-      <Amplitude index="-4384">-26901799999999.8</Amplitude>
-      <Amplitude index="-3428">-26103199999999.8</Amplitude>
-      <Amplitude index="-3469">-9393899999999.77</Amplitude>
-      <Amplitude index="-103">-37990399999999.8</Amplitude>
-      <Amplitude index="-1831">39083500000000.2</Amplitude>
-      <Amplitude index="1767">24499900000000.2</Amplitude>
-      <Amplitude index="4262">16405500000000.2</Amplitude>
-      <Amplitude index="-3295">8723900000000.24</Amplitude>
-      <Amplitude index="-3430">-28550299999999.8</Amplitude>
-      <Amplitude index="35">-41890399999999.8</Amplitude>
-      <Amplitude index="1566">23271700000000.2</Amplitude>
-      <Amplitude index="-520">23038900000000.2</Amplitude>
-      <Amplitude index="375">-5542399999999.76</Amplitude>
-      <Amplitude index="2363">42977800000000.2</Amplitude>
-      <Amplitude index="1017">-25006299999999.8</Amplitude>
-      <Amplitude index="1150">-24310699999999.8</Amplitude>
-      <Amplitude index="4141">24319700000000.2</Amplitude>
-      <Amplitude index="3708">-27836599999999.8</Amplitude>
-      <Amplitude index="-3908">-44220699999999.8</Amplitude>
-      <Amplitude index="530">-45156899999999.8</Amplitude>
-      <Amplitude index="467">-49746299999999.8</Amplitude>
-      <Amplitude index="1316">-209799999999.765</Amplitude>
-      <Amplitude index="2474">-31072699999999.8</Amplitude>
-      <Amplitude index="-890">13172800000000.2</Amplitude>
-      <Amplitude index="-2715">48427800000000.2</Amplitude>
-      <Amplitude index="4988">38136100000000.2</Amplitude>
-      <Amplitude index="1399">-31917599999999.8</Amplitude>
-      <Amplitude index="-3875">-17111599999999.8</Amplitude>
-      <Amplitude index="2830">-7317699999999.76</Amplitude>
-      <Amplitude index="2015">20852800000000.2</Amplitude>
-      <Amplitude index="1698">5992800000000.24</Amplitude>
-      <Amplitude index="183">-43303299999999.8</Amplitude>
-      <Amplitude index="-2242">-8015599999999.76</Amplitude>
-      <Amplitude index="3309">-31698299999999.8</Amplitude>
-      <Amplitude index="2933">44887500000000.2</Amplitude>
-      <Amplitude index="-219">-40083799999999.8</Amplitude>
-      <Amplitude index="1615">-4492099999999.76</Amplitude>
-      <Amplitude index="344">15403700000000.2</Amplitude>
-      <Amplitude index="-3989">45009400000000.2</Amplitude>
-      <Amplitude index="4829">-15181299999999.8</Amplitude>
-      <Amplitude index="-4664">-39547799999999.8</Amplitude>
-      <Amplitude index="2013">11747000000000.2</Amplitude>
-      <Amplitude index="-2489">23366100000000.2</Amplitude>
-      <Amplitude index="1170">23323700000000.2</Amplitude>
-      <Amplitude index="1307">4187100000000.23</Amplitude>
-      <Amplitude index="-614">18234400000000.2</Amplitude>
-      <Amplitude index="-1437">34442700000000.2</Amplitude>
-      <Amplitude index="-1214">48681700000000.2</Amplitude>
-      <Amplitude index="-158">6461900000000.24</Amplitude>
-      <Amplitude index="-2779">-17239699999999.8</Amplitude>
-      <Amplitude index="-1417">-27199499999999.8</Amplitude>
-      <Amplitude index="3384">-22034899999999.8</Amplitude>
-      <Amplitude index="62">39965500000000.2</Amplitude>
-      <Amplitude index="-2802">-31522699999999.8</Amplitude>
-      <Amplitude index="1465">-4156299999999.77</Amplitude>
-      <Amplitude index="-2722">33288900000000.2</Amplitude>
-      <Amplitude index="-561">-14667899999999.8</Amplitude>
-      <Amplitude index="1750">6528800000000.24</Amplitude>
-      <Amplitude index="3587">40087600000000.2</Amplitude>
-      <Amplitude index="3158">4215100000000.23</Amplitude>
-      <Amplitude index="3028">-40229999999999.8</Amplitude>
-      <Amplitude index="523">-24857299999999.8</Amplitude>
-      <Amplitude index="102">29572700000000.2</Amplitude>
-      <Amplitude index="2429">31711400000000.2</Amplitude>
-      <Amplitude index="-4235">4753300000000.24</Amplitude>
-      <Amplitude index="-3302">3651000000000.23</Amplitude>
-      <Amplitude index="2280">15533700000000.2</Amplitude>
-      <Amplitude index="4899">30554800000000.2</Amplitude>
-      <Amplitude index="-2339">-7840099999999.76</Amplitude>
-      <Amplitude index="-3887">-14853599999999.8</Amplitude>
-      <Amplitude index="138">-6773199999999.76</Amplitude>
-      <Amplitude index="-4132">-32771699999999.8</Amplitude>
-      <Amplitude index="-1859">10576000000000.2</Amplitude>
-      <Amplitude index="-2615">-49703699999999.8</Amplitude>
-      <Amplitude index="-3305">31333100000000.2</Amplitude>
-      <Amplitude index="-3719">8331300000000.24</Amplitude>
-      <Amplitude index="2488">17993700000000.2</Amplitude>
-      <Amplitude index="248">-23936499999999.8</Amplitude>
-      <Amplitude index="1757">8700100000000.24</Amplitude>
-      <Amplitude index="2694">21047900000000.2</Amplitude>
-      <Amplitude index="-3432">-9729499999999.77</Amplitude>
-      <Amplitude index="-3917">-40105999999999.8</Amplitude>
-      <Amplitude index="-2114">19124300000000.2</Amplitude>
-      <Amplitude index="-3951">28854400000000.2</Amplitude>
-      <Amplitude index="-1365">36942600000000.2</Amplitude>
-      <Amplitude index="-2008">-6292299999999.76</Amplitude>
-      <Amplitude index="2896">-3561699999999.77</Amplitude>
-      <Amplitude index="-4717">-12946499999999.8</Amplitude>
-      <Amplitude index="-4891">-11998799999999.8</Amplitude>
-      <Amplitude index="4373">40446400000000.2</Amplitude>
-      <Amplitude index="573">23991300000000.2</Amplitude>
-      <Amplitude index="1477">-23687399999999.8</Amplitude>
-      <Amplitude index="-806">8653400000000.24</Amplitude>
-      <Amplitude index="2877">-45193199999999.8</Amplitude>
-      <Amplitude index="-3695">22921600000000.2</Amplitude>
-      <Amplitude index="-3702">17909200000000.2</Amplitude>
-      <Amplitude index="1522">-9921599999999.77</Amplitude>
-      <Amplitude index="-3053">-38886499999999.8</Amplitude>
-      <Amplitude index="-1760">48782300000000.2</Amplitude>
-      <Amplitude index="3837">12287300000000.2</Amplitude>
-      <Amplitude index="9">-5008199999999.76</Amplitude>
-      <Amplitude index="1395">-19997499999999.8</Amplitude>
-      <Amplitude index="141">19106300000000.2</Amplitude>
-      <Amplitude index="2937">-21561199999999.8</Amplitude>
-      <Amplitude index="1516">-34573599999999.8</Amplitude>
-      <Amplitude index="-2503">-20430299999999.8</Amplitude>
-      <Amplitude index="1497">36496200000000.2</Amplitude>
-      <Amplitude index="-3468">-8313599999999.76</Amplitude>
-      <Amplitude index="2550">34518700000000.2</Amplitude>
-      <Amplitude index="1795">20205600000000.2</Amplitude>
-      <Amplitude index="4035">-44318499999999.8</Amplitude>
-      <Amplitude index="1580">13425300000000.2</Amplitude>
-      <Amplitude index="2396">12010200000000.2</Amplitude>
-      <Amplitude index="2849">-11117199999999.8</Amplitude>
-      <Amplitude index="-2303">41717400000000.2</Amplitude>
-      <Amplitude index="-4534">-47688699999999.8</Amplitude>
-      <Amplitude index="-37">-18556299999999.8</Amplitude>
-      <Amplitude index="-964">-39265399999999.8</Amplitude>
-      <Amplitude index="-3996">-15236399999999.8</Amplitude>
-      <Amplitude index="2490">22833000000000.2</Amplitude>
-      <Amplitude index="2928">334900000000.235</Amplitude>
-      <Amplitude index="-1036">47627300000000.2</Amplitude>
-      <Amplitude index="-205">33414100000000.2</Amplitude>
-      <Amplitude index="-4706">28721000000000.2</Amplitude>
-      <Amplitude index="-2524">27782100000000.2</Amplitude>
-      <Amplitude index="-1439">-2123399999999.77</Amplitude>
-      <Amplitude index="-1917">-31836299999999.8</Amplitude>
-      <Amplitude index="2194">-5593999999999.76</Amplitude>
-      <Amplitude index="2919">-49476099999999.8</Amplitude>
-      <Amplitude index="604">39403300000000.2</Amplitude>
-      <Amplitude index="4062">-9512899999999.77</Amplitude>
-      <Amplitude index="-4853">23445200000000.2</Amplitude>
-      <Amplitude index="-3923">-27341599999999.8</Amplitude>
-      <Amplitude index="2994">-16474799999999.8</Amplitude>
-      <Amplitude index="-386">-45413199999999.8</Amplitude>
-      <Amplitude index="-1836">-9259399999999.77</Amplitude>
-      <Amplitude index="-4038">45121600000000.2</Amplitude>
-      <Amplitude index="4092">-9984499999999.77</Amplitude>
-      <Amplitude index="1604">18173200000000.2</Amplitude>
-      <Amplitude index="-3453">40544500000000.2</Amplitude>
-      <Amplitude index="907">49769300000000.2</Amplitude>
-      <Amplitude index="-3587">-812399999999.765</Amplitude>
-      <Amplitude index="611">6781400000000.24</Amplitude>
-      <Amplitude index="2148">-18531999999999.8</Amplitude>
-      <Amplitude index="951">45952700000000.2</Amplitude>
-      <Amplitude index="-1846">-40481999999999.8</Amplitude>
-      <Amplitude index="2872">35495600000000.2</Amplitude>
-      <Amplitude index="3222">-11203799999999.8</Amplitude>
-      <Amplitude index="-113">16198800000000.2</Amplitude>
-      <Amplitude index="3686">-24706699999999.8</Amplitude>
-      <Amplitude index="-4652">19414900000000.2</Amplitude>
-      <Amplitude index="-1742">-29829999999999.8</Amplitude>
-      <Amplitude index="-386">44868600000000.2</Amplitude>
-      <Amplitude index="-1174">-14294099999999.8</Amplitude>
-      <Amplitude index="-2276">-18078699999999.8</Amplitude>
-      <Amplitude index="2837">-38982099999999.8</Amplitude>
-      <Amplitude index="3505">15499100000000.2</Amplitude>
-      <Amplitude index="-1967">40846400000000.2</Amplitude>
-      <Amplitude index="-2364">2281500000000.23</Amplitude>
-      <Amplitude index="-3266">3986900000000.23</Amplitude>
-      <Amplitude index="117">-1530299999999.77</Amplitude>
-      <Amplitude index="2402">184700000000.235</Amplitude>
-      <Amplitude index="2304">-27873599999999.8</Amplitude>
-      <Amplitude index="1202">-25875999999999.8</Amplitude>
-      <Amplitude index="-3710">2125900000000.23</Amplitude>
-      <Amplitude index="4115">49838500000000.2</Amplitude>
-      <Amplitude index="3131">40180200000000.2</Amplitude>
-      <Amplitude index="3707">39655100000000.2</Amplitude>
-      <Amplitude index="1719">43955900000000.2</Amplitude>
-      <Amplitude index="-4695">11239500000000.2</Amplitude>
-      <Amplitude index="-3148">-14222199999999.8</Amplitude>
-      <Amplitude index="-4577">-22414399999999.8</Amplitude>
-      <Amplitude index="-3242">-29474699999999.8</Amplitude>
-      <Amplitude index="-2553">-36779299999999.8</Amplitude>
-      <Amplitude index="516">41370600000000.2</Amplitude>
-      <Amplitude index="-3757">46584300000000.2</Amplitude>
-      <Amplitude index="-114">-17127999999999.8</Amplitude>
-      <Amplitude index="2412">5006400000000.24</Amplitude>
-      <Amplitude index="4540">32398800000000.2</Amplitude>
-      <Amplitude index="-287">-25988899999999.8</Amplitude>
-      <Amplitude index="-1715">-35867099999999.8</Amplitude>
-      <Amplitude index="-2720">25115600000000.2</Amplitude>
-      <Amplitude index="-923">28529900000000.2</Amplitude>
-      <Amplitude index="-2030">44870100000000.2</Amplitude>
-      <Amplitude index="2843">-9321899999999.77</Amplitude>
-      <Amplitude index="-2634">-17594799999999.8</Amplitude>
-      <Amplitude index="-77">6097400000000.24</Amplitude>
-      <Amplitude index="-1454">-34603299999999.8</Amplitude>
-      <Amplitude index="-576">-3567399999999.77</Amplitude>
-      <Amplitude index="-1740">2518000000000.23</Amplitude>
-      <Amplitude index="4766">-1200099999999.77</Amplitude>
-      <Amplitude index="1896">-28466099999999.8</Amplitude>
-      <Amplitude index="-1031">44565300000000.2</Amplitude>
-      <Amplitude index="98">-1557899999999.77</Amplitude>
-      <Amplitude index="-3394">-17938199999999.8</Amplitude>
-      <Amplitude index="4426">34786900000000.2</Amplitude>
-      <Amplitude index="-317">29038800000000.2</Amplitude>
-      <Amplitude index="-2161">-45608499999999.8</Amplitude>
-      <Amplitude index="-3702">-20889099999999.8</Amplitude>
-      <Amplitude index="3681">-10945899999999.8</Amplitude>
-      <Amplitude index="4082">-20402499999999.8</Amplitude>
-      <Amplitude index="-1521">-35515799999999.8</Amplitude>
-      <Amplitude index="1771">30029800000000.2</Amplitude>
-      <Amplitude index="-265">42764400000000.2</Amplitude>
-      <Amplitude index="4741">8721900000000.24</Amplitude>
-      <Amplitude index="-3924">-1036099999999.77</Amplitude>
-      <Amplitude index="-20">44608400000000.2</Amplitude>
-      <Amplitude index="-2365">34047900000000.2</Amplitude>
-      <Amplitude index="-483">-48732599999999.8</Amplitude>
-      <Amplitude index="-1458">-3793799999999.77</Amplitude>
-      <Amplitude index="-2245">31261500000000.2</Amplitude>
-      <Amplitude index="2881">-3630999999999.77</Amplitude>
-      <Amplitude index="-358">-11126299999999.8</Amplitude>
-      <Amplitude index="3558">20192600000000.2</Amplitude>
-      <Amplitude index="-2229">-18929099999999.8</Amplitude>
-      <Amplitude index="-4758">-34867699999999.8</Amplitude>
-    </AmpTable>
-    <NumRows>4355</NumRows>
-    <NumCols>1806</NumCols>
-    <FirstRow>448</FirstRow>
-    <FirstCol>966</FirstCol>
-    <FullImage>
-      <NumRows>734</NumRows>
-      <NumCols>-471</NumCols>
-    </FullImage>
-    <SCPPixel>
-      <Row>-566</Row>
-      <Col>-3829</Col>
-    </SCPPixel>
-    <ValidData size="-939">
-      <Vertex index="79">
-        <Row>-2116</Row>
-        <Col>2716</Col>
-      </Vertex>
-      <Vertex index="1506">
-        <Row>4563</Row>
-        <Col>625</Col>
-      </Vertex>
-      <Vertex index="-1709">
-        <Row>4069</Row>
-        <Col>2576</Col>
-      </Vertex>
-    </ValidData>
-  </ImageData>
-        "#;
-    assert!(match from_str::<ImageData>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_pixel_type() {
-    let xml = r#"
-    <PixelType>RE16I_IM16I</PixelType>
-        "#;
-    assert!(match from_str::<PixelType>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_amp_table() {
-    let xml = r#"
-    <AmpTable size="-1490">
-      <Amplitude index="2273">162200000000.235</Amplitude>
-      <Amplitude index="555">-43949299999999.8</Amplitude>
-      <Amplitude index="1752">2033500000000.23</Amplitude>
-      <Amplitude index="782">-49253599999999.8</Amplitude>
-      <Amplitude index="1410">39259000000000.2</Amplitude>
-      <Amplitude index="3550">-8400399999999.76</Amplitude>
-      <Amplitude index="1711">49045500000000.2</Amplitude>
-      <Amplitude index="12">35525600000000.2</Amplitude>
-      <Amplitude index="2757">39219800000000.2</Amplitude>
-      <Amplitude index="-4778">-7486199999999.76</Amplitude>
-      <Amplitude index="1095">-48358399999999.8</Amplitude>
-      <Amplitude index="-3986">-12052999999999.8</Amplitude>
-      <Amplitude index="483">24281200000000.2</Amplitude>
-      <Amplitude index="-4323">-18821199999999.8</Amplitude>
-      <Amplitude index="2107">43491900000000.2</Amplitude>
-      <Amplitude index="-619">31852100000000.2</Amplitude>
-      <Amplitude index="-2066">22261400000000.2</Amplitude>
-      <Amplitude index="1017">-42300599999999.8</Amplitude>
-      <Amplitude index="4210">-6153699999999.76</Amplitude>
-      <Amplitude index="964">12312700000000.2</Amplitude>
-      <Amplitude index="3536">-4628299999999.76</Amplitude>
-      <Amplitude index="4206">45800300000000.2</Amplitude>
-      <Amplitude index="-3825">27920800000000.2</Amplitude>
-      <Amplitude index="1812">33673500000000.2</Amplitude>
-      <Amplitude index="-3454">-2826699999999.77</Amplitude>
-      <Amplitude index="2818">-46796499999999.8</Amplitude>
-      <Amplitude index="-1712">-32673299999999.8</Amplitude>
-      <Amplitude index="-943">21088100000000.2</Amplitude>
-      <Amplitude index="-997">-32401699999999.8</Amplitude>
-      <Amplitude index="122">43235900000000.2</Amplitude>
-      <Amplitude index="-474">-23361999999999.8</Amplitude>
-      <Amplitude index="-2032">20606000000000.2</Amplitude>
-      <Amplitude index="-455">-46354899999999.8</Amplitude>
-      <Amplitude index="-3774">44849100000000.2</Amplitude>
-      <Amplitude index="-1113">-7581399999999.76</Amplitude>
-      <Amplitude index="4343">-16276299999999.8</Amplitude>
-      <Amplitude index="-2042">-10096399999999.8</Amplitude>
-      <Amplitude index="715">-34422799999999.8</Amplitude>
-      <Amplitude index="-4041">-35663799999999.8</Amplitude>
-      <Amplitude index="-2381">26905000000000.2</Amplitude>
-      <Amplitude index="-4384">-26901799999999.8</Amplitude>
-      <Amplitude index="-3428">-26103199999999.8</Amplitude>
-      <Amplitude index="-3469">-9393899999999.77</Amplitude>
-      <Amplitude index="-103">-37990399999999.8</Amplitude>
-      <Amplitude index="-1831">39083500000000.2</Amplitude>
-      <Amplitude index="1767">24499900000000.2</Amplitude>
-      <Amplitude index="4262">16405500000000.2</Amplitude>
-      <Amplitude index="-3295">8723900000000.24</Amplitude>
-      <Amplitude index="-3430">-28550299999999.8</Amplitude>
-      <Amplitude index="35">-41890399999999.8</Amplitude>
-      <Amplitude index="1566">23271700000000.2</Amplitude>
-      <Amplitude index="-520">23038900000000.2</Amplitude>
-      <Amplitude index="375">-5542399999999.76</Amplitude>
-      <Amplitude index="2363">42977800000000.2</Amplitude>
-      <Amplitude index="1017">-25006299999999.8</Amplitude>
-      <Amplitude index="1150">-24310699999999.8</Amplitude>
-      <Amplitude index="4141">24319700000000.2</Amplitude>
-      <Amplitude index="3708">-27836599999999.8</Amplitude>
-      <Amplitude index="-3908">-44220699999999.8</Amplitude>
-      <Amplitude index="530">-45156899999999.8</Amplitude>
-      <Amplitude index="467">-49746299999999.8</Amplitude>
-      <Amplitude index="1316">-209799999999.765</Amplitude>
-      <Amplitude index="2474">-31072699999999.8</Amplitude>
-      <Amplitude index="-890">13172800000000.2</Amplitude>
-      <Amplitude index="-2715">48427800000000.2</Amplitude>
-      <Amplitude index="4988">38136100000000.2</Amplitude>
-      <Amplitude index="1399">-31917599999999.8</Amplitude>
-      <Amplitude index="-3875">-17111599999999.8</Amplitude>
-      <Amplitude index="2830">-7317699999999.76</Amplitude>
-      <Amplitude index="2015">20852800000000.2</Amplitude>
-      <Amplitude index="1698">5992800000000.24</Amplitude>
-      <Amplitude index="183">-43303299999999.8</Amplitude>
-      <Amplitude index="-2242">-8015599999999.76</Amplitude>
-      <Amplitude index="3309">-31698299999999.8</Amplitude>
-      <Amplitude index="2933">44887500000000.2</Amplitude>
-      <Amplitude index="-219">-40083799999999.8</Amplitude>
-      <Amplitude index="1615">-4492099999999.76</Amplitude>
-      <Amplitude index="344">15403700000000.2</Amplitude>
-      <Amplitude index="-3989">45009400000000.2</Amplitude>
-      <Amplitude index="4829">-15181299999999.8</Amplitude>
-      <Amplitude index="-4664">-39547799999999.8</Amplitude>
-      <Amplitude index="2013">11747000000000.2</Amplitude>
-      <Amplitude index="-2489">23366100000000.2</Amplitude>
-      <Amplitude index="1170">23323700000000.2</Amplitude>
-      <Amplitude index="1307">4187100000000.23</Amplitude>
-      <Amplitude index="-614">18234400000000.2</Amplitude>
-      <Amplitude index="-1437">34442700000000.2</Amplitude>
-      <Amplitude index="-1214">48681700000000.2</Amplitude>
-      <Amplitude index="-158">6461900000000.24</Amplitude>
-      <Amplitude index="-2779">-17239699999999.8</Amplitude>
-      <Amplitude index="-1417">-27199499999999.8</Amplitude>
-      <Amplitude index="3384">-22034899999999.8</Amplitude>
-      <Amplitude index="62">39965500000000.2</Amplitude>
-      <Amplitude index="-2802">-31522699999999.8</Amplitude>
-      <Amplitude index="1465">-4156299999999.77</Amplitude>
-      <Amplitude index="-2722">33288900000000.2</Amplitude>
-      <Amplitude index="-561">-14667899999999.8</Amplitude>
-      <Amplitude index="1750">6528800000000.24</Amplitude>
-      <Amplitude index="3587">40087600000000.2</Amplitude>
-      <Amplitude index="3158">4215100000000.23</Amplitude>
-      <Amplitude index="3028">-40229999999999.8</Amplitude>
-      <Amplitude index="523">-24857299999999.8</Amplitude>
-      <Amplitude index="102">29572700000000.2</Amplitude>
-      <Amplitude index="2429">31711400000000.2</Amplitude>
-      <Amplitude index="-4235">4753300000000.24</Amplitude>
-      <Amplitude index="-3302">3651000000000.23</Amplitude>
-      <Amplitude index="2280">15533700000000.2</Amplitude>
-      <Amplitude index="4899">30554800000000.2</Amplitude>
-      <Amplitude index="-2339">-7840099999999.76</Amplitude>
-      <Amplitude index="-3887">-14853599999999.8</Amplitude>
-      <Amplitude index="138">-6773199999999.76</Amplitude>
-      <Amplitude index="-4132">-32771699999999.8</Amplitude>
-      <Amplitude index="-1859">10576000000000.2</Amplitude>
-      <Amplitude index="-2615">-49703699999999.8</Amplitude>
-      <Amplitude index="-3305">31333100000000.2</Amplitude>
-      <Amplitude index="-3719">8331300000000.24</Amplitude>
-      <Amplitude index="2488">17993700000000.2</Amplitude>
-      <Amplitude index="248">-23936499999999.8</Amplitude>
-      <Amplitude index="1757">8700100000000.24</Amplitude>
-      <Amplitude index="2694">21047900000000.2</Amplitude>
-      <Amplitude index="-3432">-9729499999999.77</Amplitude>
-      <Amplitude index="-3917">-40105999999999.8</Amplitude>
-      <Amplitude index="-2114">19124300000000.2</Amplitude>
-      <Amplitude index="-3951">28854400000000.2</Amplitude>
-      <Amplitude index="-1365">36942600000000.2</Amplitude>
-      <Amplitude index="-2008">-6292299999999.76</Amplitude>
-      <Amplitude index="2896">-3561699999999.77</Amplitude>
-      <Amplitude index="-4717">-12946499999999.8</Amplitude>
-      <Amplitude index="-4891">-11998799999999.8</Amplitude>
-      <Amplitude index="4373">40446400000000.2</Amplitude>
-      <Amplitude index="573">23991300000000.2</Amplitude>
-      <Amplitude index="1477">-23687399999999.8</Amplitude>
-      <Amplitude index="-806">8653400000000.24</Amplitude>
-      <Amplitude index="2877">-45193199999999.8</Amplitude>
-      <Amplitude index="-3695">22921600000000.2</Amplitude>
-      <Amplitude index="-3702">17909200000000.2</Amplitude>
-      <Amplitude index="1522">-9921599999999.77</Amplitude>
-      <Amplitude index="-3053">-38886499999999.8</Amplitude>
-      <Amplitude index="-1760">48782300000000.2</Amplitude>
-      <Amplitude index="3837">12287300000000.2</Amplitude>
-      <Amplitude index="9">-5008199999999.76</Amplitude>
-      <Amplitude index="1395">-19997499999999.8</Amplitude>
-      <Amplitude index="141">19106300000000.2</Amplitude>
-      <Amplitude index="2937">-21561199999999.8</Amplitude>
-      <Amplitude index="1516">-34573599999999.8</Amplitude>
-      <Amplitude index="-2503">-20430299999999.8</Amplitude>
-      <Amplitude index="1497">36496200000000.2</Amplitude>
-      <Amplitude index="-3468">-8313599999999.76</Amplitude>
-      <Amplitude index="2550">34518700000000.2</Amplitude>
-      <Amplitude index="1795">20205600000000.2</Amplitude>
-      <Amplitude index="4035">-44318499999999.8</Amplitude>
-      <Amplitude index="1580">13425300000000.2</Amplitude>
-      <Amplitude index="2396">12010200000000.2</Amplitude>
-      <Amplitude index="2849">-11117199999999.8</Amplitude>
-      <Amplitude index="-2303">41717400000000.2</Amplitude>
-      <Amplitude index="-4534">-47688699999999.8</Amplitude>
-      <Amplitude index="-37">-18556299999999.8</Amplitude>
-      <Amplitude index="-964">-39265399999999.8</Amplitude>
-      <Amplitude index="-3996">-15236399999999.8</Amplitude>
-      <Amplitude index="2490">22833000000000.2</Amplitude>
-      <Amplitude index="2928">334900000000.235</Amplitude>
-      <Amplitude index="-1036">47627300000000.2</Amplitude>
-      <Amplitude index="-205">33414100000000.2</Amplitude>
-      <Amplitude index="-4706">28721000000000.2</Amplitude>
-      <Amplitude index="-2524">27782100000000.2</Amplitude>
-      <Amplitude index="-1439">-2123399999999.77</Amplitude>
-      <Amplitude index="-1917">-31836299999999.8</Amplitude>
-      <Amplitude index="2194">-5593999999999.76</Amplitude>
-      <Amplitude index="2919">-49476099999999.8</Amplitude>
-      <Amplitude index="604">39403300000000.2</Amplitude>
-      <Amplitude index="4062">-9512899999999.77</Amplitude>
-      <Amplitude index="-4853">23445200000000.2</Amplitude>
-      <Amplitude index="-3923">-27341599999999.8</Amplitude>
-      <Amplitude index="2994">-16474799999999.8</Amplitude>
-      <Amplitude index="-386">-45413199999999.8</Amplitude>
-      <Amplitude index="-1836">-9259399999999.77</Amplitude>
-      <Amplitude index="-4038">45121600000000.2</Amplitude>
-      <Amplitude index="4092">-9984499999999.77</Amplitude>
-      <Amplitude index="1604">18173200000000.2</Amplitude>
-      <Amplitude index="-3453">40544500000000.2</Amplitude>
-      <Amplitude index="907">49769300000000.2</Amplitude>
-      <Amplitude index="-3587">-812399999999.765</Amplitude>
-      <Amplitude index="611">6781400000000.24</Amplitude>
-      <Amplitude index="2148">-18531999999999.8</Amplitude>
-      <Amplitude index="951">45952700000000.2</Amplitude>
-      <Amplitude index="-1846">-40481999999999.8</Amplitude>
-      <Amplitude index="2872">35495600000000.2</Amplitude>
-      <Amplitude index="3222">-11203799999999.8</Amplitude>
-      <Amplitude index="-113">16198800000000.2</Amplitude>
-      <Amplitude index="3686">-24706699999999.8</Amplitude>
-      <Amplitude index="-4652">19414900000000.2</Amplitude>
-      <Amplitude index="-1742">-29829999999999.8</Amplitude>
-      <Amplitude index="-386">44868600000000.2</Amplitude>
-      <Amplitude index="-1174">-14294099999999.8</Amplitude>
-      <Amplitude index="-2276">-18078699999999.8</Amplitude>
-      <Amplitude index="2837">-38982099999999.8</Amplitude>
-      <Amplitude index="3505">15499100000000.2</Amplitude>
-      <Amplitude index="-1967">40846400000000.2</Amplitude>
-      <Amplitude index="-2364">2281500000000.23</Amplitude>
-      <Amplitude index="-3266">3986900000000.23</Amplitude>
-      <Amplitude index="117">-1530299999999.77</Amplitude>
-      <Amplitude index="2402">184700000000.235</Amplitude>
-      <Amplitude index="2304">-27873599999999.8</Amplitude>
-      <Amplitude index="1202">-25875999999999.8</Amplitude>
-      <Amplitude index="-3710">2125900000000.23</Amplitude>
-      <Amplitude index="4115">49838500000000.2</Amplitude>
-      <Amplitude index="3131">40180200000000.2</Amplitude>
-      <Amplitude index="3707">39655100000000.2</Amplitude>
-      <Amplitude index="1719">43955900000000.2</Amplitude>
-      <Amplitude index="-4695">11239500000000.2</Amplitude>
-      <Amplitude index="-3148">-14222199999999.8</Amplitude>
-      <Amplitude index="-4577">-22414399999999.8</Amplitude>
-      <Amplitude index="-3242">-29474699999999.8</Amplitude>
-      <Amplitude index="-2553">-36779299999999.8</Amplitude>
-      <Amplitude index="516">41370600000000.2</Amplitude>
-      <Amplitude index="-3757">46584300000000.2</Amplitude>
-      <Amplitude index="-114">-17127999999999.8</Amplitude>
-      <Amplitude index="2412">5006400000000.24</Amplitude>
-      <Amplitude index="4540">32398800000000.2</Amplitude>
-      <Amplitude index="-287">-25988899999999.8</Amplitude>
-      <Amplitude index="-1715">-35867099999999.8</Amplitude>
-      <Amplitude index="-2720">25115600000000.2</Amplitude>
-      <Amplitude index="-923">28529900000000.2</Amplitude>
-      <Amplitude index="-2030">44870100000000.2</Amplitude>
-      <Amplitude index="2843">-9321899999999.77</Amplitude>
-      <Amplitude index="-2634">-17594799999999.8</Amplitude>
-      <Amplitude index="-77">6097400000000.24</Amplitude>
-      <Amplitude index="-1454">-34603299999999.8</Amplitude>
-      <Amplitude index="-576">-3567399999999.77</Amplitude>
-      <Amplitude index="-1740">2518000000000.23</Amplitude>
-      <Amplitude index="4766">-1200099999999.77</Amplitude>
-      <Amplitude index="1896">-28466099999999.8</Amplitude>
-      <Amplitude index="-1031">44565300000000.2</Amplitude>
-      <Amplitude index="98">-1557899999999.77</Amplitude>
-      <Amplitude index="-3394">-17938199999999.8</Amplitude>
-      <Amplitude index="4426">34786900000000.2</Amplitude>
-      <Amplitude index="-317">29038800000000.2</Amplitude>
-      <Amplitude index="-2161">-45608499999999.8</Amplitude>
-      <Amplitude index="-3702">-20889099999999.8</Amplitude>
-      <Amplitude index="3681">-10945899999999.8</Amplitude>
-      <Amplitude index="4082">-20402499999999.8</Amplitude>
-      <Amplitude index="-1521">-35515799999999.8</Amplitude>
-      <Amplitude index="1771">30029800000000.2</Amplitude>
-      <Amplitude index="-265">42764400000000.2</Amplitude>
-      <Amplitude index="4741">8721900000000.24</Amplitude>
-      <Amplitude index="-3924">-1036099999999.77</Amplitude>
-      <Amplitude index="-20">44608400000000.2</Amplitude>
-      <Amplitude index="-2365">34047900000000.2</Amplitude>
-      <Amplitude index="-483">-48732599999999.8</Amplitude>
-      <Amplitude index="-1458">-3793799999999.77</Amplitude>
-      <Amplitude index="-2245">31261500000000.2</Amplitude>
-      <Amplitude index="2881">-3630999999999.77</Amplitude>
-      <Amplitude index="-358">-11126299999999.8</Amplitude>
-      <Amplitude index="3558">20192600000000.2</Amplitude>
-      <Amplitude index="-2229">-18929099999999.8</Amplitude>
-      <Amplitude index="-4758">-34867699999999.8</Amplitude>
-    </AmpTable>
-        "#;
-    assert!(match from_str::<AmpTable>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_amplitude() {
-    let xml = r#"
-      <Amplitude index="2273">162200000000.235</Amplitude>
-        "#;
-    assert!(match from_str::<Amplitude>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_valid_data() {
-    let xml = r#"
-    <ValidData size="-939">
-      <Vertex index="79">
-        <Row>-2116</Row>
-        <Col>2716</Col>
-      </Vertex>
-      <Vertex index="1506">
-        <Row>4563</Row>
-        <Col>625</Col>
-      </Vertex>
-      <Vertex index="-1709">
-        <Row>4069</Row>
-        <Col>2576</Col>
-      </Vertex>
-    </ValidData>
-        "#;
-    assert!(match from_str::<ValidDataRC>(xml) {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
-}
-#[test]
-fn test_generated_xml_rcv_chan_proc() {
-    let xml = r#"
-    <RcvChanProc>
-      <NumChanProc>3798</NumChanProc>
-      <PRFScaleFactor>5898700000000.24</PRFScaleFactor>
-      <ChanIndex>-2598</ChanIndex>
-      <ChanIndex>-2404</ChanIndex>
-      <ChanIndex>-675</ChanIndex>
-      <ChanIndex>3381</ChanIndex>
-    </RcvChanProc>
-        "#;
-    assert!(match from_str::<RcvChanProc>(xml) {
         Ok(_) => true,
         Err(err) => {
             dbg!(err);
