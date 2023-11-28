@@ -198,10 +198,14 @@ pub enum ImageTypeEnum {
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RMAlgo {
-    #[serde(rename = "RMRefTime")]
+    #[serde(rename = "RefTime")]
     pub ref_time: f64,
-    #[serde(rename = "RMPosRef")]
+    #[serde(rename = "PosRef")]
     pub pos_ref: XYZ,
+    #[serde(rename = "UnitVelRef")]
+    pub unit_vel_ref: XYZ,
+    #[serde(rename = "DistRLPoly")]
+    pub dist_rl_poly: Poly1D,
     #[serde(rename = "CosDCACOAPoly")]
     pub cos_dcacoa_poly: Poly2D,
     #[serde(rename = "Kx1")]

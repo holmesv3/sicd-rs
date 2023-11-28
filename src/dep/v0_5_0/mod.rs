@@ -2,6 +2,7 @@
 use serde::Deserialize;
 
 pub mod grid;
+pub mod image_formation;
 pub mod match_info;
 
 pub use crate::dep::v0_4_0::antenna::Antenna;
@@ -10,7 +11,6 @@ pub use crate::dep::v0_4_0::error_statistics::ErrorStatistics;
 pub use crate::dep::v0_4_0::geo_data::GeoData;
 pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
-pub use crate::dep::v0_4_0::image_formation::{ImageFormation, RgAzComp, Rma};
 pub use crate::dep::v0_4_0::pfa::Pfa;
 pub use crate::dep::v0_4_0::position::Position;
 pub use crate::dep::v0_4_0::radar_collection::RadarCollection;
@@ -22,6 +22,7 @@ pub use crate::dep::v0_4_0::{
     XyzPoly, CMPLX, LL, LLH, XYZ,
 };
 use grid::Grid;
+use image_formation::{ImageFormation, RgAzComp, Rma};
 use match_info::MatchInfo;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
