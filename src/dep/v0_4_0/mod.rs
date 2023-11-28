@@ -18,7 +18,6 @@ pub mod radiometric;
 pub mod scpcoa;
 pub mod timeline;
 
-use crate::to_usize;
 pub use antenna::Antenna;
 pub use collection_info::CollectionInfo;
 pub use error_statistics::ErrorStatistics;
@@ -144,14 +143,14 @@ pub struct IdxLL {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Coef1D {
     #[serde(rename = "@exponent1")]
-    pub exponent1: i32,
+    pub exponent1: usize,
     #[serde(rename = "$value")]
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Poly1D {
     #[serde(rename = "@order1")]
-    pub order1: i32,
+    pub order1: usize,
     #[serde(rename = "$value")]
     pub coefs: Vec<Coef1D>,
 }
@@ -159,18 +158,18 @@ pub struct Poly1D {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Coef2D {
     #[serde(rename = "@exponent1")]
-    pub exponent1: i32,
+    pub exponent1: usize,
     #[serde(rename = "@exponent2")]
-    pub exponent2: i32,
+    pub exponent2: usize,
     #[serde(rename = "$value")]
     pub value: f64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Poly2D {
     #[serde(rename = "@order1")]
-    pub order1: i32,
+    pub order1: usize,
     #[serde(rename = "@order2")]
-    pub order2: i32,
+    pub order2: usize,
     #[serde(rename = "$value")]
     pub coefs: Vec<Coef2D>,
 }
@@ -207,9 +206,9 @@ pub struct Parameter {
 impl Poly1D {
     /// Parse the data in the polynomial to an array object
     pub fn to_array(&self) -> Array1<f64> {
-        let mut poly = Array1::zeros(to_usize(self.order1) + 1);
+        let mut poly = Array1::zeros(self.order1 + 1);
         for coef in &self.coefs {
-            let term: usize = to_usize(coef.exponent1);
+            let term: usize = coef.exponent1;
             poly[term] = coef.value;
         }
         poly
@@ -219,7 +218,8 @@ impl Poly1D {
     pub fn eval(&self, x: f64) -> f64 {
         let mut res = 0f64;
         for coef in &self.coefs {
-            res += coef.value * x.powi(coef.exponent1)
+            let exp = i32::try_from(coef.exponent1).unwrap();
+            res += coef.value * x.powi(exp);
         }
         res
     }
@@ -228,10 +228,10 @@ impl Poly1D {
 impl Poly2D {
     /// Parse the data in the polynomial to an array object
     pub fn to_array(&self) -> Array2<f64> {
-        let mut poly = Array2::zeros((to_usize(self.order1) + 1, to_usize(self.order2) + 1));
+        let mut poly = Array2::zeros((self.order1 + 1, self.order2 + 1));
         for coef in &self.coefs {
-            let term1 = to_usize(coef.exponent1);
-            let term2 = to_usize(coef.exponent2);
+            let term1 = coef.exponent1;
+            let term2 = coef.exponent2;
             poly[[term1, term2]] = coef.value;
         }
         poly
@@ -240,7 +240,7 @@ impl Poly2D {
     pub fn eval(&self, x: f64, y: f64) -> f64 {
         let mut res = 0f64;
         for coef in &self.coefs {
-            res += coef.value * x.powi(coef.exponent1) * y.powi(coef.exponent2)
+            res += coef.value * x.powi(i32::try_from(coef.exponent1).unwrap()) * y.powi(i32::try_from(coef.exponent2).unwrap())
         }
         res
     }

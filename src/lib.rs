@@ -4,7 +4,6 @@
 //!
 //! It is a future goal to have functions for each version, but for now a single
 //! function call and `match` statement are used.
-use num_traits::cast::AsPrimitive;
 use std::fs::File;
 use std::path::Path;
 use std::ptr::null;
@@ -44,11 +43,6 @@ pub mod v1_3_0;
 pub fn read_sicd(path: &Path) -> Sicd {
     let file = File::open(path).unwrap();
     Sicd::from_file(file)
-}
-
-fn to_usize(val: i32) -> usize {
-    assert!(val >= 0);
-    val.as_()
 }
 
 #[derive(Error, Debug)]
