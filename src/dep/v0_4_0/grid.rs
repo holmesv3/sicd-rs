@@ -78,8 +78,9 @@ pub struct Wgt {
 }
 
 mod tests {
-    use super::{DirectionParams, Grid, Poly2D};
-    use quick_xml::de::from_str;
+    // Unused import false alarmed on these
+    // use super::{DirectionParams, Grid, Poly2D};
+    // use quick_xml::de::from_str;
 
     #[test]
     fn test_gen_xml_grid() {
@@ -133,7 +134,7 @@ mod tests {
     </Col>
   </Grid>
         "#;
-        assert!(match from_str::<Grid>(xml) {
+        assert!(match quick_xml::de::from_str::<super::Grid>(xml) {
             Ok(_) => true,
             Err(err) => {
                 dbg!(err);
@@ -152,7 +153,7 @@ mod tests {
       <Coef exponent1="972" exponent2="1840" class="xs:double">-15645799999999.8</Coef>
     </TimeCOAPoly>
         "#;
-        assert!(match from_str::<Poly2D>(xml) {
+        assert!(match quick_xml::de::from_str::<super::Poly2D>(xml) {
             Ok(_) => true,
             Err(err) => {
                 dbg!(err);
@@ -182,7 +183,7 @@ mod tests {
       <WgtType class="xs:string">string</WgtType>
     </Row>
         "#;
-        assert!(match from_str::<DirectionParams>(xml) {
+        assert!(match quick_xml::de::from_str::<super::DirectionParams>(xml) {
             Ok(_) => true,
             Err(err) => {
                 dbg!(err);
