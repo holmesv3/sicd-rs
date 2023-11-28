@@ -153,7 +153,7 @@
    <xs:complexType name="polycoef1dtype">
       <xs:simpleContent>
          <xs:extension base="doubletype">
-            <xs:attribute name="exponent1" type="xs:int" use="required"/>
+            <xs:attribute name="exponent1" type="xs:unsignedInt" use="required"/>
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
@@ -161,8 +161,8 @@
    <xs:complexType name="polycoef2dtype">
       <xs:simpleContent>
          <xs:extension base="doubletype">
-            <xs:attribute name="exponent1" type="xs:int" use="required"/>
-            <xs:attribute name="exponent2" type="xs:int" use="required"/>
+            <xs:attribute name="exponent1" type="xs:unsignedInt" use="required"/>
+            <xs:attribute name="exponent2" type="xs:unsignedInt" use="required"/>
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
@@ -171,15 +171,15 @@
       <xs:sequence>
          <xs:element name="Coef" type="polycoef1dtype" minOccurs="1" maxOccurs="unbounded"/>
       </xs:sequence>
-      <xs:attribute name="order1" type="xs:int" use="required"/>
+      <xs:attribute name="order1" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="poly2dtype">
       <xs:sequence>
          <xs:element name="Coef" type="polycoef2dtype" minOccurs="1" maxOccurs="unbounded"/>
       </xs:sequence>
-      <xs:attribute name="order1" type="xs:int" use="required"/>
-      <xs:attribute name="order2" type="xs:int" use="required"/>
+      <xs:attribute name="order1" type="xs:unsignedInt" use="required"/>
+      <xs:attribute name="order2" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="xyzpolytype">
