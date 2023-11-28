@@ -1,5 +1,7 @@
 use quick_xml::de::from_str;
-use sicd_rs::dep::v0_4_0::{CollectionInfo, GeoData, Grid, ImageCreation, ImageData, SicdMeta};
+use sicd_rs::dep::v0_4_0::{
+    CollectionInfo, GeoData, Grid, ImageCreation, ImageData, Poly2D, SicdMeta, grid::DirectionParams,
+};
 
 #[test]
 fn test_gen_xml() {
@@ -829,6 +831,7 @@ fn test_gen_xml_geo_data() {
         }
     });
 }
+
 #[test]
 fn test_gen_xml_grid() {
     let xml = r#"
@@ -882,6 +885,55 @@ fn test_gen_xml_grid() {
   </Grid>
         "#;
     assert!(match from_str::<Grid>(xml) {
+        Ok(_) => true,
+        Err(err) => {
+            dbg!(err);
+            false
+        }
+    });
+}
+#[test]
+fn test_gen_xml_time_coa_poly() {
+    let xml = r#"
+    <TimeCOAPoly order1="-1052" order2="-4622">
+      <Coef exponent1="-4237" exponent2="2660" class="xs:double">-29866499999999.8</Coef>
+      <Coef exponent1="1945" exponent2="-1595" class="xs:double">-4506299999999.76</Coef>
+      <Coef exponent1="-4026" exponent2="-4356" class="xs:double">-20750399999999.8</Coef>
+      <Coef exponent1="594" exponent2="-4020" class="xs:double">-33942899999999.8</Coef>
+      <Coef exponent1="972" exponent2="1840" class="xs:double">-15645799999999.8</Coef>
+    </TimeCOAPoly>
+        "#;
+    assert!(match from_str::<Poly2D>(xml) {
+        Ok(_) => true,
+        Err(err) => {
+            dbg!(err);
+            false
+        }
+    });
+}
+#[test]
+fn test_gen_xml_row() {
+    let xml = r#"
+    <Row>
+      <UVectECF>
+        <X class="xs:double">-20727799999999.8</X>
+        <Y class="xs:double">23855300000000.2</Y>
+        <Z class="xs:double">29372000000000.2</Z>
+      </UVectECF>
+      <SS class="xs:double">21110500000000.2</SS>
+      <ImpRespWid class="xs:double">19682000000000.2</ImpRespWid>
+      <Sgn class="xs:int">2424</Sgn>
+      <ImpRespBW class="xs:double">20014300000000.2</ImpRespBW>
+      <KCtr class="xs:double">-12708799999999.8</KCtr>
+      <DeltaK1 class="xs:double">-41078599999999.8</DeltaK1>
+      <DeltaK2 class="xs:double">19824000000000.2</DeltaK2>
+      <DeltaKCOAPoly order1="-1146" order2="2472">
+        <Coef exponent1="-1708" exponent2="-2589" class="xs:double">26725500000000.2</Coef>
+      </DeltaKCOAPoly>
+      <WgtType class="xs:string">string</WgtType>
+    </Row>
+        "#;
+    assert!(match from_str::<DirectionParams>(xml) {
         Ok(_) => true,
         Err(err) => {
             dbg!(err);
