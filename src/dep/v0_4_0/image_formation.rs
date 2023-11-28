@@ -199,7 +199,7 @@ pub enum ImageTypeEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RMAlgo {
     #[serde(rename = "RefTime")]
-    pub ref_time: f64,
+    pub ref_time: Option<f64>,
     #[serde(rename = "PosRef")]
     pub pos_ref: XYZ,
     #[serde(rename = "UnitVelRef")]
