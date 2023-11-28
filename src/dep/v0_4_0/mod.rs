@@ -219,7 +219,7 @@ impl Poly1D {
     pub fn eval(&self, x: f64) -> f64 {
         let mut res = 0f64;
         for coef in &self.coefs {
-            res += coef.value * x.powi(coef.exponent1 as i32)
+            res += coef.value * x.powi(coef.exponent1)
         }
         res
     }
@@ -240,7 +240,7 @@ impl Poly2D {
     pub fn eval(&self, x: f64, y: f64) -> f64 {
         let mut res = 0f64;
         for coef in &self.coefs {
-            res += coef.value * x.powi(coef.exponent1 as i32) * y.powi(coef.exponent2 as i32)
+            res += coef.value * x.powi(coef.exponent1) * y.powi(coef.exponent2)
         }
         res
     }
