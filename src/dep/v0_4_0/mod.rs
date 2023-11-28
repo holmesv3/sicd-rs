@@ -522,7 +522,7 @@ mod tests {
       <Min class="xs:double">-12914799999999.8</Min>
       <Max class="xs:double">8369300000000.24</Max>
     </TxFrequency>
-    <TxPolarization class="xs:string">string</TxPolarization>
+    <TxPolarization class="xs:string">V</TxPolarization>
     <PolarizationHVAnglePoly order1="4789">
       <Coef exponent1="-3384" class="xs:double">-12397599999999.8</Coef>
       <Coef exponent1="-3204" class="xs:double">-13827599999999.8</Coef>
@@ -579,17 +579,17 @@ mod tests {
       <ChanIndex class="xs:int">-4829</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc class="xs:string">string</TxRcvPolarizationProc>
-    <ImageFormAlgo class="xs:string">string</ImageFormAlgo>
+    <ImageFormAlgo class="xs:string">PFA</ImageFormAlgo>
     <TStartProc class="xs:double">38286200000000.2</TStartProc>
     <TEndProc class="xs:double">-25466599999999.8</TEndProc>
     <TxFrequencyProc>
       <MinProc class="xs:double">-3461499999999.77</MinProc>
       <MaxProc class="xs:double">41672900000000.2</MaxProc>
     </TxFrequencyProc>
-    <STBeamComp class="xs:string">string</STBeamComp>
-    <ImageBeamComp class="xs:string">string</ImageBeamComp>
-    <AzAutofocus class="xs:string">string</AzAutofocus>
-    <RgAutofocus class="xs:string">string</RgAutofocus>
+    <STBeamComp class="xs:string">NO</STBeamComp>
+    <ImageBeamComp class="xs:string">NO</ImageBeamComp>
+    <AzAutofocus class="xs:string">NO</AzAutofocus>
+    <RgAutofocus class="xs:string">NO</RgAutofocus>
     <Processing>
       <Type class="xs:string">string</Type>
       <Applied class="xs:boolean">false</Applied>
@@ -666,7 +666,7 @@ mod tests {
       <Y class="xs:double">29455200000000.2</Y>
       <Z class="xs:double">-18975699999999.8</Z>
     </ARPAcc>
-    <SideOfTrack class="xs:string">string</SideOfTrack>
+    <SideOfTrack class="xs:string">L</SideOfTrack>
     <SlantRange class="xs:double">16624300000000.2</SlantRange>
     <GroundRange class="xs:double">-19278599999999.8</GroundRange>
     <DopplerConeAng class="xs:double">45278000000000.2</DopplerConeAng>
@@ -695,12 +695,12 @@ mod tests {
       <Coef exponent1="1700" exponent2="-3897" class="xs:double">36708700000000.2</Coef>
       <Coef exponent1="-3455" exponent2="-1029" class="xs:double">-31970099999999.8</Coef>
     </SigmaZeroSFPoly>
-    <SigmaZeroSFIncidenceMap class="xs:string">string</SigmaZeroSFIncidenceMap>
+    <SigmaZeroSFIncidenceMap class="xs:string">APPLIED</SigmaZeroSFIncidenceMap>
     <GammaZeroSFPoly order1="-3826" order2="-3475">
       <Coef exponent1="2063" exponent2="34" class="xs:double">13524800000000.2</Coef>
       <Coef exponent1="-3702" exponent2="-2003" class="xs:double">4528500000000.24</Coef>
     </GammaZeroSFPoly>
-    <GammaZeroSFIncidenceMap class="xs:string">string</GammaZeroSFIncidenceMap>
+    <GammaZeroSFIncidenceMap class="xs:string">APPLIED</GammaZeroSFIncidenceMap>
   </Radiometric>
   <Antenna>
     <Tx>
@@ -836,7 +836,7 @@ mod tests {
     </CompositeSCP>
     <Components>
       <PosVelErr>
-        <Frame class="xs:string">string</Frame>
+        <Frame class="xs:string">ECF</Frame>
         <P1 class="xs:double">-22056099999999.8</P1>
         <P2 class="xs:double">28634300000000.2</P2>
         <P3 class="xs:double">-49374399999999.8</P3>
@@ -901,8 +901,8 @@ mod tests {
     </Collect>
   </MatchInfo>
   <RMA>
-    <RMAlgoType class="xs:string">string</RMAlgoType>
-    <ImageType class="xs:string">string</ImageType>
+    <RMAlgoType class="xs:string">CSA</RMAlgoType>
+    <ImageType class="xs:string">INCA</ImageType>
     <RMAT>
       <RMRefTime class="xs:double">7501200000000.24</RMRefTime>
       <RMPosRef>
