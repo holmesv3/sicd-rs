@@ -1,8 +1,5 @@
 use quick_xml::de::from_str;
-use sicd_rs::{
-    dep::v0_4_0::image_data::{AmpTable, Amplitude, PixelType, ValidDataRC},
-    v1_3_0::{image_formation::RcvChanProc, CollectionInfo, ImageCreation, ImageData, SicdMeta},
-};
+use sicd_rs::v1_3_0::SicdMeta;
 
 #[test]
 fn test_generated_xml() {
