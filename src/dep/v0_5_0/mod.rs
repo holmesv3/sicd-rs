@@ -22,7 +22,7 @@ pub use crate::dep::v0_4_0::{
     XyzPoly, CMPLX, LL, LLH, XYZ,
 };
 pub use grid::Grid;
-pub use image_formation::{ImageFormation, RGAZCOMP, Rma};
+pub use image_formation::{ImageFormation, Rma, RGAZCOMP};
 pub use match_info::MatchInfo;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]

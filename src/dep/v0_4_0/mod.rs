@@ -25,7 +25,7 @@ pub use geo_data::GeoData;
 pub use grid::Grid;
 pub use image_creation::ImageCreation;
 pub use image_data::ImageData;
-pub use image_formation::{ImageFormation, RGAZCOMP, Rma};
+pub use image_formation::{ImageFormation, Rma, RGAZCOMP};
 pub use match_info::MatchInfo;
 pub use pfa::PFA;
 pub use position::Position;
@@ -240,7 +240,9 @@ impl Poly2D {
     pub fn eval(&self, x: f64, y: f64) -> f64 {
         let mut res = 0f64;
         for coef in &self.coefs {
-            res += coef.value * x.powi(i32::try_from(coef.exponent1).unwrap()) * y.powi(i32::try_from(coef.exponent2).unwrap())
+            res += coef.value
+                * x.powi(i32::try_from(coef.exponent1).unwrap())
+                * y.powi(i32::try_from(coef.exponent2).unwrap())
         }
         res
     }
