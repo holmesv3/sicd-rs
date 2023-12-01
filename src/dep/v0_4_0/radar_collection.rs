@@ -135,7 +135,7 @@ pub struct ChanParameters {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Area {
     #[serde(rename = "Corner")]
-    pub corner: Corner,
+    pub corner: Option<Corner>,
     #[serde(rename = "Plane")]
     pub plane: Option<Plane>,
 }
