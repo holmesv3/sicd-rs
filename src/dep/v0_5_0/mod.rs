@@ -11,7 +11,7 @@ pub use crate::dep::v0_4_0::error_statistics::ErrorStatistics;
 pub use crate::dep::v0_4_0::geo_data::GeoData;
 pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
-pub use crate::dep::v0_4_0::pfa::Pfa;
+pub use crate::dep::v0_4_0::pfa::PFA;
 pub use crate::dep::v0_4_0::position::Position;
 pub use crate::dep::v0_4_0::radar_collection::RadarCollection;
 pub use crate::dep::v0_4_0::radiometric::Radiometric;
@@ -58,7 +58,7 @@ pub struct SicdMeta {
     #[serde(rename = "RgAzComp")]
     pub rg_az_comp: Option<RgAzComp>,
     #[serde(rename = "PFA")]
-    pub pfa: Option<Pfa>,
+    pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
     pub rma: Option<Rma>,
 }

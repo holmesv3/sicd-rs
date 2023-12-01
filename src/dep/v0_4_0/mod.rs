@@ -27,7 +27,7 @@ pub use image_creation::ImageCreation;
 pub use image_data::ImageData;
 pub use image_formation::{ImageFormation, RgAzComp, Rma};
 pub use match_info::MatchInfo;
-pub use pfa::Pfa;
+pub use pfa::PFA;
 pub use position::Position;
 pub use radar_collection::RadarCollection;
 pub use radiometric::Radiometric;
@@ -67,7 +67,7 @@ pub struct SicdMeta {
     #[serde(rename = "RgAzComp")]
     pub rg_az_comp: Option<RgAzComp>,
     #[serde(rename = "PFA")]
-    pub pfa: Option<Pfa>,
+    pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
     pub rma: Option<Rma>,
 }
