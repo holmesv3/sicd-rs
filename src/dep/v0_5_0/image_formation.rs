@@ -1,7 +1,7 @@
 use super::{Poly1D, Poly2D, XYZ};
 pub use crate::dep::v0_4_0::image_formation::{
     AzAutofocus, Distortion, ImageBeamComp, ImageFormAlgo, ImageFormation, ImageType, Processing,
-    RMAlgoType, RMAlgoTypeEnum, RcvChanProc, RgAutofocus, RgAutofocusEnum, RgAzComp, STBeamComp,
+    RMAlgoType, RMAlgoTypeEnum, RcvChanProc, RgAutofocus, RgAutofocusEnum, RGAZCOMP, STBeamComp,
     TxFrequencyProc, INCA,
 };
 use serde::Deserialize;

@@ -149,7 +149,7 @@ pub struct Distortion {
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct RgAzComp {
+pub struct RGAZCOMP {
     #[serde(rename = "RgAzRefTime")]
     pub rg_az_ref_time: f64,
     #[serde(rename = "Time1")]
