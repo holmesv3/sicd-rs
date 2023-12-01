@@ -15,7 +15,7 @@ pub use crate::dep::v0_4_0::pfa::Pfa;
 pub use crate::dep::v0_4_0::position::Position;
 pub use crate::dep::v0_4_0::radar_collection::RadarCollection;
 pub use crate::dep::v0_4_0::radiometric::Radiometric;
-pub use crate::dep::v0_4_0::scpcoa::ScpCoa;
+pub use crate::dep::v0_4_0::scpcoa::SCPCOA;
 pub use crate::dep::v0_4_0::timeline::Timeline;
 pub use crate::dep::v0_4_0::{
     Coef1D, Coef2D, IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Parameter, Poly1D, Poly2D, RowCol,
@@ -46,7 +46,7 @@ pub struct SicdMeta {
     #[serde(rename = "ImageFormation")]
     pub image_formation: ImageFormation,
     #[serde(rename = "SCPCOA")]
-    pub scpcoa: ScpCoa,
+    pub scpcoa: SCPCOA,
     #[serde(rename = "Radiometric")]
     pub radiometric: Option<Radiometric>,
     #[serde(rename = "Antenna")]

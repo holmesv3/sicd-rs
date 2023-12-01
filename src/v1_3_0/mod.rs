@@ -29,7 +29,7 @@ pub use image_formation::{ImageFormation, RgAzComp, Rma};
 pub use match_info::MatchInfo;
 pub use radar_collection::RadarCollection;
 pub use radiometric::Radiometric;
-pub use scpcoa::ScpCoa;
+pub use scpcoa::SCPCOA;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SicdMeta {
@@ -52,7 +52,7 @@ pub struct SicdMeta {
     #[serde(rename = "ImageFormation")]
     pub image_formation: ImageFormation,
     #[serde(rename = "SCPCOA")]
-    pub scpcoa: ScpCoa,
+    pub scpcoa: SCPCOA,
     #[serde(rename = "Radiometric")]
     pub radiometric: Option<Radiometric>,
     #[serde(rename = "Antenna")]
