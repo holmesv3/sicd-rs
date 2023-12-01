@@ -5,7 +5,15 @@ use quick_xml::reader::Reader;
 
 #[test]
 fn test_generated_130_xml() {
-    let xml = include_str!("sicd_meta_130.xml");
+    let xml = include_str!("sicd_meta_130_00.xml");
+    parse_130_xml(xml);
+    parse_130_components(xml);
+    let xml = include_str!("sicd_meta_130_01.xml");
+    parse_130_xml(xml);
+    parse_130_components(xml);
+}
+
+fn parse_130_xml(xml: &str) {
     let sicd_meta = from_str::<sicd_rs::v1_3_0::SicdMeta>(xml);
     assert!(match sicd_meta {
         Ok(_) => true,
@@ -44,9 +52,7 @@ fn test_generated_040_xml() {
 
 macro_rules! create_130_component_test {
     ($($x:ident),*) => {
-#[test]
-fn parse_130_components_test_macro() {
-    let xml = include_str!("sicd_meta_130.xml");
+fn parse_130_components(xml: &str) {
     let mut reader = Reader::from_str(xml);
     reader.trim_text(true);
 
@@ -111,7 +117,8 @@ create_130_component_test!(
     Antenna,
     ErrorStatistics,
     MatchInfo,
-    PFA
+    PFA,
+    RMA
 );
 
 macro_rules! create_050_component_test {
@@ -186,7 +193,8 @@ create_050_component_test!(
     ErrorStatistics,
     MatchInfo,
     PFA,
-    RGAZCOMP
+    RGAZCOMP,
+    RMA
 );
 
 macro_rules! create_040_component_test {
@@ -261,5 +269,6 @@ create_040_component_test!(
     ErrorStatistics,
     MatchInfo,
     PFA,
-    RGAZCOMP
+    RGAZCOMP,
+    RMA
 );
