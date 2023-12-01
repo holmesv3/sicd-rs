@@ -45,13 +45,21 @@ fn parse_130_components_test_macro() {
             Ok(Event::Start(e)) => match std::str::from_utf8(e.name().as_ref()).unwrap() {
                 $(
                 stringify!($x) => {
+                    let attributes = e.attributes().map( |a| {
+                        let a=a.unwrap();
+                        format!(
+                            "{}=\"{}\"",
+                            std::str::from_utf8(a.key.into_inner()).unwrap(),
+                            std::str::from_utf8(&a.value).unwrap())}).collect::<Vec<_>>().join(" ");
                     let qname = QName(stringify!($x).as_bytes());
                     let span = reader.read_to_end(qname).unwrap();
-                    let result = from_str::<sicd_rs::v1_3_0::$x>(&format!(
-                        "<{0}>{1}</{0}>",
+                    let xml_sub = format!(
+                        "<{0} {2}>{1}</{0}>",
                         stringify!($x),
-                        &xml[span]
-                    ));
+                        &xml[span],
+                        attributes
+                    );
+                    let result = from_str::<sicd_rs::v1_3_0::$x>(&xml_sub);
                     match result {
                         Ok(_) => println!("Parsed {}", stringify!($x)),
                         Err(err) => {
