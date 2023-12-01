@@ -163,7 +163,7 @@ pub struct RGAZCOMP {
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Rma {
+pub struct RMA {
     #[serde(rename = "RMAlgoType")]
     pub rm_algo_type: RMAlgoType,
     #[serde(rename = "ImageType")]

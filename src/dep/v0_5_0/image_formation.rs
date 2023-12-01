@@ -7,7 +7,7 @@ pub use crate::dep::v0_4_0::image_formation::{
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Rma {
+pub struct RMA {
     #[serde(rename = "RMAlgoType")]
     pub rm_algo_type: RMAlgoType,
     #[serde(rename = "ImageType")]

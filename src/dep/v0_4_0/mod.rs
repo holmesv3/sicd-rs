@@ -25,7 +25,7 @@ pub use geo_data::GeoData;
 pub use grid::Grid;
 pub use image_creation::ImageCreation;
 pub use image_data::ImageData;
-pub use image_formation::{ImageFormation, Rma, RGAZCOMP};
+pub use image_formation::{ImageFormation, RMA, RGAZCOMP};
 pub use match_info::MatchInfo;
 pub use pfa::PFA;
 pub use position::Position;
@@ -69,7 +69,7 @@ pub struct SicdMeta {
     #[serde(rename = "PFA")]
     pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
-    pub rma: Option<Rma>,
+    pub rma: Option<RMA>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]

@@ -22,7 +22,7 @@ pub use crate::dep::v0_4_0::{
     XyzPoly, CMPLX, LL, LLH, XYZ,
 };
 pub use grid::Grid;
-pub use image_formation::{ImageFormation, Rma, RGAZCOMP};
+pub use image_formation::{ImageFormation, RMA, RGAZCOMP};
 pub use match_info::MatchInfo;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -60,5 +60,5 @@ pub struct SicdMeta {
     #[serde(rename = "PFA")]
     pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
-    pub rma: Option<Rma>,
+    pub rma: Option<RMA>,
 }

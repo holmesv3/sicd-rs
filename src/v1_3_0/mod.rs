@@ -25,7 +25,7 @@ pub use crate::dep::v0_5_0::grid::Grid;
 pub use antenna::Antenna;
 pub use error_statistics::ErrorStatistics;
 pub use geo_data::GeoData;
-pub use image_formation::{ImageFormation, RgAzComp, Rma};
+pub use image_formation::{ImageFormation, RgAzComp, RMA};
 pub use match_info::MatchInfo;
 pub use radar_collection::RadarCollection;
 pub use radiometric::Radiometric;
@@ -66,7 +66,7 @@ pub struct SicdMeta {
     #[serde(rename = "PFA")]
     pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
-    pub rma: Option<Rma>,
+    pub rma: Option<RMA>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
