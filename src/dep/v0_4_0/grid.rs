@@ -65,7 +65,7 @@ pub struct DirectionParams {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct WgtFunct {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "Wgt")]
     pub wgt: Vec<Wgt>,
 }

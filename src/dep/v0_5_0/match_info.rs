@@ -4,7 +4,7 @@ use serde::Deserialize;
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct MatchInfo {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "Collect")]
     pub collect: Vec<Collect>,
 }

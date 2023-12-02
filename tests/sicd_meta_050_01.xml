@@ -87,7 +87,7 @@
         <Lon>-13582499999999.8</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-382">
+    <ValidData size="382">
       <Vertex index="-4606">
         <Lat>14703700000000.2</Lat>
         <Lon>33222400000000.2</Lon>
@@ -113,7 +113,7 @@
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
-      <Polygon size="-882">
+      <Polygon size="882">
         <Vertex index="-4649">
           <Lat>-17984599999999.8</Lat>
           <Lon>13754800000000.2</Lon>
@@ -192,7 +192,7 @@
   <Timeline>
     <CollectStart>1992-05-17T12:59:33.20</CollectStart>
     <CollectDuration>-21119399999999.8</CollectDuration>
-    <IPP size="-507">
+    <IPP size="507">
       <Set index="-3021">
         <TStart>38239800000000.2</TStart>
         <TEnd>-9193399999999.77</TEnd>
@@ -653,7 +653,7 @@
       <Parameter name="string">string</Parameter>
     </AdditionalParms>
   </ErrorStatistics>
-  <MatchInfo size="-2658">
+  <MatchInfo size="2658">
     <Collect index="-2123">
       <CollectorName>string</CollectorName>
       <IlluminatorName>string</IlluminatorName>

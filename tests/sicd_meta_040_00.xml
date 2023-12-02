@@ -21,7 +21,7 @@
   </ImageCreation>
   <ImageData>
     <PixelType>RE16I_IM16I</PixelType>
-    <AmpTable size="-3552">
+    <AmpTable size="3552">
       <Amplitude index="-2968" class="xs:double">20567000000000.2</Amplitude>
       <Amplitude index="2333" class="xs:double">13544400000000.2</Amplitude>
       <Amplitude index="-2284" class="xs:double">5128500000000.24</Amplitude>
@@ -101,7 +101,7 @@
         <Lon class="xs:double">31366400000000.2</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-248">
+    <ValidData size="248">
       <Vertex index="-2228">
         <Lat class="xs:double">-21838499999999.8</Lat>
         <Lon class="xs:double">-17215699999999.8</Lon>
@@ -123,7 +123,7 @@
       <Desc name="string" class="xs:string">string</Desc>
       <Desc name="string" class="xs:string">string</Desc>
       <Desc name="string" class="xs:string">string</Desc>
-      <Line size="-4004">
+      <Line size="4004">
         <Endpoint index="3687">
           <Lat class="xs:double">46020000000000.2</Lat>
           <Lon class="xs:double">-4220999999999.77</Lon>
@@ -180,7 +180,7 @@
         <Coef exponent1="8293" exponent2="4544" class="xs:double">-286299999999.765</Coef>
       </DeltaKCOAPoly>
       <WgtType class="xs:string">string</WgtType>
-      <WgtFunct size="-3905">
+      <WgtFunct size="3905">
         <Wgt index="-430" class="xs:double">-39448699999999.8</Wgt>
         <Wgt index="1507" class="xs:double">-19622299999999.8</Wgt>
       </WgtFunct>
@@ -280,7 +280,7 @@
         <Coef exponent1="7635" class="xs:double">29313400000000.2</Coef>
       </Z>
     </TxAPCPoly>
-    <RcvAPC size="-4596">
+    <RcvAPC size="4596">
       <RcvAPCPoly index="4008">
         <X order1="8481">
           <Coef exponent1="6429" class="xs:double">-18153899999999.8</Coef>
@@ -338,10 +338,10 @@
       <Coef exponent1="2326" class="xs:double">2575900000000.23</Coef>
       <Coef exponent1="988" class="xs:double">22177300000000.2</Coef>
     </PolarizationHVAnglePoly>
-    <TxSequence size="-3113">
+    <TxSequence size="3113">
       <TxStep index="1258" />
     </TxSequence>
-    <Waveform size="-4233">
+    <Waveform size="4233">
       <WFParameters index="-2265" />
       <WFParameters index="-1343" />
     </Waveform>

@@ -21,7 +21,7 @@
   </ImageCreation>
   <ImageData>
     <PixelType>RE16I_IM16I</PixelType>
-    <AmpTable size="-3552">
+    <AmpTable size="3552">
       <Amplitude index="-2968">20567000000000.2</Amplitude>
       <Amplitude index="2333">13544400000000.2</Amplitude>
       <Amplitude index="-2284">5128500000000.24</Amplitude>
@@ -101,7 +101,7 @@
         <Lon>31366400000000.2</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-248">
+    <ValidData size="248">
       <Vertex index="-2228">
         <Lat>-21838499999999.8</Lat>
         <Lon>-17215699999999.8</Lon>
@@ -123,7 +123,7 @@
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
-      <Line size="-4004">
+      <Line size="4004">
         <Endpoint index="3687">
           <Lat>46020000000000.2</Lat>
           <Lon>-4220999999999.77</Lon>
@@ -182,7 +182,7 @@
       <WgtType>
         <WindowName>string</WindowName>
       </WgtType>
-      <WgtFunct size="-430">
+      <WgtFunct size="430">
         <Wgt index="-1962">6898900000000.24</Wgt>
       </WgtFunct>
     </Row>
@@ -202,7 +202,7 @@
       <DeltaKCOAPoly order1="8675" order2="8495">
         <Coef exponent1="1162" exponent2="3031">26067100000000.2</Coef>
       </DeltaKCOAPoly>
-      <WgtFunct size="-4775">
+      <WgtFunct size="4775">
         <Wgt index="3258">-5480299999999.76</Wgt>
       </WgtFunct>
     </Col>
@@ -274,7 +274,7 @@
         <Coef exponent1="964">48942700000000.2</Coef>
       </Z>
     </TxAPCPoly>
-    <RcvAPC size="-2212">
+    <RcvAPC size="2212">
       <RcvAPCPoly index="-3049">
         <X order1="903">
           <Coef exponent1="7756">-45961599999999.8</Coef>
@@ -307,13 +307,13 @@
       <TxStep index="-4828" />
       <TxStep index="-852" />
     </TxSequence>
-    <Waveform size="-2209">
+    <Waveform size="2209">
       <WFParameters index="-4315" />
       <WFParameters index="2645" />
       <WFParameters index="205" />
       <WFParameters index="-2674" />
     </Waveform>
-    <RcvChannels size="-4233">
+    <RcvChannels size="4233">
       <ChanParameters index="-2265" />
     </RcvChannels>
     <Area />

@@ -40,7 +40,7 @@ pub enum PixelTypeEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct AmpTable {
     #[serde(rename = "@size")]
-    pub size: i32, // 256
+    pub size: u64, // 256
     #[serde(rename = "Amplitude")]
     pub amplitude: Vec<Amplitude>,
 }
@@ -61,7 +61,7 @@ pub struct FullImage {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ValidDataRC {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "Vertex")]
     pub vertex: Vec<IdxRowCol>,
 }

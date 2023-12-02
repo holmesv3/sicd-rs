@@ -210,7 +210,7 @@
             </xs:complexType>
          </xs:element>
       </xs:sequence>
-      <xs:attribute name="size" type="xs:int" use="required"/>
+      <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="polygontype">
@@ -225,7 +225,7 @@
             </xs:complexType>
          </xs:element>
       </xs:sequence>
-      <xs:attribute name="size" type="xs:int" use="required"/>
+      <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="arraydoubtype">
@@ -370,7 +370,7 @@
                <xs:sequence>
                   <xs:element name="Amplitude" type="arraydoubtype" minOccurs="1" maxOccurs="256"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="NumRows" type="integertype" maxOccurs="1"/>
@@ -391,7 +391,7 @@
                <xs:sequence>
                   <xs:element name="Vertex" type="rowcolvertextype" minOccurs="3" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -465,7 +465,7 @@
                <xs:sequence>
                   <xs:element name="Wgt" type="arraydoubtype" minOccurs="2" maxOccurs="512"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -519,7 +519,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -535,7 +535,7 @@
                <xs:sequence>
                   <xs:element name="RcvAPCPoly" type="xyzpolyAttributetype" minOccurs="1" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -567,7 +567,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="Waveform" minOccurs="0" maxOccurs="1">
@@ -598,7 +598,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="RcvChannels" maxOccurs="1">
@@ -614,7 +614,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="Area" minOccurs="0" maxOccurs="1">
@@ -676,7 +676,7 @@
                                        </xs:complexType>
                                     </xs:element>
                                  </xs:sequence>
-                                 <xs:attribute name="size" type="xs:int" use="required"/>
+                                 <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
                               </xs:complexType>
                            </xs:element>
                            <xs:element name="Orientation" type="orientationtype" maxOccurs="1"/>

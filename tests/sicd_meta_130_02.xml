@@ -452,7 +452,7 @@
       <KCtr>45877100000000.2</KCtr>
       <DeltaK1>35949700000000.2</DeltaK1>
       <DeltaK2>-3374399999999.77</DeltaK2>
-      <WgtFunct size="-4934">
+      <WgtFunct size="4934">
         <Wgt index="-2100">-24174999999999.8</Wgt>
         <Wgt index="-4197">30278000000000.2</Wgt>
       </WgtFunct>
@@ -478,7 +478,7 @@
   <Timeline>
     <CollectStart>1987-07-22T22:22:56.78</CollectStart>
     <CollectDuration>24245500000000.2</CollectDuration>
-    <IPP size="-4353">
+    <IPP size="4353">
       <Set index="1110">
         <TStart>-4123599999999.77</TStart>
         <TEnd>-19409399999999.8</TEnd>
@@ -585,7 +585,7 @@
     <TxSequence size="4832">
       <TxStep index="497" />
     </TxSequence>
-    <RcvChannels size="-4982">
+    <RcvChannels size="4982">
       <ChanParameters index="3917">
         <TxRcvPolarization>OTHER</TxRcvPolarization>
       </ChanParameters>

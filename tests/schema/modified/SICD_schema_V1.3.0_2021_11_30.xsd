@@ -210,7 +210,7 @@
             </xs:complexType>
          </xs:element>
       </xs:sequence>
-      <xs:attribute name="size" type="xs:int" use="required"/>
+      <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="PolygonType">
@@ -225,7 +225,7 @@
             </xs:complexType>
          </xs:element>
       </xs:sequence>
-      <xs:attribute name="size" type="xs:int" use="required"/>
+      <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="ArrayDouble">
@@ -344,7 +344,7 @@
                <xs:sequence>
                   <xs:element name="Amplitude" type="ArrayDouble" minOccurs="256" maxOccurs="256"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="NumRows" type="xs:int"/>
@@ -365,7 +365,7 @@
                <xs:sequence>
                   <xs:element name="Vertex" type="RowColvertexType" minOccurs="3" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -444,7 +444,7 @@
                <xs:sequence>
                   <xs:element name="Wgt" type="ArrayDouble" minOccurs="2" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -498,7 +498,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -514,7 +514,7 @@
                <xs:sequence>
                   <xs:element name="RcvAPCPoly" type="XYZPolyAttributeType" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -559,7 +559,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="TxPolarization" type="Polarization1Type"/>
@@ -576,7 +576,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="RcvChannels">
@@ -592,7 +592,7 @@
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
-               <xs:attribute name="size" type="xs:int" use="required"/>
+               <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
          <xs:element name="Area" minOccurs="0">
@@ -654,7 +654,7 @@
                                        </xs:complexType>
                                     </xs:element>
                                  </xs:sequence>
-                                 <xs:attribute name="size" type="xs:int" use="required"/>
+                                 <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
                               </xs:complexType>
                            </xs:element>
                            <xs:element name="Orientation" type="OrientationType" minOccurs="0"/>

@@ -30,7 +30,7 @@ pub struct TxFrequency {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Waveform {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "WFParameters")]
     pub wf_parameters: Vec<WFParameters>,
 }
@@ -90,7 +90,7 @@ pub enum TxPolarizationEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxSequence {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "TxStep")]
     pub tx_step: Vec<TxStep>,
 }
@@ -119,7 +119,7 @@ pub enum TxStepPolarizationEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RcvChannels {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "ChanParameters")]
     pub chan_parameters: Option<Vec<ChanParameters>>,
 }
@@ -193,7 +193,7 @@ pub struct YDir {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SegmentList {
     #[serde(rename = "@size")]
-    pub size: Option<String>,
+    pub size: u64,
     #[serde(rename = "Segment")]
     pub segment: Vec<Segment>,
 }

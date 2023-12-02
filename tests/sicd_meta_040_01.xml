@@ -40,7 +40,7 @@
       <Row class="xs:int">-1176</Row>
       <Col class="xs:int">-2707</Col>
     </SCPPixel>
-    <ValidData size="-4933">
+    <ValidData size="4933">
       <Vertex index="3458">
         <Row class="xs:int">2776</Row>
         <Col class="xs:int">2898</Col>
@@ -167,7 +167,7 @@
       <DeltaK1 class="xs:double">40596100000000.2</DeltaK1>
       <DeltaK2 class="xs:double">-43715999999999.8</DeltaK2>
       <WgtType class="xs:string">string</WgtType>
-      <WgtFunct size="-3050">
+      <WgtFunct size="3050">
         <Wgt index="-2134" class="xs:double">-27208099999999.8</Wgt>
         <Wgt index="3956" class="xs:double">-28190399999999.8</Wgt>
       </WgtFunct>
@@ -176,7 +176,7 @@
   <Timeline>
     <CollectStart class="xs:dateTime">2005-01-15T13:37:17.65</CollectStart>
     <CollectDuration class="xs:double">-16033999999999.8</CollectDuration>
-    <IPP size="-1538">
+    <IPP size="1538">
       <Set index="-2689">
         <TStart class="xs:double">-23998999999999.8</TStart>
         <TEnd class="xs:double">-41865499999999.8</TEnd>
@@ -258,7 +258,7 @@
         <Coef exponent1="2624" class="xs:double">27352700000000.2</Coef>
       </Z>
     </TxAPCPoly>
-    <RcvAPC size="-2731">
+    <RcvAPC size="2731">
       <RcvAPCPoly index="3686">
         <X order1="2765">
           <Coef exponent1="9582" class="xs:double">-40651999999999.8</Coef>
@@ -326,7 +326,7 @@
     <PolarizationHVAnglePoly order1="2822">
       <Coef exponent1="6354" class="xs:double">-15387299999999.8</Coef>
     </PolarizationHVAnglePoly>
-    <TxSequence size="-3149">
+    <TxSequence size="3149">
       <TxStep index="-1678" />
       <TxStep index="146" />
     </TxSequence>
@@ -337,7 +337,7 @@
       <WFParameters index="2742" />
       <WFParameters index="-4601" />
     </Waveform>
-    <RcvChannels size="-817">
+    <RcvChannels size="817">
       <ChanParameters index="3255" />
       <ChanParameters index="-3635" />
       <ChanParameters index="-4607" />

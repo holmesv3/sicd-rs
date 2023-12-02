@@ -25,7 +25,7 @@
   </ImageCreation>
   <ImageData>
     <PixelType>RE32F_IM32F</PixelType>
-    <AmpTable size="-3056">
+    <AmpTable size="3056">
       <Amplitude index="3923">21545400000000.2</Amplitude>
       <Amplitude index="3763">29259500000000.2</Amplitude>
       <Amplitude index="4520">-44272299999999.8</Amplitude>
@@ -295,7 +295,7 @@
       <Row>3029</Row>
       <Col>1692</Col>
     </SCPPixel>
-    <ValidData size="-718">
+    <ValidData size="718">
       <Vertex index="4762">
         <Row>843</Row>
         <Col>-901</Col>
@@ -346,7 +346,7 @@
         <Lon>36485400000000.2</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-2803">
+    <ValidData size="2803">
       <Vertex index="2028">
         <Lat>9.1593058039451</Lat>
         <Lon>44.2769458039451</Lon>
@@ -365,7 +365,7 @@
       </Vertex>
     </ValidData>
     <GeoInfo name="string">
-      <Polygon size="-1776">
+      <Polygon size="1776">
         <Vertex index="49">
           <Lat>-44.3494741960549</Lat>
           <Lon>103.440425803945</Lon>
@@ -416,7 +416,7 @@
     <GeoInfo name="string">
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
-      <Line size="-3135">
+      <Line size="3135">
         <Endpoint index="4767">
           <Lat>-12249999999999.8</Lat>
           <Lon>41915200000000.2</Lon>
@@ -598,13 +598,13 @@
       <Max>3986600000000.23</Max>
     </TxFrequency>
     <RefFreqIndex>-2320</RefFreqIndex>
-    <Waveform size="-525">
+    <Waveform size="525">
       <WFParameters index="836" />
       <WFParameters index="781" />
       <WFParameters index="2296" />
     </Waveform>
     <TxPolarization>H</TxPolarization>
-    <TxSequence size="-949">
+    <TxSequence size="949">
       <TxStep index="-3385" />
       <TxStep index="-1532" />
       <TxStep index="-770" />

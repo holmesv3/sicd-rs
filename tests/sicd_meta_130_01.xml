@@ -27,7 +27,7 @@
   </ImageCreation>
   <ImageData>
     <PixelType>AMP8I_PHS8I</PixelType>
-    <AmpTable size="-997">
+    <AmpTable size="997">
       <Amplitude index="-395">11010600000000.2</Amplitude>
       <Amplitude index="-3420">11654700000000.2</Amplitude>
       <Amplitude index="4051">-15549299999999.8</Amplitude>
@@ -297,7 +297,7 @@
       <Row>3042</Row>
       <Col>-4269</Col>
     </SCPPixel>
-    <ValidData size="-1399">
+    <ValidData size="1399">
       <Vertex index="-1645">
         <Row>3527</Row>
         <Col>1933</Col>
@@ -344,7 +344,7 @@
         <Lon>-34841999999999.8</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-1357">
+    <ValidData size="1357">
       <Vertex index="4615">
         <Lat>-54.7054141960549</Lat>
         <Lon>99.6640258039451</Lon>
@@ -472,7 +472,7 @@
   <Timeline>
     <CollectStart>1988-06-26T18:27:29.19</CollectStart>
     <CollectDuration>40514100000000.2</CollectDuration>
-    <IPP size="-306">
+    <IPP size="306">
       <Set index="-840">
         <TStart>-875299999999.765</TStart>
         <TEnd>-18677399999999.8</TEnd>
@@ -518,7 +518,7 @@
         <Coef exponent1="809">31632400000000.2</Coef>
       </Z>
     </TxAPCPoly>
-    <RcvAPC size="-2449">
+    <RcvAPC size="2449">
       <RcvAPCPoly index="1625">
         <X order1="9422">
           <Coef exponent1="3053">-14378599999999.8</Coef>
@@ -582,7 +582,7 @@
       <Max>-41762999999999.8</Max>
     </TxFrequency>
     <RefFreqIndex>2299</RefFreqIndex>
-    <Waveform size="-4130">
+    <Waveform size="4130">
       <WFParameters index="1461" />
     </Waveform>
     <TxPolarization>UNKNOWN</TxPolarization>

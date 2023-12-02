@@ -30,7 +30,7 @@ pub struct TxPolarization {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RcvChannels {
     #[serde(rename = "@size")]
-    pub size: i32,
+    pub size: u64,
     #[serde(rename = "ChanParameters")]
     pub chan_parameters: Vec<ChanParameters>,
 }

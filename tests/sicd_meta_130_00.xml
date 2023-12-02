@@ -26,7 +26,7 @@
   </ImageCreation>
   <ImageData>
     <PixelType>RE32F_IM32F</PixelType>
-    <AmpTable size="-2506">
+    <AmpTable size="2506">
       <Amplitude index="-2739">8121500000000.24</Amplitude>
       <Amplitude index="-2657">-38057399999999.8</Amplitude>
       <Amplitude index="197">-36006699999999.8</Amplitude>
@@ -296,7 +296,7 @@
       <Row>-2140</Row>
       <Col>-1365</Col>
     </SCPPixel>
-    <ValidData size="-3580">
+    <ValidData size="3580">
       <Vertex index="-4865">
         <Row>-1925</Row>
         <Col>4083</Col>
@@ -347,7 +347,7 @@
         <Lon>23846900000000.2</Lon>
       </ICP>
     </ImageCorners>
-    <ValidData size="-1566">
+    <ValidData size="1566">
       <Vertex index="-4549">
         <Lat>-52.4174341960549</Lat>
         <Lon>112.440425803945</Lon>
@@ -476,7 +476,7 @@
         <Coef exponent1="6299">6807300000000.24</Coef>
       </Z>
     </TxAPCPoly>
-    <RcvAPC size="-159">
+    <RcvAPC size="159">
       <RcvAPCPoly index="-1735">
         <X order1="1264">
           <Coef exponent1="8057">12230900000000.2</Coef>
@@ -501,7 +501,7 @@
       <WFParameters index="4515" />
     </Waveform>
     <TxPolarization>OTHERz&gt;#&lt;</TxPolarization>
-    <TxSequence size="-1775">
+    <TxSequence size="1775">
       <TxStep index="-210" />
       <TxStep index="3134" />
     </TxSequence>
