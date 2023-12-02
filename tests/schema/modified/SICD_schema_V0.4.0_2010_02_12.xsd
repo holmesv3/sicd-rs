@@ -645,7 +645,7 @@
                                  <xs:sequence>
                                     <xs:element name="UVectECF" type="xyztype" maxOccurs="1"/>
                                     <xs:element name="LineSpacing" type="doubletype" maxOccurs="1"/>
-                                    <xs:element name="NumLines" type="integertype" maxOccurs="1"/>
+                                    <xs:element name="NumLines" type="xs:unsignedInt" maxOccurs="1"/>
                                     <xs:element name="FirstLine" type="integertype" maxOccurs="1"/>
                                  </xs:sequence>
                               </xs:complexType>
@@ -655,7 +655,7 @@
                                  <xs:sequence>
                                     <xs:element name="UVectECF" type="xyztype" maxOccurs="1"/>
                                     <xs:element name="SampleSpacing" type="doubletype" maxOccurs="1"/>
-                                    <xs:element name="NumSamples" type="integertype" maxOccurs="1"/>
+                                    <xs:element name="NumSamples" type="xs:unsignedInt" maxOccurs="1"/>
                                     <xs:element name="FirstSample" type="integertype" maxOccurs="1"/>
                                  </xs:sequence>
                               </xs:complexType>

@@ -361,7 +361,7 @@
             <Z class="xs:double">-40620199999999.8</Z>
           </UVectECF>
           <LineSpacing class="xs:double">26553900000000.2</LineSpacing>
-          <NumLines class="xs:int">-2267</NumLines>
+          <NumLines class="xs:int">2267</NumLines>
           <FirstLine class="xs:int">1644</FirstLine>
         </XDir>
         <YDir>
@@ -371,7 +371,7 @@
             <Z class="xs:double">285600000000.235</Z>
           </UVectECF>
           <SampleSpacing class="xs:double">-22574799999999.8</SampleSpacing>
-          <NumSamples class="xs:int">-719</NumSamples>
+          <NumSamples class="xs:int">719</NumSamples>
           <FirstSample class="xs:int">3760</FirstSample>
         </YDir>
         <Orientation>UP</Orientation>

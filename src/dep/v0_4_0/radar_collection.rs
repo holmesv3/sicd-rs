@@ -175,7 +175,7 @@ pub struct XDir {
     #[serde(rename = "LineSpacing")]
     pub line_spacing: f64,
     #[serde(rename = "NumLines")]
-    pub num_lines: i32,
+    pub num_lines: u64,
     #[serde(rename = "FirstLine")]
     pub first_line: i32,
 }
@@ -186,7 +186,7 @@ pub struct YDir {
     #[serde(rename = "SampleSpacing")]
     pub sample_spacing: f64,
     #[serde(rename = "NumSamples")]
-    pub num_samples: i32,
+    pub num_samples: u64,
     #[serde(rename = "FirstSample")]
     pub first_sample: i32,
 }
