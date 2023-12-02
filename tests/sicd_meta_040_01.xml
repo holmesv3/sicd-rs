@@ -28,10 +28,10 @@
       <Amplitude index="213" class="xs:double">39726000000000.2</Amplitude>
       <Amplitude index="1108" class="xs:double">14757100000000.2</Amplitude>
     </AmpTable>
-    <NumRows class="xs:int">-2218</NumRows>
-    <NumCols class="xs:int">-1044</NumCols>
+    <NumRows class="xs:int">2218</NumRows>
+    <NumCols class="xs:int">1044</NumCols>
     <FirstRow class="xs:int">2877</FirstRow>
-    <FirstCol class="xs:int">-2654</FirstCol>
+    <FirstCol class="xs:int">2654</FirstCol>
     <FullImage>
       <NumRows class="xs:int">1488</NumRows>
       <NumCols class="xs:int">261</NumCols>

@@ -8,13 +8,13 @@ pub struct ImageData {
     #[serde(rename = "AmpTable")]
     pub amp_table: Option<AmpTable>,
     #[serde(rename = "NumRows")]
-    pub num_rows: i32,
+    pub num_rows: u64,
     #[serde(rename = "NumCols")]
-    pub num_cols: i32,
+    pub num_cols: u64,
     #[serde(rename = "FirstRow")]
-    pub first_row: i32,
+    pub first_row: usize,
     #[serde(rename = "FirstCol")]
-    pub first_col: i32,
+    pub first_col: usize,
     #[serde(rename = "FullImage")]
     pub full_image: FullImage,
     #[serde(rename = "SCPPixel")]
@@ -54,9 +54,9 @@ pub struct Amplitude {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct FullImage {
     #[serde(rename = "NumRows")]
-    pub num_rows: i32,
+    pub num_rows: u64,
     #[serde(rename = "NumCols")]
-    pub num_cols: i32,
+    pub num_cols: u64,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ValidDataRC {

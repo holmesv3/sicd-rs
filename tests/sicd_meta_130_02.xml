@@ -286,11 +286,11 @@
       <Amplitude index="2386">30096800000000.2</Amplitude>
     </AmpTable>
     <NumRows>3755</NumRows>
-    <NumCols>-1787</NumCols>
-    <FirstRow>-903</FirstRow>
-    <FirstCol>-1104</FirstCol>
+    <NumCols>1787</NumCols>
+    <FirstRow>903</FirstRow>
+    <FirstCol>1104</FirstCol>
     <FullImage>
-      <NumRows>-4809</NumRows>
+      <NumRows>4809</NumRows>
       <NumCols>4535</NumCols>
     </FullImage>
     <SCPPixel>

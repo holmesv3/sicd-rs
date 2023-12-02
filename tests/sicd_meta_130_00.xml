@@ -285,12 +285,12 @@
       <Amplitude index="3981">-33185399999999.8</Amplitude>
     </AmpTable>
     <NumRows>2496</NumRows>
-    <NumCols>-916</NumCols>
-    <FirstRow>-1886</FirstRow>
-    <FirstCol>-1548</FirstCol>
+    <NumCols>916</NumCols>
+    <FirstRow>1886</FirstRow>
+    <FirstCol>1548</FirstCol>
     <FullImage>
       <NumRows>4448</NumRows>
-      <NumCols>-1544</NumCols>
+      <NumCols>1544</NumCols>
     </FullImage>
     <SCPPixel>
       <Row>-2140</Row>

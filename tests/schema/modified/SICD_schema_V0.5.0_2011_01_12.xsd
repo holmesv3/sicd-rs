@@ -325,15 +325,15 @@
                <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
-         <xs:element name="NumRows" type="xs:int" maxOccurs="1"/>
-         <xs:element name="NumCols" type="xs:int" maxOccurs="1"/>
-         <xs:element name="FirstRow" type="xs:int" maxOccurs="1"/>
-         <xs:element name="FirstCol" type="xs:int" maxOccurs="1"/>
+         <xs:element name="NumRows" type="xs:unsignedInt" maxOccurs="1"/>
+         <xs:element name="NumCols" type="xs:unsignedInt" maxOccurs="1"/>
+         <xs:element name="FirstRow" type="xs:unsignedInt" maxOccurs="1"/>
+         <xs:element name="FirstCol" type="xs:unsignedInt" maxOccurs="1"/>
          <xs:element name="FullImage" maxOccurs="1">
             <xs:complexType>
                <xs:sequence>
-                  <xs:element name="NumRows" type="xs:int" maxOccurs="1"/>
-                  <xs:element name="NumCols" type="xs:int" maxOccurs="1"/>
+                  <xs:element name="NumRows" type="xs:unsignedInt" maxOccurs="1"/>
+                  <xs:element name="NumCols" type="xs:unsignedInt" maxOccurs="1"/>
                </xs:sequence>
             </xs:complexType>
          </xs:element>

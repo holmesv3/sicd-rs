@@ -347,15 +347,15 @@
                <xs:attribute name="size" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
-         <xs:element name="NumRows" type="xs:int"/>
-         <xs:element name="NumCols" type="xs:int"/>
-         <xs:element name="FirstRow" type="xs:int"/>
-         <xs:element name="FirstCol" type="xs:int"/>
+         <xs:element name="NumRows" type="xs:unsignedInt"/>
+         <xs:element name="NumCols" type="xs:unsignedInt"/>
+         <xs:element name="FirstRow" type="xs:unsignedInt"/>
+         <xs:element name="FirstCol" type="xs:unsignedInt"/>
          <xs:element name="FullImage">
             <xs:complexType>
                <xs:sequence>
-                  <xs:element name="NumRows" type="xs:int"/>
-                  <xs:element name="NumCols" type="xs:int"/>
+                  <xs:element name="NumRows" type="xs:unsignedInt"/>
+                  <xs:element name="NumCols" type="xs:unsignedInt"/>
                </xs:sequence>
             </xs:complexType>
          </xs:element>
