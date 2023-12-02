@@ -971,7 +971,7 @@
 
    <xs:complexType name="MatchInfoType">
       <xs:sequence>
-         <xs:element name="NumMatchTypes" type="xs:int"/>
+         <xs:element name="NumMatchTypes" type="xs:unsignedInt"/>
          <xs:element name="MatchType" maxOccurs="unbounded">
             <xs:complexType>
                <xs:sequence>
