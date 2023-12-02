@@ -87,6 +87,7 @@ pub enum SinglePolarization {
     RHC,
     LHC,
     OTHER,
+    #[serde(other)]
     UNKNOWN,
 }
 #[allow(non_camel_case_types)]
@@ -255,6 +256,7 @@ pub enum DualPolarization {
     #[serde(rename = "OTHER:OTHER")]
     OTHER_OTHER,
     OTHER,
+    #[serde(other)]
     UNKNOWN,
 }
 
