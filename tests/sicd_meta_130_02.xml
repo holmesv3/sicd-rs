@@ -655,9 +655,9 @@
     <RcvChanProc>
       <NumChanProc>2291</NumChanProc>
       <PRFScaleFactor>-2050399999999.77</PRFScaleFactor>
-      <ChanIndex>-2814</ChanIndex>
+      <ChanIndex>2814</ChanIndex>
       <ChanIndex>2602</ChanIndex>
-      <ChanIndex>-4554</ChanIndex>
+      <ChanIndex>4554</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc>OTHER:LHC</TxRcvPolarizationProc>
     <TStartProc>-48689599999999.8</TStartProc>

@@ -698,7 +698,7 @@
                <xs:sequence>
                   <xs:element name="NumChanProc" type="xs:unsignedInt" maxOccurs="1"/>
                   <xs:element name="PRFScaleFactor" type="doubletype" minOccurs="0" maxOccurs="1"/>
-                  <xs:element name="ChanIndex" type="integertype" minOccurs="1" maxOccurs="unbounded"/>
+                  <xs:element name="ChanIndex" type="xs:unsignedInt" minOccurs="1" maxOccurs="unbounded"/>
                </xs:sequence>
             </xs:complexType>
          </xs:element>

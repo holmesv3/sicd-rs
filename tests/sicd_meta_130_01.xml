@@ -667,7 +667,7 @@
       <ChanIndex>837</ChanIndex>
       <ChanIndex>2235</ChanIndex>
       <ChanIndex>2286</ChanIndex>
-      <ChanIndex>-4673</ChanIndex>
+      <ChanIndex>4673</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc>H:OTHER$</TxRcvPolarizationProc>
     <TStartProc>-177599999999.765</TStartProc>

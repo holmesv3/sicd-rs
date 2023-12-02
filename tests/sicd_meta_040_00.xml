@@ -392,8 +392,8 @@
     <RcvChanProc>
       <NumChanProc class="xs:int">3899</NumChanProc>
       <PRFScaleFactor class="xs:double">29827400000000.2</PRFScaleFactor>
-      <ChanIndex class="xs:int">-3566</ChanIndex>
-      <ChanIndex class="xs:int">-2806</ChanIndex>
+      <ChanIndex class="xs:int">3566</ChanIndex>
+      <ChanIndex class="xs:int">2806</ChanIndex>
       <ChanIndex class="xs:int">2718</ChanIndex>
       <ChanIndex class="xs:int">4889</ChanIndex>
       <ChanIndex class="xs:int">4612</ChanIndex>

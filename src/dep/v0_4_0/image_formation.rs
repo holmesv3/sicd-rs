@@ -36,7 +36,7 @@ pub struct RcvChanProc {
     #[serde(rename = "PRFScaleFactor")]
     pub prf_scale_factor: Option<f64>,
     #[serde(rename = "ChanIndex")]
-    pub chan_index: Vec<i32>,
+    pub chan_index: Vec<usize>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxFrequencyProc {

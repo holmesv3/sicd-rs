@@ -393,10 +393,10 @@
     <SegmentIdentifier>string</SegmentIdentifier>
     <RcvChanProc>
       <NumChanProc>143</NumChanProc>
-      <ChanIndex>-3485</ChanIndex>
+      <ChanIndex>3485</ChanIndex>
       <ChanIndex>4406</ChanIndex>
-      <ChanIndex>-3557</ChanIndex>
-      <ChanIndex>-3343</ChanIndex>
+      <ChanIndex>3557</ChanIndex>
+      <ChanIndex>3343</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc>H:V</TxRcvPolarizationProc>
     <ImageFormAlgo>RGAZCOMP</ImageFormAlgo>

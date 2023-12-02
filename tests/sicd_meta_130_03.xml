@@ -645,7 +645,7 @@
   <ImageFormation>
     <RcvChanProc>
       <NumChanProc>3562</NumChanProc>
-      <ChanIndex>-1169</ChanIndex>
+      <ChanIndex>1169</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc>E:RHC</TxRcvPolarizationProc>
     <TStartProc>37838300000000.2</TStartProc>

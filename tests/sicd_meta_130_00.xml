@@ -571,9 +571,9 @@
     <RcvChanProc>
       <NumChanProc>3487</NumChanProc>
       <PRFScaleFactor>-35162799999999.8</PRFScaleFactor>
-      <ChanIndex>-2067</ChanIndex>
-      <ChanIndex>-1432</ChanIndex>
-      <ChanIndex>-2335</ChanIndex>
+      <ChanIndex>2067</ChanIndex>
+      <ChanIndex>1432</ChanIndex>
+      <ChanIndex>2335</ChanIndex>
       <ChanIndex>4162</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc>Y:V</TxRcvPolarizationProc>
