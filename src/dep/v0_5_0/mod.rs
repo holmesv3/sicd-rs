@@ -55,7 +55,7 @@ pub struct SicdMeta {
     pub error_statistics: Option<ErrorStatistics>,
     #[serde(rename = "MatchInfo")]
     pub match_info: Option<MatchInfo>,
-    #[serde(rename = "RgAzComp")]
+    #[serde(rename = "RGAZCOMP")]
     pub rg_az_comp: Option<RGAZCOMP>,
     #[serde(rename = "PFA")]
     pub pfa: Option<PFA>,
