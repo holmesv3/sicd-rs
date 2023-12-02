@@ -569,7 +569,7 @@
                   <xs:element name="TxStep" maxOccurs="unbounded">
                      <xs:complexType>
                         <xs:sequence>
-                           <xs:element name="WFIndex" type="xs:int" minOccurs="0"/>
+                           <xs:element name="WFIndex" type="xs:unsignedInt" minOccurs="0"/>
                            <xs:element name="TxPolarization" type="Polarization2Type" minOccurs="0"/>
                         </xs:sequence>
                         <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
@@ -586,7 +586,7 @@
                      <xs:complexType>
                         <xs:sequence>
                            <xs:element name="TxRcvPolarization" type="DualPolarizationType"/>
-                           <xs:element name="RcvAPCIndex" type="xs:int" minOccurs="0"/>
+                           <xs:element name="RcvAPCIndex" type="xs:unsignedInt" minOccurs="0"/>
                         </xs:sequence>
                         <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>

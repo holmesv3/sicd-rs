@@ -99,7 +99,7 @@ pub struct TxStep {
     #[serde(rename = "@index")]
     pub index: usize,
     #[serde(rename = "WFIndex")]
-    pub wf_index: Option<i32>,
+    pub wf_index: Option<usize>,
     #[serde(rename = "TxPolarization")]
     pub tx_polarization: Option<TxStepPolarization>,
 }
@@ -130,7 +130,7 @@ pub struct ChanParameters {
     #[serde(rename = "TxRcvPolarization")]
     pub tx_rcv_polarization: Option<String>, // TODO: Implement this enum
     #[serde(rename = "RcvAPCIndex")]
-    pub rcv_apc_index: Option<i32>,
+    pub rcv_apc_index: Option<usize>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Area {

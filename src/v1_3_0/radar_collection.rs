@@ -41,7 +41,7 @@ pub struct ChanParameters {
     #[serde(rename = "TxRcvPolarization")]
     pub tx_rcv_polarization: TxRcvPolarization,
     #[serde(rename = "RcvAPCIndex")]
-    pub rcv_apc_index: Option<i32>,
+    pub rcv_apc_index: Option<usize>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxRcvPolarization {
