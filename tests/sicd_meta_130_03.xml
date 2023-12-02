@@ -644,7 +644,7 @@
   </RadarCollection>
   <ImageFormation>
     <RcvChanProc>
-      <NumChanProc>-3562</NumChanProc>
+      <NumChanProc>3562</NumChanProc>
       <ChanIndex>-1169</ChanIndex>
     </RcvChanProc>
     <TxRcvPolarizationProc>E:RHC</TxRcvPolarizationProc>

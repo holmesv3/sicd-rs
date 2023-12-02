@@ -32,7 +32,7 @@ pub struct ImageFormation {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RcvChanProc {
     #[serde(rename = "NumChanProc")]
-    pub num_chan_proc: i32,
+    pub num_chan_proc: u64,
     #[serde(rename = "PRFScaleFactor")]
     pub prf_scale_factor: Option<f64>,
     #[serde(rename = "ChanIndex")]

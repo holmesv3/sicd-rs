@@ -653,7 +653,7 @@
   </RadarCollection>
   <ImageFormation>
     <RcvChanProc>
-      <NumChanProc>-2291</NumChanProc>
+      <NumChanProc>2291</NumChanProc>
       <PRFScaleFactor>-2050399999999.77</PRFScaleFactor>
       <ChanIndex>-2814</ChanIndex>
       <ChanIndex>2602</ChanIndex>

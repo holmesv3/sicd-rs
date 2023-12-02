@@ -696,7 +696,7 @@
          <xs:element name="RcvChanProc" maxOccurs="1">
             <xs:complexType>
                <xs:sequence>
-                  <xs:element name="NumChanProc" type="integertype" maxOccurs="1"/>
+                  <xs:element name="NumChanProc" type="xs:unsignedInt" maxOccurs="1"/>
                   <xs:element name="PRFScaleFactor" type="doubletype" minOccurs="0" maxOccurs="1"/>
                   <xs:element name="ChanIndex" type="integertype" minOccurs="1" maxOccurs="unbounded"/>
                </xs:sequence>
