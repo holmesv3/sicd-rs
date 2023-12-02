@@ -6,7 +6,7 @@ pub struct RadarCollection {
     #[serde(rename = "TxFrequency")]
     pub tx_frequency: TxFrequency,
     #[serde(rename = "RefFreqIndex")]
-    pub ref_freq_index: Option<u64>,
+    pub ref_freq_index: Option<i32>,
     #[serde(rename = "Waveform")]
     pub waveform: Option<Waveform>,
     #[serde(rename = "TxPolarization")]
@@ -121,21 +121,21 @@ pub struct RcvChannels {
     #[serde(rename = "@size")]
     pub size: u64,
     #[serde(rename = "ChanParameters")]
-    pub chan_parameters: Vec<ChanParameters>,
+    pub chan_parameters: Option<Vec<ChanParameters>>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ChanParameters {
     #[serde(rename = "@index")]
     pub index: usize,
     #[serde(rename = "TxRcvPolarization")]
-    pub tx_rcv_polarization: String, // TODO: Implement this enum
+    pub tx_rcv_polarization: Option<String>, // TODO: Implement this enum
     #[serde(rename = "RcvAPCIndex")]
-    pub rcv_apc_index: Option<u64>,
+    pub rcv_apc_index: Option<usize>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Area {
     #[serde(rename = "Corner")]
-    pub corner: Corner,
+    pub corner: Option<Corner>,
     #[serde(rename = "Plane")]
     pub plane: Option<Plane>,
 }
@@ -177,7 +177,7 @@ pub struct XDir {
     #[serde(rename = "NumLines")]
     pub num_lines: u64,
     #[serde(rename = "FirstLine")]
-    pub first_line: u64,
+    pub first_line: i32,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct YDir {
@@ -188,12 +188,12 @@ pub struct YDir {
     #[serde(rename = "NumSamples")]
     pub num_samples: u64,
     #[serde(rename = "FirstSample")]
-    pub first_sample: u64,
+    pub first_sample: i32,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SegmentList {
     #[serde(rename = "@size")]
-    pub size: Option<String>,
+    pub size: u64,
     #[serde(rename = "Segment")]
     pub segment: Vec<Segment>,
 }
@@ -202,13 +202,13 @@ pub struct Segment {
     #[serde(rename = "@index")]
     pub index: usize,
     #[serde(rename = "StartLine")]
-    pub start_line: u64,
+    pub start_line: i32,
     #[serde(rename = "StartSample")]
-    pub start_sample: u64,
+    pub start_sample: i32,
     #[serde(rename = "EndLine")]
-    pub end_line: u64,
+    pub end_line: i32,
     #[serde(rename = "EndSample")]
-    pub end_sample: u64,
+    pub end_sample: i32,
     #[serde(rename = "Identifier")]
     pub identifier: String,
 }

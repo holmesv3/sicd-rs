@@ -15,7 +15,7 @@ pub struct MatchType {
     #[serde(rename = "TypeID")]
     pub type_id: String,
     #[serde(rename = "CurrentIndex")]
-    pub current_index: Option<usize>,
+    pub current_index: Option<i32>,
     #[serde(rename = "NumMatchCollections")]
     pub num_match_collections: u64,
     #[serde(rename = "MatchCollection")]
@@ -28,7 +28,7 @@ pub struct MatchCollection {
     #[serde(rename = "CoreName")]
     pub core_name: String,
     #[serde(rename = "MatchIndex")]
-    pub match_index: Option<usize>,
+    pub match_index: Option<i32>,
     #[serde(rename = "Parameter")]
     pub parameters: Option<Vec<Parameter>>,
 }

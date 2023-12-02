@@ -12,9 +12,9 @@ pub struct ImageData {
     #[serde(rename = "NumCols")]
     pub num_cols: u64,
     #[serde(rename = "FirstRow")]
-    pub first_row: u64,
+    pub first_row: usize,
     #[serde(rename = "FirstCol")]
-    pub first_col: u64,
+    pub first_col: usize,
     #[serde(rename = "FullImage")]
     pub full_image: FullImage,
     #[serde(rename = "SCPPixel")]
@@ -40,14 +40,14 @@ pub enum PixelTypeEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct AmpTable {
     #[serde(rename = "@size")]
-    pub size: u16, // 256
+    pub size: u64, // 256
     #[serde(rename = "Amplitude")]
     pub amplitude: Vec<Amplitude>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Amplitude {
     #[serde(rename = "@index")]
-    pub index: u8, // [0, 255]
+    pub index: usize, // [0, 255]
     #[serde(rename = "$value")]
     pub value: f64,
 }
@@ -64,4 +64,44 @@ pub struct ValidDataRC {
     pub size: u64,
     #[serde(rename = "Vertex")]
     pub vertex: Vec<IdxRowCol>,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::ImageData;
+    use quick_xml::de::from_str;
+
+    #[test]
+    fn test_image_data() {
+        let xml_str = r#"
+        <ImageData>
+            <PixelType>RE32F_IM32F</PixelType>
+            <NumRows>0</NumRows>
+            <NumCols>10077</NumCols>
+            <FirstRow>0</FirstRow>
+            <FirstCol>0</FirstCol>
+            <FullImage>
+                <NumRows>0</NumRows>
+                <NumCols>0</NumCols>
+            </FullImage>
+            <SCPPixel>
+                <Row>0</Row>
+                <Col>0</Col>
+            </SCPPixel>
+            <ValidData size="2">
+                <Vertex index="1">
+                    <Row>0</Row>
+                    <Col>0</Col>
+                </Vertex>
+                <Vertex index="2">
+                    <Row>0</Row>
+                    <Col>0</Col>
+                </Vertex>
+            </ValidData>
+        </ImageData>"#;
+        assert!(match from_str::<ImageData>(xml_str) {
+            Ok(_) => true,
+            Err(_) => false,
+        })
+    }
 }

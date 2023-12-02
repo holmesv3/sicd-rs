@@ -1,8 +1,9 @@
 use super::XYZ;
+pub use crate::dep::v0_4_0::scpcoa::SideOfTrack;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct ScpCoa {
+pub struct SCPCOA {
     #[serde(rename = "SCPTime")]
     pub scp_time: f64,
     #[serde(rename = "ARPPos")]
@@ -32,20 +33,10 @@ pub struct ScpCoa {
     #[serde(rename = "LayoverAng")]
     pub layover_ang: f64,
 }
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct SideOfTrack {
-    #[serde(rename = "$text")]
-    pub value: SideOfTrackEnum,
-}
-#[derive(Debug, Deserialize, PartialEq, Clone)]
-pub enum SideOfTrackEnum {
-    L,
-    R,
-}
 
 #[cfg(test)]
 mod tests {
-    use super::ScpCoa;
+    use super::SCPCOA;
     use quick_xml::de::from_str;
 
     #[test]
@@ -57,7 +48,7 @@ mod tests {
             <DopplerConeAng>0</DopplerConeAng><GrazeAng>0</GrazeAng>
             <IncidenceAng>0</IncidenceAng><TwistAng>0</TwistAng><SlopeAng>0
             </SlopeAng><AzimAng>0</AzimAng><LayoverAng>0</LayoverAng></SCPCOA>"#;
-        assert!(match from_str::<ScpCoa>(&xml_str) {
+        assert!(match from_str::<SCPCOA>(&xml_str) {
             Ok(_) => true,
             Err(_) => false,
         })
