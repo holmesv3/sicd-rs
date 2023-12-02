@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<SICD xmlns="urn:SICD:1.3.0" xsi:schemaLocation="urn:SICD:1.3.0 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CollectionInfo>
+    <CollectorName>string</CollectorName>
+    <IlluminatorName>string</IlluminatorName>
+    <CoreName>string</CoreName>
+    <CollectType>BISTATIC</CollectType>
+    <RadarMode>
+      <ModeType>SPOTLIGHT</ModeType>
+    </RadarMode>
+    <Classification>string</Classification>
+    <CountryCode>string</CountryCode>
+    <CountryCode>string</CountryCode>
+    <CountryCode>string</CountryCode>
+    <CountryCode>string</CountryCode>
+    <CountryCode>string</CountryCode>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+  </CollectionInfo>
+  <ImageCreation>
+    <Application>string</Application>
+    <DateTime>2005-03-16T12:59:22.08</DateTime>
+    <Site>string</Site>
+    <Profile>string</Profile>
+  </ImageCreation>
+  <ImageData>
+    <PixelType>RE32F_IM32F</PixelType>
+    <AmpTable size="2607">
+      <Amplitude index="1931">27096700000000.2</Amplitude>
+      <Amplitude index="67">21740600000000.2</Amplitude>
+      <Amplitude index="-3315">5408600000000.24</Amplitude>
+      <Amplitude index="643">-8833599999999.77</Amplitude>
+      <Amplitude index="4294">28124400000000.2</Amplitude>
+      <Amplitude index="-2347">39091800000000.2</Amplitude>
+      <Amplitude index="4303">-34225599999999.8</Amplitude>
+      <Amplitude index="-1660">-46532999999999.8</Amplitude>
+      <Amplitude index="1317">20320600000000.2</Amplitude>
+      <Amplitude index="2664">14505100000000.2</Amplitude>
+      <Amplitude index="886">25458900000000.2</Amplitude>
+      <Amplitude index="1116">28408900000000.2</Amplitude>
+      <Amplitude index="-749">9079200000000.23</Amplitude>
+      <Amplitude index="-2282">-37984399999999.8</Amplitude>
+      <Amplitude index="2726">-1436999999999.77</Amplitude>
+      <Amplitude index="-1667">31412400000000.2</Amplitude>
+      <Amplitude index="-1598">-45870199999999.8</Amplitude>
+      <Amplitude index="-1710">-47919699999999.8</Amplitude>
+      <Amplitude index="-1903">-49855299999999.8</Amplitude>
+      <Amplitude index="-4825">48895200000000.2</Amplitude>
+      <Amplitude index="4430">7799800000000.24</Amplitude>
+      <Amplitude index="-476">-20018499999999.8</Amplitude>
+      <Amplitude index="1688">-18215399999999.8</Amplitude>
+      <Amplitude index="-273">10587100000000.2</Amplitude>
+      <Amplitude index="3763">-4505399999999.76</Amplitude>
+      <Amplitude index="1984">36046000000000.2</Amplitude>
+      <Amplitude index="4944">38478600000000.2</Amplitude>
+      <Amplitude index="-2870">43848300000000.2</Amplitude>
+      <Amplitude index="-3407">22263800000000.2</Amplitude>
+      <Amplitude index="-2077">7768800000000.24</Amplitude>
+      <Amplitude index="-2178">-5582799999999.76</Amplitude>
+      <Amplitude index="1391">-5623199999999.76</Amplitude>
+      <Amplitude index="-520">-4877599999999.76</Amplitude>
+      <Amplitude index="507">38904900000000.2</Amplitude>
+      <Amplitude index="3287">-18678299999999.8</Amplitude>
+      <Amplitude index="2249">13020600000000.2</Amplitude>
+      <Amplitude index="1857">27743100000000.2</Amplitude>
+      <Amplitude index="2020">-48943699999999.8</Amplitude>
+      <Amplitude index="-1978">-18818499999999.8</Amplitude>
+      <Amplitude index="-3847">-39275999999999.8</Amplitude>
+      <Amplitude index="-3819">16597200000000.2</Amplitude>
+      <Amplitude index="-2562">-18235999999999.8</Amplitude>
+      <Amplitude index="2872">-2717599999999.77</Amplitude>
+      <Amplitude index="3198">-4453899999999.76</Amplitude>
+      <Amplitude index="3283">-10943799999999.8</Amplitude>
+      <Amplitude index="3615">8708700000000.24</Amplitude>
+      <Amplitude index="2091">-6017599999999.76</Amplitude>
+      <Amplitude index="2067">-112299999999.765</Amplitude>
+      <Amplitude index="4389">-49133799999999.8</Amplitude>
+      <Amplitude index="3519">-28242999999999.8</Amplitude>
+      <Amplitude index="2672">8366500000000.24</Amplitude>
+      <Amplitude index="2772">6310300000000.24</Amplitude>
+      <Amplitude index="2300">-43180899999999.8</Amplitude>
+      <Amplitude index="-3252">-28307099999999.8</Amplitude>
+      <Amplitude index="-3172">-29757099999999.8</Amplitude>
+      <Amplitude index="1363">34752100000000.2</Amplitude>
+      <Amplitude index="1073">-31492099999999.8</Amplitude>
+      <Amplitude index="-404">11626900000000.2</Amplitude>
+      <Amplitude index="-2997">-17856199999999.8</Amplitude>
+      <Amplitude index="1565">47513500000000.2</Amplitude>
+      <Amplitude index="1315">-40479099999999.8</Amplitude>
+      <Amplitude index="-4393">-6186499999999.76</Amplitude>
+      <Amplitude index="-483">-36214399999999.8</Amplitude>
+      <Amplitude index="4211">-25413099999999.8</Amplitude>
+      <Amplitude index="-4293">-29687599999999.8</Amplitude>
+      <Amplitude index="-4284">-20650299999999.8</Amplitude>
+      <Amplitude index="-400">39772400000000.2</Amplitude>
+      <Amplitude index="-1599">3441100000000.23</Amplitude>
+      <Amplitude index="3888">18073100000000.2</Amplitude>
+      <Amplitude index="876">21904000000000.2</Amplitude>
+      <Amplitude index="-2019">10283400000000.2</Amplitude>
+      <Amplitude index="-2273">12587600000000.2</Amplitude>
+      <Amplitude index="2542">-48605499999999.8</Amplitude>
+      <Amplitude index="4797">2404900000000.23</Amplitude>
+      <Amplitude index="4802">-40956099999999.8</Amplitude>
+      <Amplitude index="-2015">11748200000000.2</Amplitude>
+      <Amplitude index="-1479">37672000000000.2</Amplitude>
+      <Amplitude index="861">17196500000000.2</Amplitude>
+      <Amplitude index="229">-16096299999999.8</Amplitude>
+      <Amplitude index="-3886">9214600000000.23</Amplitude>
+      <Amplitude index="-3529">42889700000000.2</Amplitude>
+      <Amplitude index="-3538">47965900000000.2</Amplitude>
+      <Amplitude index="-3692">-15717299999999.8</Amplitude>
+      <Amplitude index="-1124">20961900000000.2</Amplitude>
+      <Amplitude index="3450">42519900000000.2</Amplitude>
+      <Amplitude index="2275">1960400000000.23</Amplitude>
+      <Amplitude index="2338">43749600000000.2</Amplitude>
+      <Amplitude index="1771">-47137399999999.8</Amplitude>
+      <Amplitude index="3225">-6513299999999.76</Amplitude>
+      <Amplitude index="1839">-6219499999999.76</Amplitude>
+      <Amplitude index="-3419">-10297099999999.8</Amplitude>
+      <Amplitude index="-2343">48028200000000.2</Amplitude>
+      <Amplitude index="4046">-4583999999999.76</Amplitude>
+      <Amplitude index="4414">8323900000000.24</Amplitude>
+      <Amplitude index="-1884">16810000000000.2</Amplitude>
+      <Amplitude index="-4885">4976200000000.24</Amplitude>
+      <Amplitude index="694">49549100000000.2</Amplitude>
+      <Amplitude index="719">-13083999999999.8</Amplitude>
+      <Amplitude index="-434">-20698299999999.8</Amplitude>
+      <Amplitude index="-49">-8858999999999.77</Amplitude>
+      <Amplitude index="1264">-22987599999999.8</Amplitude>
+      <Amplitude index="1790">-44498699999999.8</Amplitude>
+      <Amplitude index="-1370">27893600000000.2</Amplitude>
+      <Amplitude index="3837">-8537099999999.76</Amplitude>
+      <Amplitude index="-3004">5748300000000.24</Amplitude>
+      <Amplitude index="3494">-41194599999999.8</Amplitude>
+      <Amplitude index="1551">17354700000000.2</Amplitude>
+      <Amplitude index="-660">25008300000000.2</Amplitude>
+      <Amplitude index="1632">-33407599999999.8</Amplitude>
+      <Amplitude index="-4249">17662600000000.2</Amplitude>
+      <Amplitude index="-985">30432200000000.2</Amplitude>
+      <Amplitude index="-1020">-32308699999999.8</Amplitude>
+      <Amplitude index="4137">-32229299999999.8</Amplitude>
+      <Amplitude index="4502">23830900000000.2</Amplitude>
+      <Amplitude index="-1344">-19208299999999.8</Amplitude>
+      <Amplitude index="720">2951500000000.23</Amplitude>
+      <Amplitude index="4398">-22751399999999.8</Amplitude>
+      <Amplitude index="3114">38798800000000.2</Amplitude>
+      <Amplitude index="2180">-28935699999999.8</Amplitude>
+      <Amplitude index="1173">-37435299999999.8</Amplitude>
+      <Amplitude index="705">2674200000000.23</Amplitude>
+      <Amplitude index="-1164">25413100000000.2</Amplitude>
+      <Amplitude index="3187">42343500000000.2</Amplitude>
+      <Amplitude index="3946">39583100000000.2</Amplitude>
+      <Amplitude index="615">32184500000000.2</Amplitude>
+      <Amplitude index="2059">-20929799999999.8</Amplitude>
+      <Amplitude index="-2821">31846200000000.2</Amplitude>
+      <Amplitude index="-4900">32206000000000.2</Amplitude>
+      <Amplitude index="3721">212100000000.235</Amplitude>
+      <Amplitude index="-3587">-31473799999999.8</Amplitude>
+      <Amplitude index="3287">-35462799999999.8</Amplitude>
+      <Amplitude index="-4509">39172400000000.2</Amplitude>
+      <Amplitude index="4855">-18008399999999.8</Amplitude>
+      <Amplitude index="-3517">-11734799999999.8</Amplitude>
+      <Amplitude index="3621">4604500000000.24</Amplitude>
+      <Amplitude index="-4679">-4740299999999.76</Amplitude>
+      <Amplitude index="486">44942900000000.2</Amplitude>
+      <Amplitude index="-3939">37471300000000.2</Amplitude>
+      <Amplitude index="-793">14387300000000.2</Amplitude>
+      <Amplitude index="-1418">49027500000000.2</Amplitude>
+      <Amplitude index="-2169">-44560599999999.8</Amplitude>
+      <Amplitude index="-3231">4372200000000.23</Amplitude>
+      <Amplitude index="1020">-21870399999999.8</Amplitude>
+      <Amplitude index="-1884">-37868499999999.8</Amplitude>
+      <Amplitude index="-2375">48936100000000.2</Amplitude>
+      <Amplitude index="-4841">-28412799999999.8</Amplitude>
+      <Amplitude index="-4307">-6794999999999.76</Amplitude>
+      <Amplitude index="-2031">-7489499999999.76</Amplitude>
+      <Amplitude index="-223">-812799999999.765</Amplitude>
+      <Amplitude index="2686">-124899999999.765</Amplitude>
+      <Amplitude index="2752">1196900000000.23</Amplitude>
+      <Amplitude index="-4663">-48458799999999.8</Amplitude>
+      <Amplitude index="2898">-24667799999999.8</Amplitude>
+      <Amplitude index="2421">-23148899999999.8</Amplitude>
+      <Amplitude index="2123">-36475899999999.8</Amplitude>
+      <Amplitude index="-987">-27175499999999.8</Amplitude>
+      <Amplitude index="-3561">-34897299999999.8</Amplitude>
+      <Amplitude index="4022">27431500000000.2</Amplitude>
+      <Amplitude index="4685">533800000000.235</Amplitude>
+      <Amplitude index="-2103">20418700000000.2</Amplitude>
+      <Amplitude index="-4917">-47303899999999.8</Amplitude>
+      <Amplitude index="-3799">37276400000000.2</Amplitude>
+      <Amplitude index="302">31621600000000.2</Amplitude>
+      <Amplitude index="-1167">-38343999999999.8</Amplitude>
+      <Amplitude index="1525">18104200000000.2</Amplitude>
+      <Amplitude index="-1030">42885200000000.2</Amplitude>
+      <Amplitude index="3752">35949400000000.2</Amplitude>
+      <Amplitude index="-2849">27111400000000.2</Amplitude>
+      <Amplitude index="-4793">-33856199999999.8</Amplitude>
+      <Amplitude index="2540">-15132399999999.8</Amplitude>
+      <Amplitude index="392">-45693599999999.8</Amplitude>
+      <Amplitude index="-910">-37271099999999.8</Amplitude>
+      <Amplitude index="880">28762300000000.2</Amplitude>
+      <Amplitude index="-4280">41831300000000.2</Amplitude>
+      <Amplitude index="299">2262200000000.23</Amplitude>
+      <Amplitude index="-434">47234200000000.2</Amplitude>
+      <Amplitude index="-2979">-43554099999999.8</Amplitude>
+      <Amplitude index="-96">24819600000000.2</Amplitude>
+      <Amplitude index="-1082">-33905899999999.8</Amplitude>
+      <Amplitude index="-148">47353900000000.2</Amplitude>
+      <Amplitude index="3701">12553000000000.2</Amplitude>
+      <Amplitude index="1160">-46872899999999.8</Amplitude>
+      <Amplitude index="2382">-2751899999999.77</Amplitude>
+      <Amplitude index="-1470">-21561899999999.8</Amplitude>
+      <Amplitude index="4359">-36893799999999.8</Amplitude>
+      <Amplitude index="2536">30708200000000.2</Amplitude>
+      <Amplitude index="2514">44105000000000.2</Amplitude>
+      <Amplitude index="-3350">46527600000000.2</Amplitude>
+      <Amplitude index="1180">49283200000000.2</Amplitude>
+      <Amplitude index="-2153">24255200000000.2</Amplitude>
+      <Amplitude index="2442">-3505699999999.77</Amplitude>
+      <Amplitude index="867">-37013099999999.8</Amplitude>
+      <Amplitude index="-2755">-7531099999999.76</Amplitude>
+      <Amplitude index="2267">31076600000000.2</Amplitude>
+      <Amplitude index="-1309">-3307999999999.77</Amplitude>
+      <Amplitude index="-1207">35974800000000.2</Amplitude>
+      <Amplitude index="1762">28042600000000.2</Amplitude>
+      <Amplitude index="-214">41367400000000.2</Amplitude>
+      <Amplitude index="-730">-12227099999999.8</Amplitude>
+      <Amplitude index="-1109">-38445499999999.8</Amplitude>
+      <Amplitude index="-654">28761400000000.2</Amplitude>
+      <Amplitude index="4824">-10118999999999.8</Amplitude>
+      <Amplitude index="2690">14950100000000.2</Amplitude>
+      <Amplitude index="-2790">-23890399999999.8</Amplitude>
+      <Amplitude index="3995">2513300000000.23</Amplitude>
+      <Amplitude index="-3698">-10098399999999.8</Amplitude>
+      <Amplitude index="3762">24268400000000.2</Amplitude>
+      <Amplitude index="-2707">-9487899999999.77</Amplitude>
+      <Amplitude index="-4612">-1385099999999.77</Amplitude>
+      <Amplitude index="3068">-18647999999999.8</Amplitude>
+      <Amplitude index="2458">4225300000000.23</Amplitude>
+      <Amplitude index="4153">-3101099999999.77</Amplitude>
+      <Amplitude index="2518">39387600000000.2</Amplitude>
+      <Amplitude index="-3691">47094400000000.2</Amplitude>
+      <Amplitude index="-376">-24869299999999.8</Amplitude>
+      <Amplitude index="382">-25976899999999.8</Amplitude>
+      <Amplitude index="1038">-33080799999999.8</Amplitude>
+      <Amplitude index="-1921">45660600000000.2</Amplitude>
+      <Amplitude index="-175">-31212399999999.8</Amplitude>
+      <Amplitude index="-1391">7495600000000.24</Amplitude>
+      <Amplitude index="-2963">-3439099999999.77</Amplitude>
+      <Amplitude index="4113">34395000000000.2</Amplitude>
+      <Amplitude index="-1633">48025000000000.2</Amplitude>
+      <Amplitude index="4835">43351600000000.2</Amplitude>
+      <Amplitude index="511">-42651099999999.8</Amplitude>
+      <Amplitude index="3748">44089500000000.2</Amplitude>
+      <Amplitude index="709">-42444099999999.8</Amplitude>
+      <Amplitude index="-1302">39235100000000.2</Amplitude>
+      <Amplitude index="3723">1341300000000.23</Amplitude>
+      <Amplitude index="1470">37512000000000.2</Amplitude>
+      <Amplitude index="186">-24997399999999.8</Amplitude>
+      <Amplitude index="2987">14816900000000.2</Amplitude>
+      <Amplitude index="4869">39000300000000.2</Amplitude>
+      <Amplitude index="2953">20701100000000.2</Amplitude>
+      <Amplitude index="-653">-22728699999999.8</Amplitude>
+      <Amplitude index="4226">35096600000000.2</Amplitude>
+      <Amplitude index="-3747">-26814399999999.8</Amplitude>
+      <Amplitude index="-3902">-21983499999999.8</Amplitude>
+      <Amplitude index="1310">-42865299999999.8</Amplitude>
+      <Amplitude index="-3677">27154500000000.2</Amplitude>
+      <Amplitude index="4103">-30263499999999.8</Amplitude>
+      <Amplitude index="-802">-11105099999999.8</Amplitude>
+      <Amplitude index="-1235">9733600000000.23</Amplitude>
+      <Amplitude index="1693">2819300000000.23</Amplitude>
+      <Amplitude index="2994">-8440399999999.76</Amplitude>
+      <Amplitude index="-4157">46912700000000.2</Amplitude>
+      <Amplitude index="409">-1424799999999.77</Amplitude>
+      <Amplitude index="-4437">45369100000000.2</Amplitude>
+      <Amplitude index="1670">-23688099999999.8</Amplitude>
+      <Amplitude index="3570">-5331899999999.76</Amplitude>
+      <Amplitude index="-3150">-22346699999999.8</Amplitude>
+      <Amplitude index="-12">-22160599999999.8</Amplitude>
+      <Amplitude index="-3491">-47613599999999.8</Amplitude>
+      <Amplitude index="3156">-16094099999999.8</Amplitude>
+      <Amplitude index="4658">-41039599999999.8</Amplitude>
+      <Amplitude index="-2386">30096800000000.2</Amplitude>
+    </AmpTable>
+    <NumRows>3755</NumRows>
+    <NumCols>-1787</NumCols>
+    <FirstRow>-903</FirstRow>
+    <FirstCol>-1104</FirstCol>
+    <FullImage>
+      <NumRows>-4809</NumRows>
+      <NumCols>4535</NumCols>
+    </FullImage>
+    <SCPPixel>
+      <Row>-3439</Row>
+      <Col>-1322</Col>
+    </SCPPixel>
+    <ValidData size="1856">
+      <Vertex index="1986">
+        <Row>-1474</Row>
+        <Col>-1697</Col>
+      </Vertex>
+      <Vertex index="624">
+        <Row>-2167</Row>
+        <Col>1654</Col>
+      </Vertex>
+      <Vertex index="210">
+        <Row>-2428</Row>
+        <Col>-325</Col>
+      </Vertex>
+      <Vertex index="-2740">
+        <Row>-204</Row>
+        <Col>-3025</Col>
+      </Vertex>
+      <Vertex index="2138">
+        <Row>3096</Row>
+        <Col>3935</Col>
+      </Vertex>
+      <Vertex index="867">
+        <Row>-1690</Row>
+        <Col>1887</Col>
+      </Vertex>
+    </ValidData>
+  </ImageData>
+  <GeoData>
+    <EarthModel>WGS_84</EarthModel>
+    <SCP>
+      <ECF>
+        <X>-38144099999999.8</X>
+        <Y>-46739299999999.8</Y>
+        <Z>-12358199999999.8</Z>
+      </ECF>
+      <LLH>
+        <Lat>-42.0915541960549</Lat>
+        <Lon>-161.235534196055</Lon>
+        <HAE>13885200000000.2</HAE>
+      </LLH>
+    </SCP>
+    <ImageCorners>
+      <ICP index="1:FRFC">
+        <Lat>39253100000000.2</Lat>
+        <Lon>-31002599999999.8</Lon>
+      </ICP>
+      <ICP index="1:FRFC">
+        <Lat>-42765599999999.8</Lat>
+        <Lon>-16444099999999.8</Lon>
+      </ICP>
+      <ICP index="1:FRFC">
+        <Lat>-31512999999999.8</Lat>
+        <Lon>-43095499999999.8</Lon>
+      </ICP>
+      <ICP index="1:FRFC">
+        <Lat>-37957999999999.8</Lat>
+        <Lon>33985000000000.2</Lon>
+      </ICP>
+    </ImageCorners>
+    <ValidData size="1203">
+      <Vertex index="1373">
+        <Lat>-89.3644141960549</Lat>
+        <Lon>162.899105803945</Lon>
+      </Vertex>
+      <Vertex index="4643">
+        <Lat>-4.64237419605491</Lat>
+        <Lon>154.525145803945</Lon>
+      </Vertex>
+      <Vertex index="-1720">
+        <Lat>-35.0317741960549</Lat>
+        <Lon>-135.099894196055</Lon>
+      </Vertex>
+      <Vertex index="-446">
+        <Lat>66.2230858039451</Lat>
+        <Lon>25.3650658039451</Lon>
+      </Vertex>
+      <Vertex index="481">
+        <Lat>-69.4238341960549</Lat>
+        <Lon>128.683985803945</Lon>
+      </Vertex>
+    </ValidData>
+    <GeoInfo name="string">
+      <Polygon size="2921">
+        <Vertex index="-2386">
+          <Lat>85.9908658039451</Lat>
+          <Lon>108.527585803945</Lon>
+        </Vertex>
+        <Vertex index="-3711">
+          <Lat>63.2395858039451</Lat>
+          <Lon>163.194305803945</Lon>
+        </Vertex>
+        <Vertex index="-3882">
+          <Lat>54.1416658039451</Lat>
+          <Lon>152.341385803945</Lon>
+        </Vertex>
+      </Polygon>
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+    </GeoInfo>
+    <GeoInfo name="string">
+      <Point>
+        <Lat>63.1355458039451</Lat>
+        <Lon>-28.8764941960549</Lon>
+      </Point>
+    </GeoInfo>
+    <GeoInfo name="string">
+      <Desc name="string">string</Desc>
+      <Polygon size="913">
+        <Vertex index="-4732">
+          <Lat>-17.1772141960549</Lat>
+          <Lon>-77.0430541960549</Lon>
+        </Vertex>
+        <Vertex index="-1445">
+          <Lat>7.9543858039451</Lat>
+          <Lon>-63.0520141960549</Lon>
+        </Vertex>
+        <Vertex index="2757">
+          <Lat>36.4309258039451</Lat>
+          <Lon>36.0761458039451</Lon>
+        </Vertex>
+      </Polygon>
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+    </GeoInfo>
+    <GeoInfo name="string">
+      <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Point>
+        <Lat>-41.9930941960549</Lat>
+        <Lon>-6.8945341960549</Lon>
+      </Point>
+    </GeoInfo>
+  </GeoData>
+  <Grid>
+    <ImagePlane>OTHER</ImagePlane>
+    <Type>XCTYAT</Type>
+    <TimeCOAPoly order1="7035" order2="1463">
+      <Coef exponent1="3683" exponent2="1002">-39419599999999.8</Coef>
+    </TimeCOAPoly>
+    <Row>
+      <UVectECF>
+        <X>17083600000000.2</X>
+        <Y>10525000000000.2</Y>
+        <Z>-22917899999999.8</Z>
+      </UVectECF>
+      <SS>-8092699999999.76</SS>
+      <ImpRespWid>5425700000000.24</ImpRespWid>
+      <Sgn>-1</Sgn>
+      <ImpRespBW>-3876699999999.77</ImpRespBW>
+      <KCtr>45877100000000.2</KCtr>
+      <DeltaK1>35949700000000.2</DeltaK1>
+      <DeltaK2>-3374399999999.77</DeltaK2>
+      <WgtFunct size="-4934">
+        <Wgt index="-2100">-24174999999999.8</Wgt>
+        <Wgt index="-4197">30278000000000.2</Wgt>
+      </WgtFunct>
+    </Row>
+    <Col>
+      <UVectECF>
+        <X>-7590499999999.76</X>
+        <Y>31249400000000.2</Y>
+        <Z>5858200000000.24</Z>
+      </UVectECF>
+      <SS>2625600000000.23</SS>
+      <ImpRespWid>1151200000000.23</ImpRespWid>
+      <Sgn>-1</Sgn>
+      <ImpRespBW>17902800000000.2</ImpRespBW>
+      <KCtr>-35859499999999.8</KCtr>
+      <DeltaK1>40764400000000.2</DeltaK1>
+      <DeltaK2>21101400000000.2</DeltaK2>
+      <DeltaKCOAPoly order1="677" order2="832">
+        <Coef exponent1="9252" exponent2="9808">-46187599999999.8</Coef>
+      </DeltaKCOAPoly>
+    </Col>
+  </Grid>
+  <Timeline>
+    <CollectStart>1987-07-22T22:22:56.78</CollectStart>
+    <CollectDuration>24245500000000.2</CollectDuration>
+    <IPP size="-4353">
+      <Set index="1110">
+        <TStart>-4123599999999.77</TStart>
+        <TEnd>-19409399999999.8</TEnd>
+        <IPPStart>-4105</IPPStart>
+        <IPPEnd>-1591</IPPEnd>
+        <IPPPoly order1="8345">
+          <Coef exponent1="6468">-31250799999999.8</Coef>
+        </IPPPoly>
+      </Set>
+    </IPP>
+  </Timeline>
+  <Position>
+    <ARPPoly>
+      <X order1="9122">
+        <Coef exponent1="5268">-12356699999999.8</Coef>
+      </X>
+      <Y order1="1458">
+        <Coef exponent1="9943">38195400000000.2</Coef>
+      </Y>
+      <Z order1="3698">
+        <Coef exponent1="8009">43348200000000.2</Coef>
+      </Z>
+    </ARPPoly>
+    <GRPPoly>
+      <X order1="3047">
+        <Coef exponent1="1148">32735300000000.2</Coef>
+      </X>
+      <Y order1="1346">
+        <Coef exponent1="3546">-24018799999999.8</Coef>
+      </Y>
+      <Z order1="6717">
+        <Coef exponent1="5491">-43595699999999.8</Coef>
+      </Z>
+    </GRPPoly>
+    <TxAPCPoly>
+      <X order1="9437">
+        <Coef exponent1="1538">45254400000000.2</Coef>
+      </X>
+      <Y order1="2079">
+        <Coef exponent1="4975">28798200000000.2</Coef>
+      </Y>
+      <Z order1="8544">
+        <Coef exponent1="7371">28636500000000.2</Coef>
+      </Z>
+    </TxAPCPoly>
+    <RcvAPC size="1995">
+      <RcvAPCPoly index="335">
+        <X order1="7345">
+          <Coef exponent1="888">-20978299999999.8</Coef>
+        </X>
+        <Y order1="7368">
+          <Coef exponent1="7024">19831000000000.2</Coef>
+        </Y>
+        <Z order1="8414">
+          <Coef exponent1="664">-34345699999999.8</Coef>
+        </Z>
+      </RcvAPCPoly>
+      <RcvAPCPoly index="1959">
+        <X order1="5666">
+          <Coef exponent1="8528">-24412399999999.8</Coef>
+        </X>
+        <Y order1="7627">
+          <Coef exponent1="9175">15247700000000.2</Coef>
+        </Y>
+        <Z order1="8381">
+          <Coef exponent1="1624">14011100000000.2</Coef>
+        </Z>
+      </RcvAPCPoly>
+      <RcvAPCPoly index="-3808">
+        <X order1="7607">
+          <Coef exponent1="1520">-37941599999999.8</Coef>
+        </X>
+        <Y order1="8957">
+          <Coef exponent1="6330">35541700000000.2</Coef>
+        </Y>
+        <Z order1="7089">
+          <Coef exponent1="4485">5277300000000.24</Coef>
+        </Z>
+      </RcvAPCPoly>
+      <RcvAPCPoly index="-2320">
+        <X order1="880">
+          <Coef exponent1="9841">-45010899999999.8</Coef>
+        </X>
+        <Y order1="7475">
+          <Coef exponent1="9999">-7369599999999.76</Coef>
+        </Y>
+        <Z order1="5475">
+          <Coef exponent1="3824">-28603699999999.8</Coef>
+        </Z>
+      </RcvAPCPoly>
+    </RcvAPC>
+  </Position>
+  <RadarCollection>
+    <TxFrequency>
+      <Min>49727200000000.2</Min>
+      <Max>5341600000000.24</Max>
+    </TxFrequency>
+    <RefFreqIndex>4036</RefFreqIndex>
+    <Waveform size="4709">
+      <WFParameters index="-2137" />
+      <WFParameters index="-2933" />
+    </Waveform>
+    <TxPolarization>UNKNOWN</TxPolarization>
+    <TxSequence size="4832">
+      <TxStep index="497" />
+    </TxSequence>
+    <RcvChannels size="-4982">
+      <ChanParameters index="3917">
+        <TxRcvPolarization>OTHER</TxRcvPolarization>
+      </ChanParameters>
+    </RcvChannels>
+    <Area>
+      <Corner>
+        <ACP index="2">
+          <Lat>-2.6108941960549</Lat>
+          <Lon>141.568025803945</Lon>
+          <HAE>4251000000000.23</HAE>
+        </ACP>
+        <ACP index="3">
+          <Lat>-0.728814196054902</Lat>
+          <Lon>68.1388258039451</Lon>
+          <HAE>-17691499999999.8</HAE>
+        </ACP>
+        <ACP index="2">
+          <Lat>-36.8767741960549</Lat>
+          <Lon>128.517665803945</Lon>
+          <HAE>46009900000000.2</HAE>
+        </ACP>
+        <ACP index="2">
+          <Lat>-21.4871341960549</Lat>
+          <Lon>115.825145803945</Lon>
+          <HAE>-32286299999999.8</HAE>
+        </ACP>
+      </Corner>
+      <Plane>
+        <RefPt>
+          <ECF>
+            <X>-12298599999999.8</X>
+            <Y>14428100000000.2</Y>
+            <Z>-45089399999999.8</Z>
+          </ECF>
+          <Line>-38898299999999.8</Line>
+          <Sample>-34031699999999.8</Sample>
+        </RefPt>
+        <XDir>
+          <UVectECF>
+            <X>24929700000000.2</X>
+            <Y>1400400000000.23</Y>
+            <Z>-35161599999999.8</Z>
+          </UVectECF>
+          <LineSpacing>48181300000000.2</LineSpacing>
+          <NumLines>3953</NumLines>
+          <FirstLine>4165</FirstLine>
+        </XDir>
+        <YDir>
+          <UVectECF>
+            <X>-18642399999999.8</X>
+            <Y>9006100000000.23</Y>
+            <Z>-39550999999999.8</Z>
+          </UVectECF>
+          <SampleSpacing>-29215399999999.8</SampleSpacing>
+          <NumSamples>3877</NumSamples>
+          <FirstSample>-2335</FirstSample>
+        </YDir>
+      </Plane>
+    </Area>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+  </RadarCollection>
+  <ImageFormation>
+    <RcvChanProc>
+      <NumChanProc>-2291</NumChanProc>
+      <PRFScaleFactor>-2050399999999.77</PRFScaleFactor>
+      <ChanIndex>-2814</ChanIndex>
+      <ChanIndex>2602</ChanIndex>
+      <ChanIndex>-4554</ChanIndex>
+    </RcvChanProc>
+    <TxRcvPolarizationProc>OTHER:LHC</TxRcvPolarizationProc>
+    <TStartProc>-48689599999999.8</TStartProc>
+    <TEndProc>7492900000000.24</TEndProc>
+    <TxFrequencyProc>
+      <MinProc>-5917599999999.76</MinProc>
+      <MaxProc>4904000000000.24</MaxProc>
+    </TxFrequencyProc>
+    <SegmentIdentifier>string</SegmentIdentifier>
+    <ImageFormAlgo>OTHER</ImageFormAlgo>
+    <STBeamComp>NO</STBeamComp>
+    <ImageBeamComp>NO</ImageBeamComp>
+    <AzAutofocus>GLOBAL</AzAutofocus>
+    <RgAutofocus>NO</RgAutofocus>
+    <Processing>
+      <Type>string</Type>
+      <Applied>false</Applied>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>0</Applied>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>0</Applied>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>0</Applied>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>false</Applied>
+    </Processing>
+    <PolarizationCalibration>
+      <DistortCorrectionApplied>0</DistortCorrectionApplied>
+      <Distortion>
+        <A>14061700000000.2</A>
+        <F1>
+          <Real>-44174999999999.8</Real>
+          <Imag>1256100000000.23</Imag>
+        </F1>
+        <Q1>
+          <Real>-8758099999999.76</Real>
+          <Imag>-5306999999999.76</Imag>
+        </Q1>
+        <Q2>
+          <Real>41204500000000.2</Real>
+          <Imag>-9283299999999.77</Imag>
+        </Q2>
+        <F2>
+          <Real>-43572599999999.8</Real>
+          <Imag>10145500000000.2</Imag>
+        </F2>
+        <Q3>
+          <Real>45694500000000.2</Real>
+          <Imag>23580300000000.2</Imag>
+        </Q3>
+        <Q4>
+          <Real>11881800000000.2</Real>
+          <Imag>-24843299999999.8</Imag>
+        </Q4>
+      </Distortion>
+    </PolarizationCalibration>
+  </ImageFormation>
+  <SCPCOA>
+    <SCPTime>17143800000000.2</SCPTime>
+    <ARPPos>
+      <X>-17496499999999.8</X>
+      <Y>28393100000000.2</Y>
+      <Z>48618900000000.2</Z>
+    </ARPPos>
+    <ARPVel>
+      <X>2128900000000.23</X>
+      <Y>32416800000000.2</Y>
+      <Z>-46176799999999.8</Z>
+    </ARPVel>
+    <ARPAcc>
+      <X>26476000000000.2</X>
+      <Y>-3394999999999.77</Y>
+      <Z>22899000000000.2</Z>
+    </ARPAcc>
+    <SideOfTrack>L</SideOfTrack>
+    <SlantRange>20692200000000.2</SlantRange>
+    <GroundRange>-8231199999999.76</GroundRange>
+    <DopplerConeAng>-39364499999999.8</DopplerConeAng>
+    <GrazeAng>89.8965958039451</GrazeAng>
+    <IncidenceAng>82.9665058039451</IncidenceAng>
+    <TwistAng>-41.7047341960549</TwistAng>
+    <SlopeAng>74.7783058039451</SlopeAng>
+    <AzimAng>246.502265803945</AzimAng>
+    <LayoverAng>168.377225803945</LayoverAng>
+  </SCPCOA>
+  <Radiometric>
+    <NoiseLevel>
+      <NoiseLevelType>RELATIVE</NoiseLevelType>
+      <NoisePoly order1="8003" order2="7586">
+        <Coef exponent1="2480" exponent2="7792">8287900000000.24</Coef>
+      </NoisePoly>
+    </NoiseLevel>
+    <RCSSFPoly order1="6564" order2="9988">
+      <Coef exponent1="3283" exponent2="1881">-5684899999999.76</Coef>
+      <Coef exponent1="3943" exponent2="9018">36557100000000.2</Coef>
+      <Coef exponent1="5894" exponent2="9447">11263500000000.2</Coef>
+      <Coef exponent1="9720" exponent2="9078">-40741199999999.8</Coef>
+      <Coef exponent1="2508" exponent2="935">27189900000000.2</Coef>
+    </RCSSFPoly>
+    <SigmaZeroSFPoly order1="9216" order2="6721">
+      <Coef exponent1="8100" exponent2="5355">-19399399999999.8</Coef>
+      <Coef exponent1="3196" exponent2="1015">-16328799999999.8</Coef>
+      <Coef exponent1="6713" exponent2="6697">18412300000000.2</Coef>
+      <Coef exponent1="6813" exponent2="1719">35813400000000.2</Coef>
+    </SigmaZeroSFPoly>
+    <BetaZeroSFPoly order1="2294" order2="1388">
+      <Coef exponent1="8141" exponent2="5537">-41439399999999.8</Coef>
+      <Coef exponent1="8666" exponent2="6630">27368500000000.2</Coef>
+    </BetaZeroSFPoly>
+    <GammaZeroSFPoly order1="8507" order2="8022">
+      <Coef exponent1="73" exponent2="4893">4058600000000.23</Coef>
+    </GammaZeroSFPoly>
+  </Radiometric>
+  <Antenna>
+    <Tx>
+      <XAxisPoly>
+        <X order1="5650">
+          <Coef exponent1="2606">43133600000000.2</Coef>
+        </X>
+        <Y order1="497">
+          <Coef exponent1="9547">-49706999999999.8</Coef>
+        </Y>
+        <Z order1="1076">
+          <Coef exponent1="8786">-35292399999999.8</Coef>
+        </Z>
+      </XAxisPoly>
+      <YAxisPoly>
+        <X order1="2993">
+          <Coef exponent1="6624">-30519999999999.8</Coef>
+        </X>
+        <Y order1="1877">
+          <Coef exponent1="535">-15408999999999.8</Coef>
+        </Y>
+        <Z order1="819">
+          <Coef exponent1="8913">44681900000000.2</Coef>
+        </Z>
+      </YAxisPoly>
+      <FreqZero>34234900000000.2</FreqZero>
+      <Array>
+        <GainPoly order1="1997" order2="43">
+          <Coef exponent1="8658" exponent2="5729">-33887999999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="311" order2="4045">
+          <Coef exponent1="5632" exponent2="6775">-24262399999999.8</Coef>
+        </PhasePoly>
+      </Array>
+      <GainBSPoly order1="6124">
+        <Coef exponent1="9679">10882400000000.2</Coef>
+      </GainBSPoly>
+      <MLFreqDilation>true</MLFreqDilation>
+    </Tx>
+    <Rcv>
+      <XAxisPoly>
+        <X order1="4493">
+          <Coef exponent1="6884">-18291099999999.8</Coef>
+        </X>
+        <Y order1="5936">
+          <Coef exponent1="422">19826700000000.2</Coef>
+        </Y>
+        <Z order1="3148">
+          <Coef exponent1="5276">-7458399999999.76</Coef>
+        </Z>
+      </XAxisPoly>
+      <YAxisPoly>
+        <X order1="517">
+          <Coef exponent1="2746">-15449299999999.8</Coef>
+        </X>
+        <Y order1="8882">
+          <Coef exponent1="7360">29409500000000.2</Coef>
+        </Y>
+        <Z order1="2841">
+          <Coef exponent1="9869">-19698299999999.8</Coef>
+        </Z>
+      </YAxisPoly>
+      <FreqZero>-13962399999999.8</FreqZero>
+      <EB>
+        <DCXPoly order1="2905">
+          <Coef exponent1="9432">-20601899999999.8</Coef>
+        </DCXPoly>
+        <DCYPoly order1="3791">
+          <Coef exponent1="5650">-25764799999999.8</Coef>
+        </DCYPoly>
+      </EB>
+      <Array>
+        <GainPoly order1="3014" order2="4159">
+          <Coef exponent1="7698" exponent2="7986">36110700000000.2</Coef>
+        </GainPoly>
+        <PhasePoly order1="2481" order2="4689">
+          <Coef exponent1="5272" exponent2="4403">-27539799999999.8</Coef>
+        </PhasePoly>
+      </Array>
+      <Elem>
+        <GainPoly order1="8644" order2="9688">
+          <Coef exponent1="6388" exponent2="4023">-20307599999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="4159" order2="7878">
+          <Coef exponent1="9870" exponent2="8760">-25606199999999.8</Coef>
+        </PhasePoly>
+      </Elem>
+      <GainBSPoly order1="6855">
+        <Coef exponent1="6342">32946000000000.2</Coef>
+      </GainBSPoly>
+      <EBFreqShift>0</EBFreqShift>
+      <MLFreqDilation>0</MLFreqDilation>
+    </Rcv>
+    <TwoWay>
+      <XAxisPoly>
+        <X order1="8342">
+          <Coef exponent1="1522">4365300000000.23</Coef>
+        </X>
+        <Y order1="9080">
+          <Coef exponent1="9406">-7074099999999.76</Coef>
+        </Y>
+        <Z order1="3827">
+          <Coef exponent1="189">-1802799999999.77</Coef>
+        </Z>
+      </XAxisPoly>
+      <YAxisPoly>
+        <X order1="7548">
+          <Coef exponent1="2193">-23931399999999.8</Coef>
+        </X>
+        <Y order1="7470">
+          <Coef exponent1="4720">-30026499999999.8</Coef>
+        </Y>
+        <Z order1="1480">
+          <Coef exponent1="8777">1764200000000.23</Coef>
+        </Z>
+      </YAxisPoly>
+      <FreqZero>-16764899999999.8</FreqZero>
+      <Array>
+        <GainPoly order1="5914" order2="2049">
+          <Coef exponent1="1485" exponent2="1503">-37457099999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="3379" order2="1315">
+          <Coef exponent1="4967" exponent2="1353">-779599999999.765</Coef>
+        </PhasePoly>
+      </Array>
+      <Elem>
+        <GainPoly order1="4873" order2="4978">
+          <Coef exponent1="2231" exponent2="3673">40558300000000.2</Coef>
+        </GainPoly>
+        <PhasePoly order1="6766" order2="5013">
+          <Coef exponent1="6142" exponent2="5917">-10329799999999.8</Coef>
+        </PhasePoly>
+      </Elem>
+    </TwoWay>
+  </Antenna>
+  <ErrorStatistics>
+    <CompositeSCP>
+      <Rg>36181700000000.2</Rg>
+      <Az>14687700000000.2</Az>
+      <RgAz>-4300299999999.77</RgAz>
+    </CompositeSCP>
+    <Components>
+      <PosVelErr>
+        <Frame>RIC_ECF</Frame>
+        <P1>30495300000000.2</P1>
+        <P2>48181900000000.2</P2>
+        <P3>-11468499999999.8</P3>
+        <V1>-2628799999999.77</V1>
+        <V2>-46231699999999.8</V2>
+        <V3>1730500000000.23</V3>
+      </PosVelErr>
+      <RadarSensor>
+        <RangeBias>44498600000000.2</RangeBias>
+      </RadarSensor>
+      <TropoError />
+      <IonoError>
+        <IonoRgRgRateCC>5275500000000.24</IonoRgRgRateCC>
+      </IonoError>
+    </Components>
+    <Unmodeled>
+      <Xrow>7650700000000.24</Xrow>
+      <Ycol>49968700000000.2</Ycol>
+      <XrowYcol>6955900000000.24</XrowYcol>
+      <UnmodeledDecorr>
+        <Xrow>
+          <CorrCoefZero>23743800000000.2</CorrCoefZero>
+          <DecorrRate>-31221799999999.8</DecorrRate>
+        </Xrow>
+        <Ycol>
+          <CorrCoefZero>2666400000000.23</CorrCoefZero>
+          <DecorrRate>-19038999999999.8</DecorrRate>
+        </Ycol>
+      </UnmodeledDecorr>
+    </Unmodeled>
+    <AdditionalParms>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </AdditionalParms>
+  </ErrorStatistics>
+  <MatchInfo>
+    <NumMatchTypes>396</NumMatchTypes>
+    <MatchType index="-1663">
+      <TypeID>string</TypeID>
+      <CurrentIndex>-2491</CurrentIndex>
+      <NumMatchCollections>-3684</NumMatchCollections>
+      <MatchCollection index="4453">
+        <CoreName>string</CoreName>
+      </MatchCollection>
+      <MatchCollection index="2686">
+        <CoreName>string</CoreName>
+      </MatchCollection>
+    </MatchType>
+  </MatchInfo>
+  <RMA>
+    <RMAlgoType>RG_DOP</RMAlgoType>
+    <ImageType>RMAT</ImageType>
+    <RMAT>
+      <PosRef>
+        <X>-8431599999999.76</X>
+        <Y>-3896199999999.77</Y>
+        <Z>-24514799999999.8</Z>
+      </PosRef>
+      <VelRef>
+        <X>-44703799999999.8</X>
+        <Y>15599700000000.2</Y>
+        <Z>-14702499999999.8</Z>
+      </VelRef>
+      <DopConeAngRef>-35121199999999.8</DopConeAngRef>
+    </RMAT>
+  </RMA>
+</SICD>

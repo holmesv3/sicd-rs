@@ -11,6 +11,12 @@ fn test_generated_130_xml() {
     let xml = include_str!("sicd_meta_130_01.xml");
     parse_130_components(xml);
     parse_xml::<sicd_rs::v1_3_0::SicdMeta>(xml);
+    let xml = include_str!("sicd_meta_130_02.xml");
+    parse_130_components(xml);
+    parse_xml::<sicd_rs::v1_3_0::SicdMeta>(xml);
+    let xml = include_str!("sicd_meta_130_03.xml");
+    parse_130_components(xml);
+    parse_xml::<sicd_rs::v1_3_0::SicdMeta>(xml);
 }
 
 fn parse_xml<'a, T>(xml: &'a str) where T: serde::de::Deserialize<'a>{
@@ -37,8 +43,11 @@ fn test_generated_050_xml() {
 #[test]
 fn test_generated_040_xml() {
     let xml = include_str!("sicd_meta_040_00.xml");
-    parse_xml::<sicd_rs::dep::v0_4_0::SicdMeta>(xml);
     parse_040_components(xml);
+    parse_xml::<sicd_rs::dep::v0_4_0::SicdMeta>(xml);
+    let xml = include_str!("sicd_meta_040_01.xml");
+    parse_040_components(xml);
+    parse_xml::<sicd_rs::dep::v0_4_0::SicdMeta>(xml);
 }
 
 macro_rules! create_130_component_test {
@@ -110,7 +119,8 @@ create_130_component_test!(
     ErrorStatistics,
     MatchInfo,
     PFA,
-    RMA
+    RMA,
+    RgAzComp
 );
 
 macro_rules! create_050_component_test {
