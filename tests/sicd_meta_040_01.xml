@@ -26,7 +26,7 @@
     <PixelType>RE32F_IM32F</PixelType>
     <AmpTable size="1317">
       <Amplitude index="213" class="xs:double">39726000000000.2</Amplitude>
-      <Amplitude index="-1108" class="xs:double">14757100000000.2</Amplitude>
+      <Amplitude index="1108" class="xs:double">14757100000000.2</Amplitude>
     </AmpTable>
     <NumRows class="xs:int">-2218</NumRows>
     <NumCols class="xs:int">-1044</NumCols>
@@ -57,7 +57,7 @@
         <Row class="xs:int">4331</Row>
         <Col class="xs:int">-2143</Col>
       </Vertex>
-      <Vertex index="-4131">
+      <Vertex index="4131">
         <Row class="xs:int">-3611</Row>
         <Col class="xs:int">-3401</Col>
       </Vertex>
@@ -96,11 +96,11 @@
       </ICP>
     </ImageCorners>
     <ValidData size="4648">
-      <Vertex index="-1478">
+      <Vertex index="1478">
         <Lat class="xs:double">-49226399999999.8</Lat>
         <Lon class="xs:double">13714100000000.2</Lon>
       </Vertex>
-      <Vertex index="-4233">
+      <Vertex index="4233">
         <Lat class="xs:double">-11107499999999.8</Lat>
         <Lon class="xs:double">-4607799999999.76</Lon>
       </Vertex>
@@ -149,8 +149,8 @@
       <DeltaK2 class="xs:double">-10518899999999.8</DeltaK2>
       <WgtType class="xs:string">string</WgtType>
       <WgtFunct size="3712">
-        <Wgt index="-1628" class="xs:double">11687400000000.2</Wgt>
-        <Wgt index="-3146" class="xs:double">-26295399999999.8</Wgt>
+        <Wgt index="1628" class="xs:double">11687400000000.2</Wgt>
+        <Wgt index="3146" class="xs:double">-26295399999999.8</Wgt>
       </WgtFunct>
     </Row>
     <Col>
@@ -168,7 +168,7 @@
       <DeltaK2 class="xs:double">-43715999999999.8</DeltaK2>
       <WgtType class="xs:string">string</WgtType>
       <WgtFunct size="3050">
-        <Wgt index="-2134" class="xs:double">-27208099999999.8</Wgt>
+        <Wgt index="2134" class="xs:double">-27208099999999.8</Wgt>
         <Wgt index="3956" class="xs:double">-28190399999999.8</Wgt>
       </WgtFunct>
     </Col>
@@ -177,7 +177,7 @@
     <CollectStart class="xs:dateTime">2005-01-15T13:37:17.65</CollectStart>
     <CollectDuration class="xs:double">-16033999999999.8</CollectDuration>
     <IPP size="1538">
-      <Set index="-2689">
+      <Set index="2689">
         <TStart class="xs:double">-23998999999999.8</TStart>
         <TEnd class="xs:double">-41865499999999.8</TEnd>
         <IPPStart class="xs:int">-1794</IPPStart>
@@ -186,7 +186,7 @@
           <Coef exponent1="5130" class="xs:double">-4230399999999.77</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-4960">
+      <Set index="4960">
         <TStart class="xs:double">3368700000000.23</TStart>
         <TEnd class="xs:double">-10387599999999.8</TEnd>
         <IPPStart class="xs:int">-329</IPPStart>
@@ -195,7 +195,7 @@
           <Coef exponent1="4270" class="xs:double">34886800000000.2</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-4505">
+      <Set index="4505">
         <TStart class="xs:double">-12215899999999.8</TStart>
         <TEnd class="xs:double">45808600000000.2</TEnd>
         <IPPStart class="xs:int">-4437</IPPStart>
@@ -204,7 +204,7 @@
           <Coef exponent1="7861" class="xs:double">-39600899999999.8</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-3592">
+      <Set index="3592">
         <TStart class="xs:double">25546000000000.2</TStart>
         <TEnd class="xs:double">30356100000000.2</TEnd>
         <IPPStart class="xs:int">3350</IPPStart>
@@ -213,7 +213,7 @@
           <Coef exponent1="6966" class="xs:double">46066700000000.2</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-623">
+      <Set index="623">
         <TStart class="xs:double">-30996499999999.8</TStart>
         <TEnd class="xs:double">-36480899999999.8</TEnd>
         <IPPStart class="xs:int">-4541</IPPStart>
@@ -327,20 +327,20 @@
       <Coef exponent1="6354" class="xs:double">-15387299999999.8</Coef>
     </PolarizationHVAnglePoly>
     <TxSequence size="3149">
-      <TxStep index="-1678" />
+      <TxStep index="1678" />
       <TxStep index="146" />
     </TxSequence>
     <Waveform size="3557">
       <WFParameters index="815" />
       <WFParameters index="4716" />
-      <WFParameters index="-1512" />
+      <WFParameters index="1512" />
       <WFParameters index="2742" />
-      <WFParameters index="-4601" />
+      <WFParameters index="4601" />
     </Waveform>
     <RcvChannels size="817">
       <ChanParameters index="3255" />
-      <ChanParameters index="-3635" />
-      <ChanParameters index="-4607" />
+      <ChanParameters index="3635" />
+      <ChanParameters index="4607" />
       <ChanParameters index="4325" />
     </RcvChannels>
     <Area>
@@ -673,7 +673,7 @@
     </AdditionalParms>
   </ErrorStatistics>
   <MatchInfo>
-    <Collect index="-4185">
+    <Collect index="4185">
       <CollectorName class="xs:string">string</CollectorName>
       <CoreName class="xs:string">string</CoreName>
       <MatchType class="xs:string">string</MatchType>

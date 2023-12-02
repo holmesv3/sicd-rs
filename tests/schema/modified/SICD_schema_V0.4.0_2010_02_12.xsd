@@ -147,7 +147,7 @@
          <xs:element name="Row" type="integertype" maxOccurs="1"/>
          <xs:element name="Col" type="integertype" maxOccurs="1"/>
       </xs:sequence>
-      <xs:attribute name="index" type="xs:int" use="required"/>
+      <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
    </xs:complexType>
 
    <xs:complexType name="polycoef1dtype">
@@ -193,7 +193,7 @@
    <xs:complexType name="xyzpolyAttributetype">
       <xs:complexContent>
          <xs:extension base="xyzpolytype">
-            <xs:attribute name="index" type="xs:int" use="required"/>
+            <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
@@ -206,7 +206,7 @@
                   <xs:element name="Lat" type="doubletype" maxOccurs="1"/>
                   <xs:element name="Lon" type="doubletype" maxOccurs="1"/>
                </xs:sequence>
-               <xs:attribute name="index" type="xs:int" use="required"/>
+               <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -221,7 +221,7 @@
                   <xs:element name="Lat" type="doubletype" maxOccurs="1"/>
                   <xs:element name="Lon" type="doubletype" maxOccurs="1"/>
                </xs:sequence>
-               <xs:attribute name="index" type="xs:int" use="required"/>
+               <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>
@@ -231,7 +231,7 @@
    <xs:complexType name="arraydoubtype">
       <xs:simpleContent>
          <xs:extension base="doubletype">
-            <xs:attribute name="index" type="xs:int" use="required"/>
+            <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
@@ -515,7 +515,7 @@
                            <xs:element name="IPPEnd" type="integertype" maxOccurs="1"/>
                            <xs:element name="IPPPoly" type="poly1dtype" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -563,7 +563,7 @@
                            <xs:element name="WFIndex" type="integertype" minOccurs="0" maxOccurs="1"/>
                            <xs:element name="TxPolarization" type="polarizationtype" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -594,7 +594,7 @@
                            <xs:element name="RcvFreqStart" type="doubletype" minOccurs="0" maxOccurs="1"/>
                            <xs:element name="RcvFMRate" type="doubletype" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -610,7 +610,7 @@
                            <xs:element name="RcvAPCIndex" type="integertype" minOccurs="0" maxOccurs="1"/>
                            <xs:element name="TxRcvPolarization" type="dualpolarizationtype" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -672,7 +672,7 @@
                                              <xs:element name="EndSample" type="integertype" maxOccurs="1"/>
                                              <xs:element name="Identifier" type="stringtype" maxOccurs="1"/>
                                           </xs:sequence>
-                                       <xs:attribute name="index" type="xs:int" use="required"/>
+                                       <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                                        </xs:complexType>
                                     </xs:element>
                                  </xs:sequence>
@@ -1053,7 +1053,7 @@
                   <xs:element name="MatchType" type="stringtype" minOccurs="0" maxOccurs="unbounded"/>
                   <xs:element name="Parameter" type="parametertype" minOccurs="0" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="index" type="xs:int" use="required"/>
+               <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>

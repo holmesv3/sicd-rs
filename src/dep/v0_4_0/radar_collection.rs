@@ -37,7 +37,7 @@ pub struct Waveform {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct WFParameters {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "TxPulseLength")]
     pub tx_pulse_length: Option<f64>,
     #[serde(rename = "TxRFBandwidth")]
@@ -97,7 +97,7 @@ pub struct TxSequence {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxStep {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "WFIndex")]
     pub wf_index: Option<i32>,
     #[serde(rename = "TxPolarization")]
@@ -126,7 +126,7 @@ pub struct RcvChannels {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ChanParameters {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "TxRcvPolarization")]
     pub tx_rcv_polarization: Option<String>, // TODO: Implement this enum
     #[serde(rename = "RcvAPCIndex")]
@@ -200,7 +200,7 @@ pub struct SegmentList {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Segment {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "StartLine")]
     pub start_line: i32,
     #[serde(rename = "StartSample")]

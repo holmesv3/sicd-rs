@@ -47,7 +47,7 @@ pub struct AmpTable {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Amplitude {
     #[serde(rename = "@index")]
-    pub index: i32, // [0, 255]
+    pub index: usize, // [0, 255]
     #[serde(rename = "$value")]
     pub value: f64,
 }

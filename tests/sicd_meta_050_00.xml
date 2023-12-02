@@ -22,9 +22,9 @@
   <ImageData>
     <PixelType>RE16I_IM16I</PixelType>
     <AmpTable size="3552">
-      <Amplitude index="-2968">20567000000000.2</Amplitude>
+      <Amplitude index="2968">20567000000000.2</Amplitude>
       <Amplitude index="2333">13544400000000.2</Amplitude>
-      <Amplitude index="-2284">5128500000000.24</Amplitude>
+      <Amplitude index="2284">5128500000000.24</Amplitude>
     </AmpTable>
     <NumRows>1346</NumRows>
     <NumCols>-3731</NumCols>
@@ -39,19 +39,19 @@
       <Col>4415</Col>
     </SCPPixel>
     <ValidData size="4861">
-      <Vertex index="-1592">
+      <Vertex index="1592">
         <Row>-2723</Row>
         <Col>-3074</Col>
       </Vertex>
-      <Vertex index="-4954">
+      <Vertex index="4954">
         <Row>-2570</Row>
         <Col>-1008</Col>
       </Vertex>
-      <Vertex index="-3417">
+      <Vertex index="3417">
         <Row>2740</Row>
         <Col>-1217</Col>
       </Vertex>
-      <Vertex index="-1800">
+      <Vertex index="1800">
         <Row>-4140</Row>
         <Col>2764</Col>
       </Vertex>
@@ -102,11 +102,11 @@
       </ICP>
     </ImageCorners>
     <ValidData size="248">
-      <Vertex index="-2228">
+      <Vertex index="2228">
         <Lat>-21838499999999.8</Lat>
         <Lon>-17215699999999.8</Lon>
       </Vertex>
-      <Vertex index="-4508">
+      <Vertex index="4508">
         <Lat>-14933199999999.8</Lat>
         <Lon>12918300000000.2</Lon>
       </Vertex>
@@ -128,7 +128,7 @@
           <Lat>46020000000000.2</Lat>
           <Lon>-4220999999999.77</Lon>
         </Endpoint>
-        <Endpoint index="-3065">
+        <Endpoint index="3065">
           <Lat>-47409799999999.8</Lat>
           <Lon>48096400000000.2</Lon>
         </Endpoint>
@@ -183,7 +183,7 @@
         <WindowName>string</WindowName>
       </WgtType>
       <WgtFunct size="430">
-        <Wgt index="-1962">6898900000000.24</Wgt>
+        <Wgt index="1962">6898900000000.24</Wgt>
       </WgtFunct>
     </Row>
     <Col>
@@ -220,7 +220,7 @@
           <Coef exponent1="1631">-31335999999999.8</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-4107">
+      <Set index="4107">
         <TStart>15381700000000.2</TStart>
         <TEnd>-18688799999999.8</TEnd>
         <IPPStart>-2044</IPPStart>
@@ -229,7 +229,7 @@
           <Coef exponent1="2599">-14396899999999.8</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-4601">
+      <Set index="4601">
         <TStart>23578100000000.2</TStart>
         <TEnd>-12762499999999.8</TEnd>
         <IPPStart>-2832</IPPStart>
@@ -275,7 +275,7 @@
       </Z>
     </TxAPCPoly>
     <RcvAPC size="2212">
-      <RcvAPCPoly index="-3049">
+      <RcvAPCPoly index="3049">
         <X order1="903">
           <Coef exponent1="7756">-45961599999999.8</Coef>
         </X>
@@ -301,20 +301,20 @@
       <Coef exponent1="747">29003800000000.2</Coef>
     </PolarizationHVAnglePoly>
     <TxSequence size="2757">
-      <TxStep index="-1144" />
+      <TxStep index="1144" />
       <TxStep index="3118" />
       <TxStep index="634" />
-      <TxStep index="-4828" />
-      <TxStep index="-852" />
+      <TxStep index="4828" />
+      <TxStep index="852" />
     </TxSequence>
     <Waveform size="2209">
-      <WFParameters index="-4315" />
+      <WFParameters index="4315" />
       <WFParameters index="2645" />
       <WFParameters index="205" />
-      <WFParameters index="-2674" />
+      <WFParameters index="2674" />
     </Waveform>
     <RcvChannels size="4233">
-      <ChanParameters index="-2265" />
+      <ChanParameters index="2265" />
     </RcvChannels>
     <Area />
     <Parameter name="string">string</Parameter>
@@ -588,7 +588,7 @@
     </AdditionalParms>
   </ErrorStatistics>
   <MatchInfo size="1686">
-    <Collect index="-4879">
+    <Collect index="4879">
       <CollectorName>string</CollectorName>
       <IlluminatorName>string</IlluminatorName>
       <CoreName>string</CoreName>

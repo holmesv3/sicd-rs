@@ -22,9 +22,9 @@
   <ImageData>
     <PixelType>RE16I_IM16I</PixelType>
     <AmpTable size="3552">
-      <Amplitude index="-2968" class="xs:double">20567000000000.2</Amplitude>
+      <Amplitude index="2968" class="xs:double">20567000000000.2</Amplitude>
       <Amplitude index="2333" class="xs:double">13544400000000.2</Amplitude>
-      <Amplitude index="-2284" class="xs:double">5128500000000.24</Amplitude>
+      <Amplitude index="2284" class="xs:double">5128500000000.24</Amplitude>
     </AmpTable>
     <NumRows class="xs:int">1346</NumRows>
     <NumCols class="xs:int">-3731</NumCols>
@@ -39,19 +39,19 @@
       <Col class="xs:int">4415</Col>
     </SCPPixel>
     <ValidData size="4861">
-      <Vertex index="-1592">
+      <Vertex index="1592">
         <Row class="xs:int">-2723</Row>
         <Col class="xs:int">-3074</Col>
       </Vertex>
-      <Vertex index="-4954">
+      <Vertex index="4954">
         <Row class="xs:int">-2570</Row>
         <Col class="xs:int">-1008</Col>
       </Vertex>
-      <Vertex index="-3417">
+      <Vertex index="3417">
         <Row class="xs:int">2740</Row>
         <Col class="xs:int">-1217</Col>
       </Vertex>
-      <Vertex index="-1800">
+      <Vertex index="1800">
         <Row class="xs:int">-4140</Row>
         <Col class="xs:int">2764</Col>
       </Vertex>
@@ -102,11 +102,11 @@
       </ICP>
     </ImageCorners>
     <ValidData size="248">
-      <Vertex index="-2228">
+      <Vertex index="2228">
         <Lat class="xs:double">-21838499999999.8</Lat>
         <Lon class="xs:double">-17215699999999.8</Lon>
       </Vertex>
-      <Vertex index="-4508">
+      <Vertex index="4508">
         <Lat class="xs:double">-14933199999999.8</Lat>
         <Lon class="xs:double">12918300000000.2</Lon>
       </Vertex>
@@ -128,7 +128,7 @@
           <Lat class="xs:double">46020000000000.2</Lat>
           <Lon class="xs:double">-4220999999999.77</Lon>
         </Endpoint>
-        <Endpoint index="-3065">
+        <Endpoint index="3065">
           <Lat class="xs:double">-47409799999999.8</Lat>
           <Lon class="xs:double">48096400000000.2</Lon>
         </Endpoint>
@@ -181,7 +181,7 @@
       </DeltaKCOAPoly>
       <WgtType class="xs:string">string</WgtType>
       <WgtFunct size="3905">
-        <Wgt index="-430" class="xs:double">-39448699999999.8</Wgt>
+        <Wgt index="430" class="xs:double">-39448699999999.8</Wgt>
         <Wgt index="1507" class="xs:double">-19622299999999.8</Wgt>
       </WgtFunct>
     </Row>
@@ -208,7 +208,7 @@
     <CollectStart class="xs:dateTime">2011-06-23T19:12:44.07</CollectStart>
     <CollectDuration class="xs:double">-19105499999999.8</CollectDuration>
     <IPP size="4231">
-      <Set index="-555">
+      <Set index="555">
         <TStart class="xs:double">17486300000000.2</TStart>
         <TEnd class="xs:double">279600000000.235</TEnd>
         <IPPStart class="xs:int">-958</IPPStart>
@@ -226,7 +226,7 @@
           <Coef exponent1="8809" class="xs:double">42634000000000.2</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-3697">
+      <Set index="3697">
         <TStart class="xs:double">23211500000000.2</TStart>
         <TEnd class="xs:double">-14396899999999.8</TEnd>
         <IPPStart class="xs:int">197</IPPStart>
@@ -235,7 +235,7 @@
           <Coef exponent1="9379" class="xs:double">26733800000000.2</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-4945">
+      <Set index="4945">
         <TStart class="xs:double">-32306499999999.8</TStart>
         <TEnd class="xs:double">37263400000000.2</TEnd>
         <IPPStart class="xs:int">-2421</IPPStart>
@@ -303,7 +303,7 @@
           <Coef exponent1="4304" class="xs:double">24296300000000.2</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="-1535">
+      <RcvAPCPoly index="1535">
         <X order1="1910">
           <Coef exponent1="9752" class="xs:double">-34982799999999.8</Coef>
         </X>
@@ -342,12 +342,12 @@
       <TxStep index="1258" />
     </TxSequence>
     <Waveform size="4233">
-      <WFParameters index="-2265" />
-      <WFParameters index="-1343" />
+      <WFParameters index="2265" />
+      <WFParameters index="1343" />
     </Waveform>
     <RcvChannels size="1695">
       <ChanParameters index="2732" />
-      <ChanParameters index="-4581" />
+      <ChanParameters index="4581" />
       <ChanParameters index="1221" />
     </RcvChannels>
     <Area>
@@ -695,7 +695,7 @@
       <MatchType class="xs:string">string</MatchType>
       <Parameter name="string" class="xs:string">string</Parameter>
     </Collect>
-    <Collect index="-3931">
+    <Collect index="3931">
       <CollectorName class="xs:string">string</CollectorName>
       <CoreName class="xs:string">string</CoreName>
       <MatchType class="xs:string">string</MatchType>
@@ -709,7 +709,7 @@
       <Parameter name="string" class="xs:string">string</Parameter>
       <Parameter name="string" class="xs:string">string</Parameter>
     </Collect>
-    <Collect index="-4783">
+    <Collect index="4783">
       <CollectorName class="xs:string">string</CollectorName>
       <IlluminatorName class="xs:string">string</IlluminatorName>
       <CoreName class="xs:string">string</CoreName>

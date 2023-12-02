@@ -103,7 +103,7 @@
    <xs:complexType name="RowColvertexType">
     <xs:complexContent>
       <xs:extension base="RowColType">
-         <xs:attribute name="index" type="xs:int" use="required"/>
+         <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
       </xs:extension>
      </xs:complexContent>
    </xs:complexType>
@@ -151,7 +151,7 @@
    <xs:complexType name="XYZPolyAttributeType">
       <xs:complexContent>
          <xs:extension base="XYZPolyType">
-            <xs:attribute name="index" type="xs:int" use="required"/>
+            <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
          </xs:extension>
       </xs:complexContent>
    </xs:complexType>
@@ -162,7 +162,7 @@
             <xs:complexType>
                <xs:complexContent>
                   <xs:extension base="LatLonType">
-                     <xs:attribute name="index" type="xs:int" use="required"/>
+                     <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                   </xs:extension>
                </xs:complexContent>
             </xs:complexType>
@@ -177,7 +177,7 @@
             <xs:complexType>
                <xs:complexContent>
                   <xs:extension base="LatLonType">
-                     <xs:attribute name="index" type="xs:int" use="required"/>
+                     <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                   </xs:extension>
                </xs:complexContent>
             </xs:complexType>
@@ -189,7 +189,7 @@
    <xs:complexType name="ArrayDouble">
       <xs:simpleContent>
          <xs:extension base="xs:double">
-            <xs:attribute name="index" type="xs:int" use="required"/>
+            <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
          </xs:extension>
       </xs:simpleContent>
    </xs:complexType>
@@ -472,7 +472,7 @@
                            <xs:element name="IPPEnd" type="xs:int" maxOccurs="1"/>
                            <xs:element name="IPPPoly" type="Poly1DType" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -520,7 +520,7 @@
                            <xs:element name="WFIndex" type="xs:int" minOccurs="0" maxOccurs="1"/>
                            <xs:element name="TxPolarization" type="PolarizationType" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -551,7 +551,7 @@
                            <xs:element name="RcvFreqStart" type="xs:double" minOccurs="0" maxOccurs="1"/>
                            <xs:element name="RcvFMRate" type="xs:double" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -567,7 +567,7 @@
                            <xs:element name="RcvAPCIndex" type="xs:int" minOccurs="0" maxOccurs="1"/>
                            <xs:element name="TxRcvPolarization" type="DualPolarizationType" minOccurs="0" maxOccurs="1"/>
                         </xs:sequence>
-                        <xs:attribute name="index" type="xs:int" use="required"/>
+                        <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                      </xs:complexType>
                   </xs:element>
                </xs:sequence>
@@ -629,7 +629,7 @@
                                              <xs:element name="EndSample" type="xs:int" maxOccurs="1"/>
                                              <xs:element name="Identifier" type="xs:string" maxOccurs="1"/>
                                           </xs:sequence>
-                                       <xs:attribute name="index" type="xs:int" use="required"/>
+                                       <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
                                        </xs:complexType>
                                     </xs:element>
                                  </xs:sequence>
@@ -1018,7 +1018,7 @@
                   <xs:element name="MatchType" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                   <xs:element name="Parameter" type="ParameterType" minOccurs="0" maxOccurs="unbounded"/>
                </xs:sequence>
-               <xs:attribute name="index" type="xs:int" use="required"/>
+               <xs:attribute name="index" type="xs:unsignedInt" use="required"/>
             </xs:complexType>
          </xs:element>
       </xs:sequence>

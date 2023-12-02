@@ -15,7 +15,7 @@ mod tests {
     fn test_match_info() {
         let xml = r#"
           <MatchInfo size="1686">
-    <Collect index="-4879">
+    <Collect index="4879">
       <CollectorName>string</CollectorName>
       <IlluminatorName>string</IlluminatorName>
       <CoreName>string</CoreName>

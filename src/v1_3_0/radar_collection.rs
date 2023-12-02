@@ -37,7 +37,7 @@ pub struct RcvChannels {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ChanParameters {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "TxRcvPolarization")]
     pub tx_rcv_polarization: TxRcvPolarization,
     #[serde(rename = "RcvAPCIndex")]

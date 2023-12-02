@@ -72,7 +72,7 @@ pub struct WgtFunct {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Wgt {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "$value")]
     pub value: f64,
 }

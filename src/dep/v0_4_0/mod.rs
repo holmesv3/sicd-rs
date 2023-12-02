@@ -25,7 +25,7 @@ pub use geo_data::GeoData;
 pub use grid::Grid;
 pub use image_creation::ImageCreation;
 pub use image_data::ImageData;
-pub use image_formation::{ImageFormation, RMA, RGAZCOMP};
+pub use image_formation::{ImageFormation, RGAZCOMP, RMA};
 pub use match_info::MatchInfo;
 pub use pfa::PFA;
 pub use position::Position;
@@ -82,7 +82,7 @@ pub struct RowCol {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxRowCol {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "Row")]
     pub row: i64,
     #[serde(rename = "Col")]
@@ -116,7 +116,7 @@ pub struct LLH {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxLLH {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "Lat")]
     pub lat: f64,
     #[serde(rename = "Lon")]
@@ -134,7 +134,7 @@ pub struct LL {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxLL {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "Lat")]
     pub lat: f64,
     #[serde(rename = "Lon")]
@@ -186,7 +186,7 @@ pub struct XyzPoly {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct IdxXyzPoly {
     #[serde(rename = "@index")]
-    pub index: i32,
+    pub index: usize,
     #[serde(rename = "X")]
     pub x: Poly1D,
     #[serde(rename = "Y")]

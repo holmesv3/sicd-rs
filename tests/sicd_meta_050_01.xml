@@ -25,8 +25,8 @@
   <ImageData>
     <PixelType>RE16I_IM16I</PixelType>
     <AmpTable size="4167">
-      <Amplitude index="-1235">14910400000000.2</Amplitude>
-      <Amplitude index="-3095">-10851799999999.8</Amplitude>
+      <Amplitude index="1235">14910400000000.2</Amplitude>
+      <Amplitude index="3095">-10851799999999.8</Amplitude>
     </AmpTable>
     <NumRows>-2305</NumRows>
     <NumCols>-3371</NumCols>
@@ -45,7 +45,7 @@
         <Row>539</Row>
         <Col>3009</Col>
       </Vertex>
-      <Vertex index="-1473">
+      <Vertex index="1473">
         <Row>-1057</Row>
         <Col>-711</Col>
       </Vertex>
@@ -88,7 +88,7 @@
       </ICP>
     </ImageCorners>
     <ValidData size="382">
-      <Vertex index="-4606">
+      <Vertex index="4606">
         <Lat>14703700000000.2</Lat>
         <Lon>33222400000000.2</Lon>
       </Vertex>
@@ -96,11 +96,11 @@
         <Lat>-9972499999999.77</Lat>
         <Lon>-25424199999999.8</Lon>
       </Vertex>
-      <Vertex index="-898">
+      <Vertex index="898">
         <Lat>-15612299999999.8</Lat>
         <Lon>-25262399999999.8</Lon>
       </Vertex>
-      <Vertex index="-3225">
+      <Vertex index="3225">
         <Lat>-9810399999999.77</Lat>
         <Lon>15332400000000.2</Lon>
       </Vertex>
@@ -114,11 +114,11 @@
       <Desc name="string">string</Desc>
       <Desc name="string">string</Desc>
       <Polygon size="882">
-        <Vertex index="-4649">
+        <Vertex index="4649">
           <Lat>-17984599999999.8</Lat>
           <Lon>13754800000000.2</Lon>
         </Vertex>
-        <Vertex index="-1021">
+        <Vertex index="1021">
           <Lat>26130400000000.2</Lat>
           <Lon>-49301799999999.8</Lon>
         </Vertex>
@@ -185,7 +185,7 @@
         <WindowName>string</WindowName>
       </WgtType>
       <WgtFunct size="3016">
-        <Wgt index="-1593">-32482999999999.8</Wgt>
+        <Wgt index="1593">-32482999999999.8</Wgt>
       </WgtFunct>
     </Col>
   </Grid>
@@ -193,7 +193,7 @@
     <CollectStart>1992-05-17T12:59:33.20</CollectStart>
     <CollectDuration>-21119399999999.8</CollectDuration>
     <IPP size="507">
-      <Set index="-3021">
+      <Set index="3021">
         <TStart>38239800000000.2</TStart>
         <TEnd>-9193399999999.77</TEnd>
         <IPPStart>-4892</IPPStart>
@@ -211,7 +211,7 @@
           <Coef exponent1="1565">-13002499999999.8</Coef>
         </IPPPoly>
       </Set>
-      <Set index="-3034">
+      <Set index="3034">
         <TStart>35070900000000.2</TStart>
         <TEnd>-20722799999999.8</TEnd>
         <IPPStart>-768</IPPStart>
@@ -266,7 +266,7 @@
       </Z>
     </TxAPCPoly>
     <RcvAPC size="4949">
-      <RcvAPCPoly index="-4410">
+      <RcvAPCPoly index="4410">
         <X order1="6826">
           <Coef exponent1="1213">-1329799999999.77</Coef>
         </X>
@@ -277,7 +277,7 @@
           <Coef exponent1="1151">46385500000000.2</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="-14">
+      <RcvAPCPoly index="14">
         <X order1="1540">
           <Coef exponent1="3702">-1892299999999.77</Coef>
         </X>
@@ -299,7 +299,7 @@
           <Coef exponent1="4197">20732700000000.2</Coef>
         </Z>
       </RcvAPCPoly>
-      <RcvAPCPoly index="-4416">
+      <RcvAPCPoly index="4416">
         <X order1="7252">
           <Coef exponent1="8433">-4116999999999.77</Coef>
         </X>
@@ -323,9 +323,9 @@
       <Coef exponent1="6933">-37856599999999.8</Coef>
     </PolarizationHVAnglePoly>
     <TxSequence size="2735">
-      <TxStep index="-129" />
+      <TxStep index="129" />
       <TxStep index="3685" />
-      <TxStep index="-4858" />
+      <TxStep index="4858" />
       <TxStep index="3581" />
     </TxSequence>
     <Waveform size="1323">
@@ -654,7 +654,7 @@
     </AdditionalParms>
   </ErrorStatistics>
   <MatchInfo size="2658">
-    <Collect index="-2123">
+    <Collect index="2123">
       <CollectorName>string</CollectorName>
       <IlluminatorName>string</IlluminatorName>
       <CoreName>string</CoreName>
