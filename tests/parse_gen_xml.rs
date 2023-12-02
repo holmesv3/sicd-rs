@@ -1,3 +1,5 @@
+use core::panic;
+
 use quick_xml::de::from_str;
 use quick_xml::events::Event;
 use quick_xml::name::QName;
@@ -19,7 +21,56 @@ fn test_generated_130_xml() {
     parse_xml::<sicd_rs::v1_3_0::SicdMeta>(xml);
 }
 
-fn parse_xml<'a, T>(xml: &'a str) where T: serde::de::Deserialize<'a>{
+#[test]
+fn parse_050_rgazcomp() {
+    let xml = include_str!("sicd_meta_050_00.xml");
+    let sicd_meta = from_str::<sicd_rs::dep::v0_5_0::SicdMeta>(xml).unwrap();
+    match sicd_meta.rg_az_comp {
+        Some(val) => {
+            dbg!(val);
+        }
+        None => {
+            panic!("Expectd something");
+        }
+    }
+    let xml = include_str!("sicd_meta_050_01.xml");
+    let sicd_meta = from_str::<sicd_rs::dep::v0_5_0::SicdMeta>(xml).unwrap();
+    match sicd_meta.rg_az_comp {
+        Some(val) => {
+            dbg!(val);
+            panic!("Expected nothing")
+        }
+        None => (),
+    }
+}
+
+#[test]
+fn parse_131_rgazcomp() {
+    let xml = include_str!("sicd_meta_130_03.xml");
+    let sicd_meta = from_str::<sicd_rs::v1_3_0::SicdMeta>(xml).unwrap();
+    match sicd_meta.rg_az_comp {
+        Some(val) => {
+            dbg!(val);
+        }
+        None => {
+            panic!("Expectd something");
+        }
+    }
+    let xml = include_str!("sicd_meta_130_00.xml");
+    let sicd_meta = from_str::<sicd_rs::v1_3_0::SicdMeta>(xml).unwrap();
+    match sicd_meta.rg_az_comp {
+        Some(val) => {
+            dbg!(val);
+            panic!("Expected nothing")
+        }
+        None => (),
+    }
+}
+
+fn parse_xml<'a, T>(xml: &'a str)
+where
+    T: serde::de::Deserialize<'a>,
+{
     let sicd_meta = from_str::<T>(xml);
     assert!(match sicd_meta {
         Ok(_) => true,
