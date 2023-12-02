@@ -977,7 +977,7 @@
                <xs:sequence>
                   <xs:element name="TypeID" type="xs:string"/>
                   <xs:element name="CurrentIndex" type="xs:int" minOccurs="0"/>
-                  <xs:element name="NumMatchCollections" type="xs:int"/>
+                  <xs:element name="NumMatchCollections" type="xs:unsignedInt"/>
                   <xs:element name="MatchCollection" minOccurs="0" maxOccurs="unbounded">
                      <xs:complexType>
                         <xs:sequence>

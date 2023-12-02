@@ -964,7 +964,7 @@
     </MatchType>
     <MatchType index="1952">
       <TypeID>string</TypeID>
-      <NumMatchCollections>-1283</NumMatchCollections>
+      <NumMatchCollections>1283</NumMatchCollections>
       <MatchCollection index="2502">
         <CoreName>string</CoreName>
       </MatchCollection>
@@ -991,7 +991,7 @@
     </MatchType>
     <MatchType index="966">
       <TypeID>string</TypeID>
-      <NumMatchCollections>-3828</NumMatchCollections>
+      <NumMatchCollections>3828</NumMatchCollections>
       <MatchCollection index="4534">
         <CoreName>string</CoreName>
       </MatchCollection>

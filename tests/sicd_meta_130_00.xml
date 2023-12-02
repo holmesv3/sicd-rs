@@ -861,7 +861,7 @@
     <NumMatchTypes>4729</NumMatchTypes>
     <MatchType index="3038">
       <TypeID>string</TypeID>
-      <NumMatchCollections>-1752</NumMatchCollections>
+      <NumMatchCollections>1752</NumMatchCollections>
       <MatchCollection index="4987">
         <CoreName>string</CoreName>
       </MatchCollection>
@@ -900,7 +900,7 @@
     </MatchType>
     <MatchType index="2961">
       <TypeID>string</TypeID>
-      <NumMatchCollections>-7</NumMatchCollections>
+      <NumMatchCollections>7</NumMatchCollections>
     </MatchType>
   </MatchInfo>
   <PFA>

@@ -972,7 +972,7 @@
     <MatchType index="1663">
       <TypeID>string</TypeID>
       <CurrentIndex>-2491</CurrentIndex>
-      <NumMatchCollections>-3684</NumMatchCollections>
+      <NumMatchCollections>3684</NumMatchCollections>
       <MatchCollection index="4453">
         <CoreName>string</CoreName>
       </MatchCollection>

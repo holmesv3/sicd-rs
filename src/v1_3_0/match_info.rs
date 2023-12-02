@@ -17,7 +17,7 @@ pub struct MatchType {
     #[serde(rename = "CurrentIndex")]
     pub current_index: Option<i32>,
     #[serde(rename = "NumMatchCollections")]
-    pub num_match_collections: i32,
+    pub num_match_collections: u64,
     #[serde(rename = "MatchCollection")]
     pub match_collection: Option<Vec<MatchCollection>>,
 }
