@@ -121,7 +121,7 @@ pub struct RcvChannels {
     #[serde(rename = "@size")]
     pub size: i32,
     #[serde(rename = "ChanParameters")]
-    pub chan_parameters: Vec<ChanParameters>,
+    pub chan_parameters: Option<Vec<ChanParameters>>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct ChanParameters {
