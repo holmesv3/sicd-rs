@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<SICD xmlns="urn:SICD:0.5.0" xsi:schemaLocation="urn:SICD:0.5.0 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <CollectionInfo>
+    <CollectorName>string</CollectorName>
+    <IlluminatorName>string</IlluminatorName>
+    <CoreName>string</CoreName>
+    <CollectType>BISTATIC</CollectType>
+    <RadarMode>
+      <ModeType>STRIPMAP</ModeType>
+      <ModeID>string</ModeID>
+    </RadarMode>
+    <Classification>string</Classification>
+    <CountryCode>string</CountryCode>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+    <Parameter name="string">string</Parameter>
+  </CollectionInfo>
+  <ImageCreation>
+    <Application>string</Application>
+    <DateTime>2009-12-20T16:22:45.35</DateTime>
+    <Site>string</Site>
+    <Profile>string</Profile>
+  </ImageCreation>
+  <ImageData>
+    <PixelType>RE16I_IM16I</PixelType>
+    <AmpTable size="4167">
+      <Amplitude index="-1235">14910400000000.2</Amplitude>
+      <Amplitude index="-3095">-10851799999999.8</Amplitude>
+    </AmpTable>
+    <NumRows>-2305</NumRows>
+    <NumCols>-3371</NumCols>
+    <FirstRow>2483</FirstRow>
+    <FirstCol>53</FirstCol>
+    <FullImage>
+      <NumRows>1597</NumRows>
+      <NumCols>4242</NumCols>
+    </FullImage>
+    <SCPPixel>
+      <Row>1442</Row>
+      <Col>-4443</Col>
+    </SCPPixel>
+    <ValidData size="1769">
+      <Vertex index="4461">
+        <Row>539</Row>
+        <Col>3009</Col>
+      </Vertex>
+      <Vertex index="-1473">
+        <Row>-1057</Row>
+        <Col>-711</Col>
+      </Vertex>
+      <Vertex index="4566">
+        <Row>1073</Row>
+        <Col>-3099</Col>
+      </Vertex>
+    </ValidData>
+  </ImageData>
+  <GeoData>
+    <EarthModel>WGS_84</EarthModel>
+    <SCP>
+      <ECF>
+        <X>-35624299999999.8</X>
+        <Y>-43870299999999.8</Y>
+        <Z>-42520899999999.8</Z>
+      </ECF>
+      <LLH>
+        <Lat>-9630399999999.77</Lat>
+        <Lon>-34936699999999.8</Lon>
+        <HAE>-22625699999999.8</HAE>
+      </LLH>
+    </SCP>
+    <ImageCorners>
+      <ICP index="4:LRFC">
+        <Lat>-20138999999999.8</Lat>
+        <Lon>39799800000000.2</Lon>
+      </ICP>
+      <ICP index="3:LRLC">
+        <Lat>23091400000000.2</Lat>
+        <Lon>46950600000000.2</Lon>
+      </ICP>
+      <ICP index="4:LRFC">
+        <Lat>24873600000000.2</Lat>
+        <Lon>12041800000000.2</Lon>
+      </ICP>
+      <ICP index="4:LRFC">
+        <Lat>38768800000000.2</Lat>
+        <Lon>-13582499999999.8</Lon>
+      </ICP>
+    </ImageCorners>
+    <ValidData size="-382">
+      <Vertex index="-4606">
+        <Lat>14703700000000.2</Lat>
+        <Lon>33222400000000.2</Lon>
+      </Vertex>
+      <Vertex index="4718">
+        <Lat>-9972499999999.77</Lat>
+        <Lon>-25424199999999.8</Lon>
+      </Vertex>
+      <Vertex index="-898">
+        <Lat>-15612299999999.8</Lat>
+        <Lon>-25262399999999.8</Lon>
+      </Vertex>
+      <Vertex index="-3225">
+        <Lat>-9810399999999.77</Lat>
+        <Lon>15332400000000.2</Lon>
+      </Vertex>
+    </ValidData>
+    <GeoInfo name="string">
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Polygon size="-882">
+        <Vertex index="-4649">
+          <Lat>-17984599999999.8</Lat>
+          <Lon>13754800000000.2</Lon>
+        </Vertex>
+        <Vertex index="-1021">
+          <Lat>26130400000000.2</Lat>
+          <Lon>-49301799999999.8</Lon>
+        </Vertex>
+        <Vertex index="415">
+          <Lat>-37153599999999.8</Lat>
+          <Lon>-42433599999999.8</Lon>
+        </Vertex>
+      </Polygon>
+    </GeoInfo>
+    <GeoInfo name="string">
+      <GeoInfo name="string" />
+      <GeoInfo name="string" />
+      <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Desc name="string">string</Desc>
+      <Point>
+        <Lat>16866600000000.2</Lat>
+        <Lon>-21330599999999.8</Lon>
+      </Point>
+    </GeoInfo>
+  </GeoData>
+  <Grid>
+    <ImagePlane>SLANT</ImagePlane>
+    <Type>XRGYCR</Type>
+    <TimeCOAPoly order1="5414" order2="3371">
+      <Coef exponent1="7925" exponent2="1299">29234800000000.2</Coef>
+      <Coef exponent1="5913" exponent2="6259">-29283299999999.8</Coef>
+      <Coef exponent1="3225" exponent2="7477">-25342999999999.8</Coef>
+    </TimeCOAPoly>
+    <Row>
+      <UVectECF>
+        <X>19278900000000.2</X>
+        <Y>1257600000000.23</Y>
+        <Z>-2767999999999.77</Z>
+      </UVectECF>
+      <SS>6391800000000.24</SS>
+      <ImpRespWid>-32278099999999.8</ImpRespWid>
+      <Sgn>+1</Sgn>
+      <ImpRespBW>29893500000000.2</ImpRespBW>
+      <KCtr>2934400000000.23</KCtr>
+      <DeltaK1>29377200000000.2</DeltaK1>
+      <DeltaK2>31448200000000.2</DeltaK2>
+      <DeltaKCOAPoly order1="9399" order2="5065">
+        <Coef exponent1="1802" exponent2="8620">-15380199999999.8</Coef>
+      </DeltaKCOAPoly>
+      <WgtType>
+        <WindowName>string</WindowName>
+      </WgtType>
+    </Row>
+    <Col>
+      <UVectECF>
+        <X>-15949499999999.8</X>
+        <Y>-28884599999999.8</Y>
+        <Z>45072900000000.2</Z>
+      </UVectECF>
+      <SS>-39758799999999.8</SS>
+      <ImpRespWid>39136200000000.2</ImpRespWid>
+      <Sgn>-1</Sgn>
+      <ImpRespBW>-11784999999999.8</ImpRespBW>
+      <KCtr>-33972299999999.8</KCtr>
+      <DeltaK1>17701800000000.2</DeltaK1>
+      <DeltaK2>-31375199999999.8</DeltaK2>
+      <WgtType>
+        <WindowName>string</WindowName>
+      </WgtType>
+      <WgtFunct size="3016">
+        <Wgt index="-1593">-32482999999999.8</Wgt>
+      </WgtFunct>
+    </Col>
+  </Grid>
+  <Timeline>
+    <CollectStart>1992-05-17T12:59:33.20</CollectStart>
+    <CollectDuration>-21119399999999.8</CollectDuration>
+    <IPP size="-507">
+      <Set index="-3021">
+        <TStart>38239800000000.2</TStart>
+        <TEnd>-9193399999999.77</TEnd>
+        <IPPStart>-4892</IPPStart>
+        <IPPEnd>-2455</IPPEnd>
+        <IPPPoly order1="2624">
+          <Coef exponent1="4122">39310700000000.2</Coef>
+        </IPPPoly>
+      </Set>
+      <Set index="2162">
+        <TStart>655200000000.235</TStart>
+        <TEnd>23797000000000.2</TEnd>
+        <IPPStart>-4714</IPPStart>
+        <IPPEnd>3754</IPPEnd>
+        <IPPPoly order1="1468">
+          <Coef exponent1="1565">-13002499999999.8</Coef>
+        </IPPPoly>
+      </Set>
+      <Set index="-3034">
+        <TStart>35070900000000.2</TStart>
+        <TEnd>-20722799999999.8</TEnd>
+        <IPPStart>-768</IPPStart>
+        <IPPEnd>-3071</IPPEnd>
+        <IPPPoly order1="1065">
+          <Coef exponent1="8400">-11081999999999.8</Coef>
+        </IPPPoly>
+      </Set>
+      <Set index="2935">
+        <TStart>14477900000000.2</TStart>
+        <TEnd>-43203699999999.8</TEnd>
+        <IPPStart>-400</IPPStart>
+        <IPPEnd>-1439</IPPEnd>
+        <IPPPoly order1="4598">
+          <Coef exponent1="9898">8791800000000.24</Coef>
+        </IPPPoly>
+      </Set>
+    </IPP>
+  </Timeline>
+  <Position>
+    <ARPPoly>
+      <X order1="9371">
+        <Coef exponent1="6424">-24023799999999.8</Coef>
+      </X>
+      <Y order1="6045">
+        <Coef exponent1="8828">-46465499999999.8</Coef>
+      </Y>
+      <Z order1="3533">
+        <Coef exponent1="5117">48630500000000.2</Coef>
+      </Z>
+    </ARPPoly>
+    <GRPPoly>
+      <X order1="8106">
+        <Coef exponent1="8042">14753100000000.2</Coef>
+      </X>
+      <Y order1="2031">
+        <Coef exponent1="1896">-29986199999999.8</Coef>
+      </Y>
+      <Z order1="8146">
+        <Coef exponent1="1492">-40019699999999.8</Coef>
+      </Z>
+    </GRPPoly>
+    <TxAPCPoly>
+      <X order1="8555">
+        <Coef exponent1="8509">-7554999999999.76</Coef>
+      </X>
+      <Y order1="9648">
+        <Coef exponent1="5862">-46440799999999.8</Coef>
+      </Y>
+      <Z order1="3413">
+        <Coef exponent1="3372">36434200000000.2</Coef>
+      </Z>
+    </TxAPCPoly>
+    <RcvAPC size="4949">
+      <RcvAPCPoly index="-4410">
+        <X order1="6826">
+          <Coef exponent1="1213">-1329799999999.77</Coef>
+        </X>
+        <Y order1="4119">
+          <Coef exponent1="1702">-22533999999999.8</Coef>
+        </Y>
+        <Z order1="609">
+          <Coef exponent1="1151">46385500000000.2</Coef>
+        </Z>
+      </RcvAPCPoly>
+      <RcvAPCPoly index="-14">
+        <X order1="1540">
+          <Coef exponent1="3702">-1892299999999.77</Coef>
+        </X>
+        <Y order1="2849">
+          <Coef exponent1="4771">21140900000000.2</Coef>
+        </Y>
+        <Z order1="6628">
+          <Coef exponent1="2237">-39617999999999.8</Coef>
+        </Z>
+      </RcvAPCPoly>
+      <RcvAPCPoly index="3435">
+        <X order1="1743">
+          <Coef exponent1="1710">-33021399999999.8</Coef>
+        </X>
+        <Y order1="2763">
+          <Coef exponent1="8798">-13275899999999.8</Coef>
+        </Y>
+        <Z order1="9421">
+          <Coef exponent1="4197">20732700000000.2</Coef>
+        </Z>
+      </RcvAPCPoly>
+      <RcvAPCPoly index="-4416">
+        <X order1="7252">
+          <Coef exponent1="8433">-4116999999999.77</Coef>
+        </X>
+        <Y order1="8005">
+          <Coef exponent1="1560">-48872399999999.8</Coef>
+        </Y>
+        <Z order1="2809">
+          <Coef exponent1="3635">14614300000000.2</Coef>
+        </Z>
+      </RcvAPCPoly>
+    </RcvAPC>
+  </Position>
+  <RadarCollection>
+    <RefFreqIndex>-3713</RefFreqIndex>
+    <TxFrequency>
+      <Min>-7245699999999.76</Min>
+      <Max>-9928899999999.77</Max>
+    </TxFrequency>
+    <TxPolarization>LHC</TxPolarization>
+    <PolarizationHVAnglePoly order1="454">
+      <Coef exponent1="6933">-37856599999999.8</Coef>
+    </PolarizationHVAnglePoly>
+    <TxSequence size="2735">
+      <TxStep index="-129" />
+      <TxStep index="3685" />
+      <TxStep index="-4858" />
+      <TxStep index="3581" />
+    </TxSequence>
+    <Waveform size="1323">
+      <WFParameters index="1238" />
+    </Waveform>
+    <RcvChannels size="88" />
+    <Area>
+      <Corner>
+        <ACP index="3">
+          <Lat>47508500000000.2</Lat>
+          <Lon>-31270099999999.8</Lon>
+          <HAE>-14773999999999.8</HAE>
+        </ACP>
+        <ACP index="1">
+          <Lat>-45993899999999.8</Lat>
+          <Lon>-43214499999999.8</Lon>
+          <HAE>-8523299999999.76</HAE>
+        </ACP>
+        <ACP index="3">
+          <Lat>-17017099999999.8</Lat>
+          <Lon>-26126699999999.8</Lon>
+          <HAE>-46150699999999.8</HAE>
+        </ACP>
+        <ACP index="4">
+          <Lat>24030900000000.2</Lat>
+          <Lon>-41572199999999.8</Lon>
+          <HAE>13430000000000.2</HAE>
+        </ACP>
+      </Corner>
+      <Plane>
+        <RefPt>
+          <ECF>
+            <X>27860500000000.2</X>
+            <Y>23619300000000.2</Y>
+            <Z>-44014399999999.8</Z>
+          </ECF>
+          <Line>33258400000000.2</Line>
+          <Sample>-5909299999999.76</Sample>
+        </RefPt>
+        <XDir>
+          <UVectECF>
+            <X>3314000000000.23</X>
+            <Y>-12805699999999.8</Y>
+            <Z>-21099599999999.8</Z>
+          </UVectECF>
+          <LineSpacing>-14331299999999.8</LineSpacing>
+          <NumLines>-4838</NumLines>
+          <FirstLine>-4875</FirstLine>
+        </XDir>
+        <YDir>
+          <UVectECF>
+            <X>-42597699999999.8</X>
+            <Y>-49097099999999.8</Y>
+            <Z>-37597299999999.8</Z>
+          </UVectECF>
+          <SampleSpacing>-32167699999999.8</SampleSpacing>
+          <NumSamples>3278</NumSamples>
+          <FirstSample>-4317</FirstSample>
+        </YDir>
+      </Plane>
+    </Area>
+    <Parameter name="string">string</Parameter>
+  </RadarCollection>
+  <ImageFormation>
+    <SegmentIdentifier>string</SegmentIdentifier>
+    <RcvChanProc>
+      <NumChanProc>143</NumChanProc>
+      <ChanIndex>-3485</ChanIndex>
+      <ChanIndex>4406</ChanIndex>
+      <ChanIndex>-3557</ChanIndex>
+      <ChanIndex>-3343</ChanIndex>
+    </RcvChanProc>
+    <TxRcvPolarizationProc>H:V</TxRcvPolarizationProc>
+    <ImageFormAlgo>RGAZCOMP</ImageFormAlgo>
+    <TStartProc>-11386699999999.8</TStartProc>
+    <TEndProc>11331700000000.2</TEndProc>
+    <TxFrequencyProc>
+      <MinProc>-13617699999999.8</MinProc>
+      <MaxProc>-45854999999999.8</MaxProc>
+    </TxFrequencyProc>
+    <STBeamComp>GLOBAL</STBeamComp>
+    <ImageBeamComp>SV</ImageBeamComp>
+    <AzAutofocus>SV</AzAutofocus>
+    <RgAutofocus>GLOBAL</RgAutofocus>
+    <Processing>
+      <Type>string</Type>
+      <Applied>1</Applied>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>0</Applied>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>0</Applied>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <Processing>
+      <Type>string</Type>
+      <Applied>true</Applied>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Processing>
+    <PolarizationCalibration>
+      <HVAngleCompApplied>false</HVAngleCompApplied>
+      <DistortionCorrectionApplied>false</DistortionCorrectionApplied>
+      <Distortion>
+        <A>-25081699999999.8</A>
+        <F1>
+          <Real>40080900000000.2</Real>
+          <Imag>37758800000000.2</Imag>
+        </F1>
+        <Q1>
+          <Real>-8898899999999.77</Real>
+          <Imag>28788800000000.2</Imag>
+        </Q1>
+        <Q2>
+          <Real>-40185899999999.8</Real>
+          <Imag>10056200000000.2</Imag>
+        </Q2>
+        <F2>
+          <Real>40769200000000.2</Real>
+          <Imag>40867400000000.2</Imag>
+        </F2>
+        <Q3>
+          <Real>31394700000000.2</Real>
+          <Imag>226200000000.235</Imag>
+        </Q3>
+        <Q4>
+          <Real>27586400000000.2</Real>
+          <Imag>-34567799999999.8</Imag>
+        </Q4>
+      </Distortion>
+    </PolarizationCalibration>
+  </ImageFormation>
+  <SCPCOA>
+    <SCPTime>27978200000000.2</SCPTime>
+    <ARPPos>
+      <X>24499500000000.2</X>
+      <Y>-36451399999999.8</Y>
+      <Z>10370300000000.2</Z>
+    </ARPPos>
+    <ARPVel>
+      <X>7456600000000.24</X>
+      <Y>47194700000000.2</Y>
+      <Z>-34144999999999.8</Z>
+    </ARPVel>
+    <ARPAcc>
+      <X>49986000000000.2</X>
+      <Y>6291100000000.24</Y>
+      <Z>-4760899999999.76</Z>
+    </ARPAcc>
+    <SideOfTrack>L</SideOfTrack>
+    <SlantRange>-9192499999999.77</SlantRange>
+    <GroundRange>22844800000000.2</GroundRange>
+    <DopplerConeAng>8829400000000.23</DopplerConeAng>
+    <GrazeAng>12.7233958039451</GrazeAng>
+    <IncidenceAng>69.2435758039451</IncidenceAng>
+    <TwistAng>85.1191258039451</TwistAng>
+    <SlopeAng>35.8355758039451</SlopeAng>
+  </SCPCOA>
+  <Radiometric>
+    <NoisePoly order1="7702" order2="5152">
+      <Coef exponent1="4478" exponent2="3912">-17823099999999.8</Coef>
+      <Coef exponent1="6703" exponent2="4281">9775400000000.23</Coef>
+      <Coef exponent1="1643" exponent2="718">-9382999999999.77</Coef>
+      <Coef exponent1="5406" exponent2="7366">42419300000000.2</Coef>
+    </NoisePoly>
+    <NoiseLevelType>RELATIVE</NoiseLevelType>
+    <RCSSFPoly order1="2017" order2="7642">
+      <Coef exponent1="8435" exponent2="7479">39822500000000.2</Coef>
+      <Coef exponent1="3376" exponent2="2973">18306100000000.2</Coef>
+    </RCSSFPoly>
+    <BetaZeroSFPoly order1="8539" order2="468">
+      <Coef exponent1="6822" exponent2="4931">22884100000000.2</Coef>
+      <Coef exponent1="4233" exponent2="9603">-3366499999999.77</Coef>
+      <Coef exponent1="4067" exponent2="3910">-33976299999999.8</Coef>
+    </BetaZeroSFPoly>
+    <SigmaZeroSFPoly order1="9745" order2="1522">
+      <Coef exponent1="2349" exponent2="5689">-21396399999999.8</Coef>
+      <Coef exponent1="4346" exponent2="8225">14406600000000.2</Coef>
+    </SigmaZeroSFPoly>
+    <SigmaZeroSFIncidenceMap>NOT_APPLIED</SigmaZeroSFIncidenceMap>
+    <GammaZeroSFPoly order1="5127" order2="8548">
+      <Coef exponent1="245" exponent2="9872">44365900000000.2</Coef>
+    </GammaZeroSFPoly>
+    <GammaZeroSFIncidenceMap>APPLIED</GammaZeroSFIncidenceMap>
+  </Radiometric>
+  <Antenna>
+    <Tx>
+      <XAxisPoly>
+        <X order1="7950">
+          <Coef exponent1="5502">36902100000000.2</Coef>
+        </X>
+        <Y order1="5376">
+          <Coef exponent1="1142">-30163899999999.8</Coef>
+        </Y>
+        <Z order1="2243">
+          <Coef exponent1="7077">-25858699999999.8</Coef>
+        </Z>
+      </XAxisPoly>
+      <YAxisPoly>
+        <X order1="4127">
+          <Coef exponent1="2166">46949800000000.2</Coef>
+        </X>
+        <Y order1="7976">
+          <Coef exponent1="9914">-12649999999999.8</Coef>
+        </Y>
+        <Z order1="6835">
+          <Coef exponent1="3165">-16114899999999.8</Coef>
+        </Z>
+      </YAxisPoly>
+      <FreqZero>14365500000000.2</FreqZero>
+      <Array>
+        <GainPoly order1="7453" order2="3244">
+          <Coef exponent1="9243" exponent2="1507">-49789899999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="1177" order2="3403">
+          <Coef exponent1="9694" exponent2="4190">8070300000000.24</Coef>
+        </PhasePoly>
+      </Array>
+      <GainBSPoly order1="9974">
+        <Coef exponent1="7407">9854800000000.23</Coef>
+      </GainBSPoly>
+      <EBFreqShift>true</EBFreqShift>
+    </Tx>
+    <Rcv>
+      <XAxisPoly>
+        <X order1="3988">
+          <Coef exponent1="5308">-2871899999999.77</Coef>
+        </X>
+        <Y order1="9638">
+          <Coef exponent1="2713">48932000000000.2</Coef>
+        </Y>
+        <Z order1="4821">
+          <Coef exponent1="4362">-15290699999999.8</Coef>
+        </Z>
+      </XAxisPoly>
+      <YAxisPoly>
+        <X order1="4610">
+          <Coef exponent1="8913">-36770399999999.8</Coef>
+        </X>
+        <Y order1="5885">
+          <Coef exponent1="3446">28176600000000.2</Coef>
+        </Y>
+        <Z order1="4067">
+          <Coef exponent1="4509">49283800000000.2</Coef>
+        </Z>
+      </YAxisPoly>
+      <FreqZero>44770700000000.2</FreqZero>
+      <EB>
+        <DCXPoly order1="3815">
+          <Coef exponent1="3464">-38359199999999.8</Coef>
+        </DCXPoly>
+        <DCYPoly order1="60">
+          <Coef exponent1="4490">-8091199999999.76</Coef>
+        </DCYPoly>
+      </EB>
+      <HPBW>
+        <DCX>-44500799999999.8</DCX>
+        <DCY>-10148199999999.8</DCY>
+      </HPBW>
+      <GainBSPoly order1="4585">
+        <Coef exponent1="5271">48763400000000.2</Coef>
+      </GainBSPoly>
+      <EBFreqShift>1</EBFreqShift>
+    </Rcv>
+    <TwoWay>
+      <XAxisPoly>
+        <X order1="1790">
+          <Coef exponent1="8097">28590100000000.2</Coef>
+        </X>
+        <Y order1="1958">
+          <Coef exponent1="1120">-16726899999999.8</Coef>
+        </Y>
+        <Z order1="4658">
+          <Coef exponent1="3959">-3586799999999.77</Coef>
+        </Z>
+      </XAxisPoly>
+      <YAxisPoly>
+        <X order1="2959">
+          <Coef exponent1="8744">5446500000000.24</Coef>
+        </X>
+        <Y order1="4425">
+          <Coef exponent1="3444">-17596499999999.8</Coef>
+        </Y>
+        <Z order1="2339">
+          <Coef exponent1="7513">-44235599999999.8</Coef>
+        </Z>
+      </YAxisPoly>
+      <FreqZero>11261700000000.2</FreqZero>
+      <HPBW>
+        <DCX>-34064699999999.8</DCX>
+        <DCY>-1599499999999.77</DCY>
+      </HPBW>
+      <Array>
+        <GainPoly order1="8288" order2="9793">
+          <Coef exponent1="3061" exponent2="2876">-14452399999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="1230" order2="2552">
+          <Coef exponent1="2047" exponent2="4244">42533300000000.2</Coef>
+        </PhasePoly>
+      </Array>
+      <Elem>
+        <GainPoly order1="1085" order2="2902">
+          <Coef exponent1="7451" exponent2="4274">-17101599999999.8</Coef>
+        </GainPoly>
+        <PhasePoly order1="7493" order2="6347">
+          <Coef exponent1="705" exponent2="8369">22826700000000.2</Coef>
+        </PhasePoly>
+      </Elem>
+      <EBFreqShift>1</EBFreqShift>
+    </TwoWay>
+  </Antenna>
+  <ErrorStatistics>
+    <CompositeSCP />
+    <Components />
+    <AdditionalParms>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </AdditionalParms>
+  </ErrorStatistics>
+  <MatchInfo size="-2658">
+    <Collect index="-2123">
+      <CollectorName>string</CollectorName>
+      <IlluminatorName>string</IlluminatorName>
+      <CoreName>string</CoreName>
+      <Parameter name="string">string</Parameter>
+      <Parameter name="string">string</Parameter>
+    </Collect>
+  </MatchInfo>
+  <PFA>
+    <FPN>
+      <X>47618900000000.2</X>
+      <Y>-9640499999999.77</Y>
+      <Z>-25805799999999.8</Z>
+    </FPN>
+    <IPN>
+      <X>-12884299999999.8</X>
+      <Y>-8342099999999.76</Y>
+      <Z>-7639699999999.76</Z>
+    </IPN>
+    <PolarAngRefTime>-39176199999999.8</PolarAngRefTime>
+    <PolarAngPoly order1="1310">
+      <Coef exponent1="6401">3154600000000.23</Coef>
+    </PolarAngPoly>
+    <SpatialFreqSFPoly order1="6561">
+      <Coef exponent1="5953">34672000000000.2</Coef>
+    </SpatialFreqSFPoly>
+    <Krg1>15019700000000.2</Krg1>
+    <Krg2>-46106899999999.8</Krg2>
+    <Kaz1>29340000000000.2</Kaz1>
+    <Kaz2>-5220599999999.76</Kaz2>
+  </PFA>
+</SICD>

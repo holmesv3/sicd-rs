@@ -6,15 +6,15 @@ use quick_xml::reader::Reader;
 #[test]
 fn test_generated_130_xml() {
     let xml = include_str!("sicd_meta_130_00.xml");
-    parse_130_xml(xml);
     parse_130_components(xml);
+    parse_xml::<sicd_rs::v1_3_0::SicdMeta>(xml);
     let xml = include_str!("sicd_meta_130_01.xml");
-    parse_130_xml(xml);
     parse_130_components(xml);
+    parse_xml::<sicd_rs::v1_3_0::SicdMeta>(xml);
 }
 
-fn parse_130_xml(xml: &str) {
-    let sicd_meta = from_str::<sicd_rs::v1_3_0::SicdMeta>(xml);
+fn parse_xml<'a, T>(xml: &'a str) where T: serde::de::Deserialize<'a>{
+    let sicd_meta = from_str::<T>(xml);
     assert!(match sicd_meta {
         Ok(_) => true,
         Err(err) => {
@@ -26,28 +26,19 @@ fn parse_130_xml(xml: &str) {
 
 #[test]
 fn test_generated_050_xml() {
-    let xml = include_str!("sicd_meta_050.xml");
-    let sicd_meta = from_str::<sicd_rs::dep::v0_5_0::SicdMeta>(xml);
-    assert!(match sicd_meta {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
+    let xml = include_str!("sicd_meta_050_00.xml");
+    parse_050_components(xml);
+    parse_xml::<sicd_rs::dep::v0_5_0::SicdMeta>(xml);
+    let xml = include_str!("sicd_meta_050_01.xml");
+    parse_050_components(xml);
+    parse_xml::<sicd_rs::dep::v0_5_0::SicdMeta>(xml);
 }
 
 #[test]
 fn test_generated_040_xml() {
-    let xml = include_str!("sicd_meta_040.xml");
-    let sicd_meta = from_str::<sicd_rs::dep::v0_4_0::SicdMeta>(xml);
-    assert!(match sicd_meta {
-        Ok(_) => true,
-        Err(err) => {
-            dbg!(err);
-            false
-        }
-    });
+    let xml = include_str!("sicd_meta_040_00.xml");
+    parse_xml::<sicd_rs::dep::v0_4_0::SicdMeta>(xml);
+    parse_040_components(xml);
 }
 
 macro_rules! create_130_component_test {
@@ -91,6 +82,7 @@ fn parse_130_components(xml: &str) {
                     if print_count < 3 {
                         print_count += 1;
                         println!("Found other tag {}", other);
+                        assert_eq!("SICD", other);
                     }
                 }
             },
@@ -123,9 +115,7 @@ create_130_component_test!(
 
 macro_rules! create_050_component_test {
     ($($x:ident),*) => {
-#[test]
-fn parse_050_components_test_macro() {
-    let xml = include_str!("sicd_meta_050.xml");
+fn parse_050_components(xml: &str) {
     let mut reader = Reader::from_str(xml);
     reader.trim_text(true);
 
@@ -166,6 +156,7 @@ fn parse_050_components_test_macro() {
                     if print_count < 3 {
                         print_count += 1;
                         println!("Found other tag {}", other);
+                        assert_eq!("SICD", other);
                     }
                 }
             },
@@ -199,9 +190,7 @@ create_050_component_test!(
 
 macro_rules! create_040_component_test {
     ($($x:ident),*) => {
-#[test]
-fn parse_040_components_test_macro() {
-    let xml = include_str!("sicd_meta_040.xml");
+fn parse_040_components(xml: &str) {
     let mut reader = Reader::from_str(xml);
     reader.trim_text(true);
 
@@ -242,6 +231,7 @@ fn parse_040_components_test_macro() {
                     if print_count < 3 {
                         print_count += 1;
                         println!("Found other tag {}", other);
+                        assert_eq!("SICD", other);
                     }
                 }
             },
