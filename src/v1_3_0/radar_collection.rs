@@ -1,4 +1,4 @@
-use super::Parameter;
+use super::{DualPolarization, Parameter, SinglePolarization};
 pub use crate::dep::v0_4_0::radar_collection::{Area, TxFrequency, TxSequence, Waveform};
 use serde::Deserialize;
 
@@ -24,7 +24,7 @@ pub struct RadarCollection {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxPolarization {
     #[serde(rename = "$text")]
-    pub value: String,
+    pub value: SinglePolarization,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -46,7 +46,7 @@ pub struct ChanParameters {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxRcvPolarization {
     #[serde(rename = "$text")]
-    pub value: String,
+    pub value: DualPolarization,
 }
 
 #[cfg(test)]

@@ -1,4 +1,4 @@
-use super::{Poly1D, XYZ};
+use super::{DualPolarization, Poly1D, XYZ};
 pub use crate::dep::v0_5_0::image_formation::{
     AzAutofocus, Distortion, ImageBeamComp, ImageFormAlgo, Processing, RMAlgoType, RMAlgoTypeEnum,
     RcvChanProc, RgAutofocus, RgAutofocusEnum, STBeamComp, TxFrequencyProc, INCA,
@@ -36,7 +36,7 @@ pub struct ImageFormation {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxRcvPolarizationProc {
     #[serde(rename = "$text")]
-    pub value: String,
+    pub value: DualPolarization,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct PolCal {
