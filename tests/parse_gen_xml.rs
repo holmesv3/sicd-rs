@@ -30,7 +30,7 @@ fn parse_050_rgazcomp() {
             dbg!(val);
         }
         None => {
-            panic!("Expectd something");
+            panic!("Expected something");
         }
     }
     let xml = include_str!("sicd_meta_050_01.xml");
