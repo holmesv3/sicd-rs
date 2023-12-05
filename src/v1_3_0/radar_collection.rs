@@ -7,7 +7,7 @@ pub struct RadarCollection {
     #[serde(rename = "TxFrequency")]
     pub tx_frequency: TxFrequency,
     #[serde(rename = "RefFreqIndex")]
-    pub ref_freq_index: Option<u64>,
+    pub ref_freq_index: Option<i32>,
     #[serde(rename = "Waveform")]
     pub waveform: Option<Waveform>,
     #[serde(rename = "TxPolarization")]
@@ -41,7 +41,7 @@ pub struct ChanParameters {
     #[serde(rename = "TxRcvPolarization")]
     pub tx_rcv_polarization: TxRcvPolarization,
     #[serde(rename = "RcvAPCIndex")]
-    pub rcv_apc_index: Option<u64>,
+    pub rcv_apc_index: Option<usize>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxRcvPolarization {

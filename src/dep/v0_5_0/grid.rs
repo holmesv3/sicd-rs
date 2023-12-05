@@ -23,7 +23,7 @@ pub struct DirectionParams {
     #[serde(rename = "ImpRespWid")]
     pub imp_resp_wid: f64,
     #[serde(rename = "Sgn")]
-    pub sgn: i8, // TODO: Maybe use an actual enum here
+    pub sgn: i32, // TODO: Maybe use an actual enum here
     #[serde(rename = "ImpRespBW")]
     pub imp_resp_bw: f64,
     #[serde(rename = "KCtr")]

@@ -12,9 +12,9 @@ pub struct ImageData {
     #[serde(rename = "NumCols")]
     pub num_cols: u64,
     #[serde(rename = "FirstRow")]
-    pub first_row: u64,
+    pub first_row: usize,
     #[serde(rename = "FirstCol")]
-    pub first_col: u64,
+    pub first_col: usize,
     #[serde(rename = "FullImage")]
     pub full_image: FullImage,
     #[serde(rename = "SCPPixel")]
@@ -40,14 +40,14 @@ pub enum PixelTypeEnum {
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct AmpTable {
     #[serde(rename = "@size")]
-    pub size: u16, // 256
+    pub size: u64, // 256
     #[serde(rename = "Amplitude")]
     pub amplitude: Vec<Amplitude>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct Amplitude {
     #[serde(rename = "@index")]
-    pub index: u8, // [0, 255]
+    pub index: usize, // [0, 255]
     #[serde(rename = "$value")]
     pub value: f64,
 }

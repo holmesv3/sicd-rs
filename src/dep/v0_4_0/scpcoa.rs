@@ -2,7 +2,7 @@ use super::XYZ;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct ScpCoa {
+pub struct SCPCOA {
     #[serde(rename = "SCPTime")]
     pub scp_time: f64,
     #[serde(rename = "ARPPos")]

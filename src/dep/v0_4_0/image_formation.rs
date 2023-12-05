@@ -36,7 +36,7 @@ pub struct RcvChanProc {
     #[serde(rename = "PRFScaleFactor")]
     pub prf_scale_factor: Option<f64>,
     #[serde(rename = "ChanIndex")]
-    pub chan_index: usize,
+    pub chan_index: Vec<usize>,
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct TxFrequencyProc {
@@ -114,7 +114,7 @@ pub struct PolCal {
     #[serde(rename = "HVAngleCompApplied")]
     pub hv_angle_comp_applied: bool,
     #[serde(rename = "DistortCorrectionApplied")]
-    pub distort_correction_applied: bool,
+    pub distort_correction_applied: Option<bool>,
     #[serde(rename = "Distortion")]
     pub distortion: Distortion,
 }
@@ -149,7 +149,7 @@ pub struct Distortion {
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct RgAzComp {
+pub struct RGAZCOMP {
     #[serde(rename = "RgAzRefTime")]
     pub rg_az_ref_time: f64,
     #[serde(rename = "Time1")]
@@ -163,7 +163,7 @@ pub struct RgAzComp {
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
-pub struct Rma {
+pub struct RMA {
     #[serde(rename = "RMAlgoType")]
     pub rm_algo_type: RMAlgoType,
     #[serde(rename = "ImageType")]
@@ -198,14 +198,10 @@ pub enum ImageTypeEnum {
 }
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct RMAlgo {
-    #[serde(rename = "RefTime")]
+    #[serde(rename = "RMRefTime")]
     pub ref_time: f64,
-    #[serde(rename = "PosRef")]
+    #[serde(rename = "RMPosRef")]
     pub pos_ref: XYZ,
-    #[serde(rename = "UnitVelRef")]
-    pub unit_vel_ref: XYZ,
-    #[serde(rename = "DistRLPoly")]
-    pub dist_rl_poly: Poly1D,
     #[serde(rename = "CosDCACOAPoly")]
     pub cos_dcacoa_poly: Poly2D,
     #[serde(rename = "Kx1")]

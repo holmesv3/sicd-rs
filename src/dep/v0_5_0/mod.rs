@@ -2,6 +2,7 @@
 use serde::Deserialize;
 
 pub mod grid;
+pub mod image_formation;
 pub mod match_info;
 
 pub use crate::dep::v0_4_0::antenna::Antenna;
@@ -10,19 +11,19 @@ pub use crate::dep::v0_4_0::error_statistics::ErrorStatistics;
 pub use crate::dep::v0_4_0::geo_data::GeoData;
 pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
-pub use crate::dep::v0_4_0::image_formation::{ImageFormation, RgAzComp, Rma};
-pub use crate::dep::v0_4_0::pfa::Pfa;
+pub use crate::dep::v0_4_0::pfa::PFA;
 pub use crate::dep::v0_4_0::position::Position;
 pub use crate::dep::v0_4_0::radar_collection::RadarCollection;
 pub use crate::dep::v0_4_0::radiometric::Radiometric;
-pub use crate::dep::v0_4_0::scpcoa::ScpCoa;
+pub use crate::dep::v0_4_0::scpcoa::SCPCOA;
 pub use crate::dep::v0_4_0::timeline::Timeline;
 pub use crate::dep::v0_4_0::{
     Coef1D, Coef2D, IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Parameter, Poly1D, Poly2D, RowCol,
     XyzPoly, CMPLX, LL, LLH, XYZ,
 };
-use grid::Grid;
-use match_info::MatchInfo;
+pub use grid::Grid;
+pub use image_formation::{ImageFormation, RGAZCOMP, RMA};
+pub use match_info::MatchInfo;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SicdMeta {
@@ -45,7 +46,7 @@ pub struct SicdMeta {
     #[serde(rename = "ImageFormation")]
     pub image_formation: ImageFormation,
     #[serde(rename = "SCPCOA")]
-    pub scpcoa: ScpCoa,
+    pub scpcoa: SCPCOA,
     #[serde(rename = "Radiometric")]
     pub radiometric: Option<Radiometric>,
     #[serde(rename = "Antenna")]
@@ -54,10 +55,10 @@ pub struct SicdMeta {
     pub error_statistics: Option<ErrorStatistics>,
     #[serde(rename = "MatchInfo")]
     pub match_info: Option<MatchInfo>,
-    #[serde(rename = "RgAzComp")]
-    pub rg_az_comp: Option<RgAzComp>,
+    #[serde(rename = "RGAZCOMP")]
+    pub rg_az_comp: Option<RGAZCOMP>,
     #[serde(rename = "PFA")]
-    pub pfa: Option<Pfa>,
+    pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
-    pub rma: Option<Rma>,
+    pub rma: Option<RMA>,
 }

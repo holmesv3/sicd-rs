@@ -15,21 +15,21 @@ pub mod scpcoa;
 pub use crate::dep::v0_4_0::collection_info::CollectionInfo;
 pub use crate::dep::v0_4_0::image_creation::ImageCreation;
 pub use crate::dep::v0_4_0::image_data::ImageData;
-pub use crate::dep::v0_4_0::pfa::Pfa;
+pub use crate::dep::v0_4_0::pfa::PFA;
 pub use crate::dep::v0_4_0::position::Position;
 pub use crate::dep::v0_4_0::timeline::Timeline;
 pub use crate::dep::v0_4_0::{
     IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Poly1D, Poly2D, RowCol, XyzPoly, CMPLX, LL, LLH, XYZ,
 };
 pub use crate::dep::v0_5_0::grid::Grid;
-use antenna::Antenna;
-use error_statistics::ErrorStatistics;
-use geo_data::GeoData;
-use image_formation::{ImageFormation, RgAzComp, Rma};
-use match_info::MatchInfo;
-use radar_collection::RadarCollection;
-use radiometric::Radiometric;
-use scpcoa::ScpCoa;
+pub use antenna::Antenna;
+pub use error_statistics::ErrorStatistics;
+pub use geo_data::GeoData;
+pub use image_formation::{ImageFormation, RgAzComp, RMA};
+pub use match_info::MatchInfo;
+pub use radar_collection::RadarCollection;
+pub use radiometric::Radiometric;
+pub use scpcoa::SCPCOA;
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
 pub struct SicdMeta {
@@ -52,7 +52,7 @@ pub struct SicdMeta {
     #[serde(rename = "ImageFormation")]
     pub image_formation: ImageFormation,
     #[serde(rename = "SCPCOA")]
-    pub scpcoa: ScpCoa,
+    pub scpcoa: SCPCOA,
     #[serde(rename = "Radiometric")]
     pub radiometric: Option<Radiometric>,
     #[serde(rename = "Antenna")]
@@ -64,9 +64,9 @@ pub struct SicdMeta {
     #[serde(rename = "RgAzComp")]
     pub rg_az_comp: Option<RgAzComp>,
     #[serde(rename = "PFA")]
-    pub pfa: Option<Pfa>,
+    pub pfa: Option<PFA>,
     #[serde(rename = "RMA")]
-    pub rma: Option<Rma>,
+    pub rma: Option<RMA>,
 }
 
 #[derive(Debug, Deserialize, PartialEq, Clone)]
@@ -87,6 +87,7 @@ pub enum SinglePolarization {
     RHC,
     LHC,
     OTHER,
+    #[serde(other)]
     UNKNOWN,
 }
 #[allow(non_camel_case_types)]
@@ -255,12 +256,16 @@ pub enum DualPolarization {
     #[serde(rename = "OTHER:OTHER")]
     OTHER_OTHER,
     OTHER,
+    #[serde(other)]
     UNKNOWN,
 }
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use super::{
+        IdxLL, IdxLLH, IdxRowCol, IdxXyzPoly, Parameter, Poly1D, Poly2D, RowCol, XyzPoly, CMPLX,
+        LL, LLH, XYZ,
+    };
     use quick_xml::de::from_str;
 
     #[test]
