@@ -17,7 +17,7 @@ use quick_xml::de::from_str;
 use serde::Deserialize;
 use thiserror::Error;
 
-use nitf_rs::Nitf;
+use nitf_rs::{Nitf, NitfError};
 
 pub mod dep;
 pub mod v1_3_0;
@@ -28,20 +28,19 @@ pub mod v1_3_0;
 /// and makes use of several `enums` to parse the data.
 ///
 /// # Example
-/// ```
+/// ```no_run
 /// use std::path::Path;
 /// use sicd_rs::SicdVersion;
 ///
 /// let sicd_path = Path::new("../example.nitf");
-/// if sicd_path.exists() {
-///     let sicd = sicd_rs::read_sicd(sicd_path);
-///     // Then use convenience methods provided by SicdMeta enum, or match off of version
-///     let meta = sicd.meta.get_v1_meta();
-/// }
+/// let sicd = sicd_rs::read_sicd(sicd_path).unwrap();
+/// // Then use convenience methods provided by SicdMeta enum, or match off of version
+/// let meta = sicd.meta.get_v1_meta();
+///
 /// ```
 ///
-pub fn read_sicd(path: &Path) -> Sicd {
-    let file = File::open(path).unwrap();
+pub fn read_sicd(path: &Path) -> Result<Sicd, NitfError> {
+    let file = File::open(path)?;
     Sicd::from_file(file)
 }
 
@@ -180,8 +179,8 @@ impl SicdMeta {
     }
 }
 impl Sicd {
-    pub fn from_file(mut file: File) -> Self {
-        let nitf = Nitf::from_file(&mut file);
+    pub fn from_file(mut file: File) -> Result<Self, NitfError> {
+        let nitf = Nitf::from_file(&mut file)?;
         let sicd_str = from_utf8(&nitf.data_extension_segments[0].data[..]).unwrap();
         let (version, meta) = parse_sicd(sicd_str).unwrap();
         let n_img = nitf.nitf_header.meta.numi.val as usize;
@@ -194,13 +193,13 @@ impl Sicd {
             );
             image_data.push(tmp);
         }
-        Self {
+        Ok(Self {
             nitf,
             meta,
             version,
             image_data,
             _file: file,
-        }
+        })
     }
 }
 

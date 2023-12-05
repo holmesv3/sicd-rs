@@ -7,7 +7,7 @@ A rust SICD file interface
 ```rust
 // Read sicd and print metadata
 let file = std::path::Path::new("../example.nitf");
-let sicd = sicd_rs::read_sicd(file);
+let sicd = sicd_rs::read_sicd(file).unwrap();
 println!("{:?}", sicd.meta);
 ```
 
