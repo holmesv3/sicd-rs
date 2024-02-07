@@ -13,4 +13,3 @@ println!("{:?}", sicd.meta);
 
 If you have questions, would like to contribute, or would like to request
 something be added, please create an issue.
-```

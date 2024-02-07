@@ -1,5 +1,2 @@
 Cargo.lock
 /target
-
-# Ignore the executable I like to keep :3
-src/main.rs
