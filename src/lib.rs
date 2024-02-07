@@ -8,7 +8,7 @@ use std::fs::File;
 use std::path::Path;
 use std::ptr::null;
 use std::slice::from_raw_parts;
-use std::str::{from_utf8, FromStr};
+use std::str::{from_utf8, FromStr, Utf8Error};
 
 use ndarray::{par_azip, Array2, ArrayView2};
 
@@ -39,7 +39,7 @@ pub mod v1_3_0;
 ///
 /// ```
 ///
-pub fn read_sicd(path: &Path) -> Result<Sicd, NitfError> {
+pub fn read_sicd(path: &Path) -> Result<Sicd, SicdError> {
     let file = File::open(path)?;
     Sicd::from_file(file)
 }
@@ -52,6 +52,13 @@ pub enum SicdError {
     /// "metadata for version {} is not implemented"
     #[error("metadata for version {0} is not implemented")]
     Unimpl(String),
+    // Wrappers for built in errors
+    #[error(transparent)]
+    IOError(#[from] std::io::Error),
+    #[error(transparent)]
+    NitfError(#[from] NitfError),
+    #[error(transparent)]
+    UTF8(#[from] Utf8Error),
 }
 
 /// SICD file structure
@@ -179,17 +186,18 @@ impl SicdMeta {
     }
 }
 impl Sicd {
-    pub fn from_file(mut file: File) -> Result<Self, NitfError> {
-        let nitf = Nitf::from_file(&mut file)?;
-        let sicd_str = from_utf8(&nitf.data_extension_segments[0].data[..]).unwrap();
+    pub fn from_file(mut file: File) -> Result<Self, SicdError> {
+        let nitf = Nitf::from_reader(&mut file)?;
+        let dex_data = nitf.data_extension_segments[0].get_data_map(&mut file)?;
+        let sicd_str = from_utf8(&dex_data[..])?;
         let (version, meta) = parse_sicd(sicd_str).unwrap();
-        let n_img = nitf.nitf_header.meta.numi.val as usize;
+        let n_img = nitf.nitf_header.numi.val as usize;
         let mut image_data: Vec<ImageData> = vec![];
         for i_img in 0..n_img {
             let tmp = ImageData::initialize(
-                &nitf.image_segments[i_img].data[..],
-                nitf.image_segments[i_img].meta.nrows.val as usize,
-                nitf.image_segments[i_img].meta.ncols.val as usize,
+                &nitf.image_segments[i_img].get_data_map(&mut file)?[..],
+                nitf.image_segments[i_img].header.nrows.val as usize,
+                nitf.image_segments[i_img].header.ncols.val as usize,
             );
             image_data.push(tmp);
         }
