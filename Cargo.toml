@@ -14,4 +14,8 @@ nitf-rs = { version = "0.3.0" }
 ndarray = { version = "0.15", features = ["rayon"] }
 serde = { version = "1.0", features = ["derive"] }
 quick-xml = { version = "0.28", features = ["serialize"] }
-num-traits = "0.2.17"
+zerocopy = "0.7.32"
+memmap2 = "0.5.10"
+
+[dev-dependencies]
+clap = { version = "4.5.4", features = ["derive"] }

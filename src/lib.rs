@@ -4,15 +4,15 @@
 //!
 //! It is a future goal to have functions for each version, but for now a single
 //! function call and `match` statement are used.
+use memmap2::Mmap;
+use ndarray::{azip, par_azip, Array2, ArrayView2};
 use std::fs::File;
 use std::path::Path;
-use std::ptr::null;
 use std::slice::from_raw_parts;
 use std::str::{from_utf8, FromStr, Utf8Error};
+use zerocopy::{BE, F32};
 
-use ndarray::{par_azip, Array2, ArrayView2};
-
-use num_complex::Complex;
+use num_complex::{Complex, Complex32};
 use quick_xml::de::from_str;
 use serde::Deserialize;
 use thiserror::Error;
@@ -64,7 +64,7 @@ pub enum SicdError {
 /// SICD file structure
 ///
 // TODO: Implement printing (Debug, Display?)
-pub struct Sicd {
+pub struct Sicd<'a> {
     /// Nitf file object and associated metadata
     pub nitf: Nitf,
     /// Parsed SICD xml metadata
@@ -72,48 +72,54 @@ pub struct Sicd {
     /// SICD Version
     pub version: SicdVersion,
     /// Image data from Nitf Image segements
-    pub image_data: Vec<ImageData>,
-    _file: File,
+    pub image_data: Vec<ImageData<'a>>,
 }
 
-/// Image data structure. Currently only implements Complex<f32> data type
+/// Image data structure. Currently only implements Complex<F32<BE>> (e.g. big-endian complex float) data type
 #[derive(Debug)]
-pub struct ImageData {
-    /// Complex<f32> image data array
-    pub array: Array2<Complex<f32>>,
-
-    byte_slice_ptr: *const u8,
-    byte_slice_len: usize,
-    new_size: usize,
+pub struct ImageData<'a> {
+    /// Raw byte array
+    pub array: ArrayView2<'a, Complex<F32<BE>>>,
+    /// Need to hold onto this to access data
+    _mmap: Mmap,
 }
-impl Default for ImageData {
-    fn default() -> Self {
-        Self {
-            byte_slice_ptr: null(),
-            byte_slice_len: usize::default(),
-            new_size: usize::default(),
-            array: Array2::default((0, 0)),
-        }
+
+impl<'a> ImageData<'a> {
+    fn initialize(mmap: Mmap, n_rows: usize, n_cols: usize) -> Self {
+        let byte_slice_len = mmap.len();
+        let new_size = byte_slice_len / std::mem::size_of::<Complex<F32<BE>>>();
+        dbg!(byte_slice_len);
+        dbg!(new_size);
+        let f32_ptr = mmap.as_ptr() as *const Complex<F32<BE>>;
+        let float_slice = unsafe { from_raw_parts(f32_ptr, new_size) };
+        let array = ArrayView2::from_shape((n_rows, n_cols), float_slice).unwrap();
+        Self { array, _mmap: mmap }
     }
 }
-impl ImageData {
-    fn initialize(slice: &[u8], n_rows: usize, n_cols: usize) -> Self {
-        const REAL: usize = 0;
-        const IM: usize = 1;
-        let mut im_data = Self::default();
-        im_data.byte_slice_ptr = slice.as_ptr();
-        im_data.byte_slice_len = slice.len();
-        im_data.new_size = im_data.byte_slice_len / std::mem::size_of::<Complex<f32>>();
-        let f32_ptr = im_data.byte_slice_ptr as *const [[u8; 4]; 2]; // bit layout of complex number
-        let float_slice = unsafe { from_raw_parts(f32_ptr, im_data.new_size) };
-        let aview = ArrayView2::from_shape((n_rows, n_cols), float_slice).unwrap();
-        im_data.array = Array2::zeros((n_rows, n_cols));
+pub trait ToNative {
+    /// Performs allocation of a native-aligned Complex32 array
+    fn to_native(&self) -> Array2<Complex32>;
+    /// Performs allocation of a native-aligned Complex32 array using `rayon`
+    fn par_to_native(&self) -> Array2<Complex32>;
+}
 
-        par_azip!((out_elem in &mut im_data.array, in_elem in &aview) {
-            out_elem.re = f32::from_be_bytes(in_elem[REAL]);
-            out_elem.im = f32::from_be_bytes(in_elem[IM]);
+impl<'a> ToNative for ArrayView2<'a, Complex<F32<BE>>> {
+    fn to_native(&self) -> Array2<Complex32> {
+        let mut out = Array2::from_elem((self.nrows(), self.ncols()), Complex32::default());
+        azip!((be in self, ne in &mut out) {
+           ne.re = be.re.get();
+           ne.im = be.im.get();
         });
-        im_data
+        out
+    }
+
+    fn par_to_native(&self) -> Array2<Complex32> {
+        let mut out = Array2::from_elem((self.nrows(), self.ncols()), Complex32::default());
+        par_azip!((be in self, ne in &mut out) {
+           ne.re = be.re.get();
+           ne.im = be.im.get();
+        });
+        out
     }
 }
 
@@ -185,28 +191,30 @@ impl SicdMeta {
         }
     }
 }
-impl Sicd {
+impl<'a> Sicd<'a> {
     pub fn from_file(mut file: File) -> Result<Self, SicdError> {
         let nitf = Nitf::from_reader(&mut file)?;
         let dex_data = nitf.data_extension_segments[0].get_data_map(&mut file)?;
         let sicd_str = from_utf8(&dex_data[..])?;
         let (version, meta) = parse_sicd(sicd_str).unwrap();
-        let n_img = nitf.nitf_header.numi.val as usize;
-        let mut image_data: Vec<ImageData> = vec![];
-        for i_img in 0..n_img {
-            let tmp = ImageData::initialize(
-                &nitf.image_segments[i_img].get_data_map(&mut file)?[..],
-                nitf.image_segments[i_img].header.nrows.val as usize,
-                nitf.image_segments[i_img].header.ncols.val as usize,
-            );
-            image_data.push(tmp);
-        }
+
+        let image_data: Vec<_> = nitf
+            .image_segments
+            .iter()
+            .map(|seg| {
+                ImageData::initialize(
+                    seg.get_data_map(&mut file).unwrap(),
+                    seg.header.nrows.val as usize,
+                    seg.header.ncols.val as usize,
+                )
+            })
+            .collect();
+
         Ok(Self {
             nitf,
             meta,
             version,
             image_data,
-            _file: file,
         })
     }
 }
