@@ -91,8 +91,6 @@ impl<'a> ImageData<'a> {
     fn initialize(mmap: Mmap, n_rows: usize, n_cols: usize) -> Self {
         let byte_slice_len = mmap.len();
         let new_size = byte_slice_len / std::mem::size_of::<Complex<F32<BE>>>();
-        dbg!(byte_slice_len);
-        dbg!(new_size);
         let f32_ptr = mmap.as_ptr() as *const Complex<F32<BE>>;
         let float_slice = unsafe { from_raw_parts(f32_ptr, new_size) };
         let array = ArrayView2::from_shape((n_rows, n_cols), float_slice).unwrap();
