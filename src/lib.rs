@@ -6,6 +6,7 @@
 //! function call and `match` statement are used.
 use memmap2::Mmap;
 use ndarray::{azip, par_azip, Array2, ArrayView2};
+use quick_xml::DeError;
 use std::fs::File;
 use std::path::Path;
 use std::slice::from_raw_parts;
@@ -59,6 +60,8 @@ pub enum SicdError {
     NitfError(#[from] NitfError),
     #[error(transparent)]
     UTF8(#[from] Utf8Error),
+    #[error(transparent)]
+    DESER(#[from] DeError),
 }
 
 /// SICD file structure
@@ -196,7 +199,7 @@ impl<'a> Sicd<'a> {
         let nitf = Nitf::from_reader(&mut file)?;
         let dex_data = nitf.data_extension_segments[0].get_data_map(&mut file)?;
         let sicd_str = from_utf8(&dex_data[..])?;
-        let (version, meta) = parse_sicd(sicd_str).unwrap();
+        let (version, meta) = parse_sicd(sicd_str)?;
 
         let image_data: Vec<_> = nitf
             .image_segments
@@ -227,21 +230,21 @@ struct VersionGetter {
 
 fn parse_sicd(sicd_str: &str) -> Result<(SicdVersion, SicdMeta), SicdError> {
     // This feels bad
-    let tmp: VersionGetter = from_str(sicd_str).unwrap();
-    let sicd_version = SicdVersion::from_str(&tmp.version).unwrap();
+    let tmp: VersionGetter = from_str(sicd_str)?;
+    let sicd_version = SicdVersion::from_str(&tmp.version)?;
     use SicdError::Unimpl;
     match sicd_version {
         SicdVersion::V0_3_1 => Err(Unimpl("V0_3_1".to_string())),
         SicdVersion::V0_4_0 => Ok((
             SicdVersion::V0_4_0,
-            SicdMeta::V0_4_0(from_str(sicd_str).unwrap()),
+            SicdMeta::V0_4_0(from_str(sicd_str)?),
         )),
         SicdVersion::V0_4_1 => Err(Unimpl("V0_4_1".to_string())),
         SicdVersion::V0_5_0 => Ok((
             SicdVersion::V0_5_0,
-            SicdMeta::V0_5_0(from_str(sicd_str).unwrap()),
+            SicdMeta::V0_5_0(from_str(sicd_str)?),
         )),
         // Don't need to worry about anything else, all versions past 1.0 are backwards compatible
-        other => Ok((other, SicdMeta::V1(from_str(sicd_str).unwrap()))),
+        other => Ok((other, SicdMeta::V1(from_str(sicd_str)?))),
     }
 }
