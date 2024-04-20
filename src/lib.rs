@@ -235,15 +235,9 @@ fn parse_sicd(sicd_str: &str) -> Result<(SicdVersion, SicdMeta), SicdError> {
     use SicdError::Unimpl;
     match sicd_version {
         SicdVersion::V0_3_1 => Err(Unimpl("V0_3_1".to_string())),
-        SicdVersion::V0_4_0 => Ok((
-            SicdVersion::V0_4_0,
-            SicdMeta::V0_4_0(from_str(sicd_str)?),
-        )),
+        SicdVersion::V0_4_0 => Ok((SicdVersion::V0_4_0, SicdMeta::V0_4_0(from_str(sicd_str)?))),
         SicdVersion::V0_4_1 => Err(Unimpl("V0_4_1".to_string())),
-        SicdVersion::V0_5_0 => Ok((
-            SicdVersion::V0_5_0,
-            SicdMeta::V0_5_0(from_str(sicd_str)?),
-        )),
+        SicdVersion::V0_5_0 => Ok((SicdVersion::V0_5_0, SicdMeta::V0_5_0(from_str(sicd_str)?))),
         // Don't need to worry about anything else, all versions past 1.0 are backwards compatible
         other => Ok((other, SicdMeta::V1(from_str(sicd_str)?))),
     }

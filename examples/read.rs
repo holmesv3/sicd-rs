@@ -16,7 +16,7 @@ fn main() {
     let arr = sicd.image_data[0].array.slice(s![0..2, 0..2]);
     arr.indexed_iter()
         .for_each(|((row, col), z)| println!("[{row}, {col}] = {} + {}i", z.re, z.im));
-    
+
     // Convert to 'native' Complex32
-    let useful = arr.to_native();
+    let _ = arr.to_native();
 }
