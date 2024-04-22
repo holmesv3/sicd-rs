@@ -53,6 +53,8 @@ pub enum SicdError {
     /// "metadata for version {} is not implemented"
     #[error("metadata for version {0} is not implemented")]
     Unimpl(String),
+    #[error("file does not appear to be a SICD")]
+    NotASicd,
     // Wrappers for built in errors
     #[error(transparent)]
     IOError(#[from] std::io::Error),
@@ -195,6 +197,9 @@ impl SicdMeta {
 impl<'a> Sicd<'a> {
     pub fn from_file(mut file: File) -> Result<Self, SicdError> {
         let nitf = Nitf::from_reader(&mut file)?;
+        if nitf.nitf_header.numdes.val == 0 {
+            return Err(SicdError::NotASicd)
+        }
         let dex_data = nitf.data_extension_segments[0].get_data_map(&mut file)?;
         let sicd_str = from_utf8(&dex_data[..])?;
         let (version, meta) = parse_sicd(sicd_str)?;
