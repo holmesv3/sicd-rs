@@ -197,8 +197,8 @@ impl SicdMeta {
 impl<'a> Sicd<'a> {
     pub fn from_file(mut file: File) -> Result<Self, SicdError> {
         let nitf = Nitf::from_reader(&mut file)?;
-        if nitf.data_extension_segments.len() == 0 {
-            return Err(SicdError::NotASicd);
+        if nitf.nitf_header.numdes.val == 0 {
+            return Err(SicdError::NotASicd)
         }
         let dex_data = nitf.data_extension_segments[0].get_data_map(&mut file)?;
         let sicd_str = from_utf8(&dex_data[..])?;
