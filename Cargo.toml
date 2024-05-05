@@ -4,7 +4,7 @@ version = "0.2.2"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 description = "Crate to interact with SICD files."
-homepage = "https://github.com/holmesv3/sicd-rs"
+repository = "https://github.com/holmesv3/sicd-rs"
 readme = "README-crates.md"
 
 [dependencies]
